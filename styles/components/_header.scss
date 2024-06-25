@@ -1,0 +1,80 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 140px;
+  background-color: $light-blue;
+  padding: 32px $pc-body-padding;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    .line1 {
+      color: $dark-blue;
+    }
+
+    .line2,
+    .line3 {
+      color: white;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      .nav-button {
+        padding: 16px 13px;
+        width: 170px;
+        background-color: $dark-blue;
+        color: white;
+        border: none;
+        font-size: 14px;
+        letter-spacing: 1px;
+
+        &:hover {
+          background-color: $button-hover;
+          color: white;
+        }
+      }
+    }
+
+    .search-container {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .loop-icon {
+        position: absolute;
+        left: 20px;
+      }
+
+      input {
+        width: 265px;
+        border: none;
+        padding: 16px 20px 16px 50px;
+        font-size: 14px;
+
+        &::placeholder {
+          color: $dark-blue;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
