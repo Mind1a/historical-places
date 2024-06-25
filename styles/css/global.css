@@ -179,14 +179,12 @@ header .logo .line3 {
 header .navigation {
   display: flex;
   flex-direction: row;
-  gap: 20px;
 }
-header .navigation nav {
+header .navigation nav ul {
   display: flex;
   flex-direction: row;
-  gap: 20px;
 }
-header .navigation nav .nav-button {
+header .navigation nav ul .nav-button {
   padding: 16px 13px;
   width: 170px;
   background-color: #085791;
@@ -194,8 +192,9 @@ header .navigation nav .nav-button {
   border: none;
   font-size: 14px;
   letter-spacing: 1px;
+  margin-right: 20px;
 }
-header .navigation nav .nav-button:hover {
+header .navigation nav ul .nav-button:hover {
   background-color: #0b71bc;
   color: white;
 }
@@ -208,6 +207,7 @@ header .navigation .search-container {
 header .navigation .search-container .loop-icon {
   position: absolute;
   left: 20px;
+  cursor: pointer;
 }
 header .navigation .search-container input {
   width: 100%;
@@ -218,10 +218,13 @@ header .navigation .search-container input {
   font-size: 14px;
 }
 header .navigation .search-container input::-moz-placeholder {
-  color: #085791;
   opacity: 0.5;
+  font-size: 14px;
 }
 header .navigation .search-container input::placeholder {
-  color: #085791;
   opacity: 0.5;
+  font-size: 14px;
+}
+header .navigation .search-container input:focus {
+  outline: none;
 }/*# sourceMappingURL=global.css.map */

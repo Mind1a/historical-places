@@ -21,23 +21,23 @@ header {
 
     .line1 {
       color: $dark-blue;
+      // line-height: 26.4px;
     }
 
     .line2,
     .line3 {
       color: white;
+      // line-height: 26.4px;
     }
   }
 
   .navigation {
     display: flex;
     flex-direction: row;
-    gap: 20px;
 
-    nav {
+    nav ul {
       display: flex;
       flex-direction: row;
-      gap: 20px;
 
       .nav-button {
         padding: 16px 13px;
@@ -47,6 +47,7 @@ header {
         border: none;
         font-size: 14px;
         letter-spacing: 1px;
+        margin-right: 20px;
 
         &:hover {
           background-color: $button-hover;
@@ -64,6 +65,7 @@ header {
       .loop-icon {
         position: absolute;
         left: 20px;
+        cursor: pointer;
       }
 
       input {
@@ -75,8 +77,12 @@ header {
         font-size: 14px;
 
         &::placeholder {
-          color: $dark-blue;
           opacity: 0.5;
+          font-size: 14px;
+        }
+
+        &:focus {
+          outline: none;
         }
       }
     }
