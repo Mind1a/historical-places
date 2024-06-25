@@ -13,9 +13,11 @@ header {
     flex-direction: column;
     gap: 2px;
     text-align: left;
+    margin-right: 1em;
     font-size: 22px;
     font-weight: 900;
     letter-spacing: 1px;
+    flex-shrink: 0;
 
     .line1 {
       color: $dark-blue;
@@ -65,7 +67,9 @@ header {
       }
 
       input {
-        width: 265px;
+        width: 100%;
+        max-width: 265px;
+        min-width: 170px;
         border: none;
         padding: 16px 20px 16px 50px;
         font-size: 14px;

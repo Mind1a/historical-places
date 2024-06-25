@@ -163,9 +163,11 @@ header .logo {
   flex-direction: column;
   gap: 2px;
   text-align: left;
+  margin-right: 1em;
   font-size: 22px;
   font-weight: 900;
   letter-spacing: 1px;
+  flex-shrink: 0;
 }
 header .logo .line1 {
   color: #085791;
@@ -208,7 +210,9 @@ header .navigation .search-container .loop-icon {
   left: 20px;
 }
 header .navigation .search-container input {
-  width: 265px;
+  width: 100%;
+  max-width: 265px;
+  min-width: 170px;
   border: none;
   padding: 16px 20px 16px 50px;
   font-size: 14px;
