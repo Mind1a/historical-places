@@ -56,3 +56,23 @@ $pc-max: $pc - 1;
   font-weight: $fw;
   line-height: normal;
 }
+
+@mixin underline($color: $light-blue, $thickness: 1px, $space: 5px) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -$space;
+    height: $thickness;
+    background-color: $color;
+  }
+}
+
+@mixin container {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
