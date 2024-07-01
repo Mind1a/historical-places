@@ -76,3 +76,31 @@ $pc-max: $pc - 1;
   width: 100%;
   margin: 0 auto;
 }
+
+
+@mixin button( $bg-color: #085791, 
+  $color: #ffffff,
+  $padding: 10px ,
+  $border-radius: 0,
+  $font-size: 14px,
+  $font-weight: 400,
+  $hover-bg-color: #0b71bc,
+  // $active-bg-color: 
+) {
+  background-color: $bg-color;
+  color: $color;
+  padding: $padding;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+
+  // &:active {
+  //   background-color: $active-bg-color;
+  // }
+}

@@ -283,6 +283,190 @@ header .navigation .search-container input:focus {
   color: #ffffff;
 }
 
+.list-of-places {
+  width: 1120px;
+  margin: 70px auto 51px;
+}
+.list-of-places form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 31px;
+}
+.list-of-places form label {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 5px;
+  margin-bottom: 32px;
+  border-bottom: solid 0.5px #000000;
+  font-size: 20px;
+  font-weight: 500;
+  color: #3e3e3e;
+}
+.list-of-places form input {
+  width: 550px;
+  padding: 16px 20px 16px 46px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #d9d9d9;
+  background-color: #ffffff;
+}
+.list-of-places form input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: normal;
+  color: #d9d9d9;
+}
+.list-of-places form input::placeholder {
+  font-size: 14px;
+  font-weight: normal;
+  color: #d9d9d9;
+}
+.list-of-places form img {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+}
+.list-of-places .filter-wrapper {
+  margin-bottom: 36px;
+}
+.list-of-places .filter-wrapper .filterBtn-container {
+  width: 130px;
+  height: 35px;
+  position: relative;
+}
+.list-of-places .filter-wrapper .filterBtn-container button {
+  width: 100%;
+  background-color: #085791;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+}
+.list-of-places .filter-wrapper .filterBtn-container button:hover {
+  background-color: #0b71bc;
+}
+.list-of-places .filter-wrapper .filterBtn-container img {
+  width: 13px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+.list-of-places .sort-wrapper {
+  margin-bottom: 60px;
+}
+.list-of-places .sort-wrapper .sortBtn-container {
+  width: 130px;
+  height: 35px;
+  position: relative;
+}
+.list-of-places .sort-wrapper .sortBtn-container button {
+  width: 100%;
+  background-color: #085791;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+}
+.list-of-places .sort-wrapper .sortBtn-container button:hover {
+  background-color: #0b71bc;
+}
+.list-of-places .sort-wrapper .sortBtn-container img {
+  width: 13px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+.list-of-places .slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list-of-places .slider-wrapper .cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 57px;
+}
+.list-of-places .slider-wrapper .cards .card {
+  margin-right: 10px;
+  padding: 24px;
+  border: 1px solid #3e3e3e;
+  background-color: #ffffff;
+}
+.list-of-places .slider-wrapper .cards .card h4 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
+  margin-bottom: 10px;
+}
+.list-of-places .slider-wrapper .cards .card p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #3e3e3e;
+}
+.list-of-places .slider-wrapper .cards .card:last-child {
+  margin-right: 0;
+}
+.list-of-places .slider-wrapper .pages {
+  margin-bottom: 49px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.list-of-places .slider-wrapper .pages #leftArrow {
+  width: 12px;
+  height: 22px;
+  transform: rotate(180deg);
+  margin-right: 5px;
+  cursor: pointer;
+}
+.list-of-places .slider-wrapper .pages .numbers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.list-of-places .slider-wrapper .pages .numbers span {
+  margin-right: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}
+.list-of-places .slider-wrapper .pages .numbers .spot {
+  padding-bottom: 12.5px;
+  color: #3E3E3E;
+}
+.list-of-places .slider-wrapper .pages .numbers .current {
+  background-color: #a9c9e0;
+}
+.list-of-places .slider-wrapper .pages #rightArrow {
+  width: 12px;
+  height: 22px;
+  cursor: pointer;
+}
+.list-of-places .slider-wrapper a button {
+  background-color: #085791;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+}
+.list-of-places .slider-wrapper a button:hover {
+  background-color: #0b71bc;
+}
+
 main {
   /* About Project Section */
   /* Team Members Section */
