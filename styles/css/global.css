@@ -148,6 +148,22 @@ button {
   cursor: pointer;
 }
 
+@keyframes rotateAnimationForwards {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotateAnimationBackwards {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 main .team-members .container h3, .about-project .container h3 {
   display: inline-block;
   font-weight: 500;
@@ -295,13 +311,13 @@ header .navigation .search-container input:focus {
   max-width: 1120px;
   margin: 70px auto 51px;
 }
-.list-of-places form {
+.list-of-places .places-list-form {
   display: flex;
   flex-direction: column;
   position: relative;
   margin-bottom: 31px;
 }
-.list-of-places form label {
+.list-of-places .places-list-form label {
   width: -moz-fit-content;
   width: fit-content;
   padding-bottom: 5px;
@@ -310,7 +326,7 @@ header .navigation .search-container input:focus {
   font-weight: 500;
   color: #3e3e3e;
 }
-.list-of-places form input {
+.list-of-places .places-list-form input {
   width: 550px;
   padding: 16px 20px 16px 46px;
   font-size: 14px;
@@ -319,22 +335,23 @@ header .navigation .search-container input:focus {
   background-color: #ffffff;
   border: solid 0.5px #000;
 }
-.list-of-places form input::-moz-placeholder {
+.list-of-places .places-list-form input::-moz-placeholder {
   font-size: 14px;
   font-weight: normal;
   color: #d9d9d9;
 }
-.list-of-places form input::placeholder {
+.list-of-places .places-list-form input::placeholder {
   font-size: 14px;
   font-weight: normal;
   color: #d9d9d9;
 }
-.list-of-places form img {
+.list-of-places .places-list-form img {
   width: 16px;
   height: 16px;
   position: absolute;
   bottom: 16px;
   left: 20px;
+  cursor: pointer;
 }
 .list-of-places .filter-wrapper {
   margin-bottom: 36px;
@@ -363,6 +380,140 @@ header .navigation .search-container input:focus {
   position: absolute;
   top: 50%;
   right: 10px;
+  cursor: pointer;
+}
+.list-of-places .filter-wrapper .filterBtn-container img.rotate {
+  transform: rotate(180deg);
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown.active {
+  height: 205px;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
+  width: 100%;
+  max-width: 1120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 17px;
+  padding: 20px 30px;
+  background-color: #f2faff;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8.25px;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 1px solid;
+  position: relative;
+  cursor: pointer;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input[type=radio]:checked {
+  background-color: #a9c9e0;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input {
+  margin-right: 20px;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item label {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 17px;
+  padding: 13px 30px;
+  background-color: #f2faff;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8.25px;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 1px solid;
+  position: relative;
+  cursor: pointer;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input[type=radio]:checked {
+  background-color: #a9c9e0;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input {
+  margin-right: 20px;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item label {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container.active {
+  height: 205px;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container .search-div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container .search-div input {
+  width: 297px;
+  max-width: 297px;
+  min-width: 170px;
+  border: solid 0.5px #000;
+  padding: 6px 20px 6px 40px;
+  font-size: 14px;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container .search-div .loop-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
 }
 .list-of-places .sort-wrapper {
   margin-bottom: 60px;
@@ -391,6 +542,64 @@ header .navigation .search-container input:focus {
   position: absolute;
   top: 50%;
   right: 10px;
+  cursor: pointer;
+}
+.list-of-places .sort-wrapper .sortBtn-container img.rotate {
+  transform: rotate(180deg);
+}
+.list-of-places .sort-wrapper .sorting-dropdpwn-wrapper {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.list-of-places .sort-wrapper .sorting-dropdpwn-wrapper.active {
+  height: 196px;
+}
+.list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 17px;
+  padding: 27.5px 15px 30px;
+  background-color: #f2faff;
+}
+.list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8.25px;
+}
+.list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 1px solid;
+  position: relative;
+  cursor: pointer;
+}
+.list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input[type=radio]:checked {
+  background-color: #a9c9e0;
+}
+.list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input {
+  margin-right: 20px;
+}
+.list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item label {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form {
+  margin-top: 0;
 }
 .list-of-places .slider-wrapper {
   display: flex;
@@ -451,7 +660,7 @@ header .navigation .search-container input:focus {
 }
 .list-of-places .slider-wrapper .pages .numbers .spot {
   padding-bottom: 12.5px;
-  color: #3E3E3E;
+  color: #3e3e3e;
 }
 .list-of-places .slider-wrapper .pages .numbers .current {
   background-color: #a9c9e0;
@@ -540,13 +749,13 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   width: 1120px;
   margin: 81px auto 70px;
 }
-.main-container form {
+.main-container .places-list-form {
   display: flex;
   flex-direction: column;
   position: relative;
   margin-bottom: 38px;
 }
-.main-container form input {
+.main-container .places-list-form input {
   width: 550px;
   padding: 16px 20px 16px 46px;
   font-size: 16px;
@@ -555,31 +764,31 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   background-color: #ffffff;
   border: solid 0.5px #000;
 }
-.main-container form input::-moz-placeholder {
+.main-container .places-list-form input::-moz-placeholder {
   font-size: 16px;
   font-weight: normal;
   color: #d9d9d9;
 }
-.main-container form input::placeholder {
+.main-container .places-list-form input::placeholder {
   font-size: 16px;
   font-weight: normal;
   color: #d9d9d9;
 }
-.main-container form img {
+.main-container .places-list-form img {
   width: 21px;
   height: 21px;
   position: absolute;
   bottom: 50%;
   left: 15px;
   transform: translateY(50%);
+  cursor: pointer;
 }
 .main-container .filter-wrapper {
-  margin-bottom: 51px;
+  margin-bottom: 36px;
 }
 .main-container .filter-wrapper .filterBtn-container {
   width: 130px;
   height: 35px;
-  margin-bottom: 17px;
   position: relative;
 }
 .main-container .filter-wrapper .filterBtn-container button {
@@ -601,6 +810,140 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   position: absolute;
   top: 50%;
   right: 10px;
+  cursor: pointer;
+}
+.main-container .filter-wrapper .filterBtn-container img.rotate {
+  transform: rotate(180deg);
+}
+.main-container .filter-wrapper .filterBtn-dropdown {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.main-container .filter-wrapper .filterBtn-dropdown.active {
+  height: 205px;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
+  width: 100%;
+  max-width: 1120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 17px;
+  padding: 20px 30px;
+  background-color: #f2faff;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8.25px;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 1px solid;
+  position: relative;
+  cursor: pointer;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input[type=radio]:checked {
+  background-color: #a9c9e0;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input {
+  margin-right: 20px;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item label {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 17px;
+  padding: 13px 30px;
+  background-color: #f2faff;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8.25px;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 1px solid;
+  position: relative;
+  cursor: pointer;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input[type=radio]:checked {
+  background-color: #a9c9e0;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input {
+  margin-right: 20px;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item label {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container.active {
+  height: 205px;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container .search-div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container .search-div input {
+  width: 297px;
+  max-width: 297px;
+  min-width: 170px;
+  border: solid 0.5px #000;
+  padding: 6px 20px 6px 40px;
+  font-size: 14px;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container .search-div .loop-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
 }
 .main-container .sort-wrapper {
   margin-bottom: 63px;
@@ -609,7 +952,6 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   width: 130px;
   height: 35px;
   position: relative;
-  margin-bottom: 17px;
 }
 .main-container .sort-wrapper .sortBtn-container button {
   width: 100%;
@@ -630,6 +972,64 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   position: absolute;
   top: 50%;
   right: 10px;
+  cursor: pointer;
+}
+.main-container .sort-wrapper .sortBtn-container img.rotate {
+  transform: rotate(180deg);
+}
+.main-container .sort-wrapper .sorting-dropdpwn-wrapper {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.main-container .sort-wrapper .sorting-dropdpwn-wrapper.active {
+  height: 196px;
+}
+.main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 17px;
+  padding: 27.5px 15px 30px;
+  background-color: #f2faff;
+}
+.main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8.25px;
+}
+.main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 1px solid;
+  position: relative;
+  cursor: pointer;
+}
+.main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input[type=radio]:checked {
+  background-color: #a9c9e0;
+}
+.main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input {
+  margin-right: 20px;
+}
+.main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item label {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form {
+  margin-top: 0;
 }
 .main-container .cards {
   display: grid;
@@ -686,7 +1086,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
 }
 .main-container .page-container .pages .numbers .spot {
   padding-bottom: 12.5px;
-  color: #3E3E3E;
+  color: #3e3e3e;
 }
 .main-container .page-container .pages .numbers .current {
   background-color: #a9c9e0;

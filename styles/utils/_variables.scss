@@ -4,8 +4,30 @@ $dark-blue: #085791;
 $button-hover: #0b71bc;
 $text-color: #3e3e3e;
 $button-text-color: #ffffff;
+$dropdown-background: #f2faff;
+
 //spacing
 $pc-body-padding: 160px;
 
 // transitions
 $change-background-color: background-color 0.3s ease;
+
+// arrow rotation animation
+
+@keyframes rotateAnimationForwards {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateAnimationBackwards {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
