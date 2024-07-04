@@ -43,23 +43,102 @@
       <section class="main-container">
         <!-- search form -->
 
-        <form action="#">
+        <form action="#" class="places-list-form">
           <input type="text" id="search" placeholder="ძიება" />
           <img src="../assets/search-icon.svg" alt="search icon" />
         </form>
         <!-- filter section -->
 
         <div class="filter-wrapper">
-          <div class="filterBtn-container">
+          <div class="filterBtn-container dropdown-btn">
             <button>ფილტრი</button>
             <img src="../assets/down-arrow.svg" alt="button arrow" />
+          </div>
+          <div class="filterBtn-dropdown dropdown">
+            <div class="filter-dropdown-wrapper">
+              <div class="place-type-container">
+                <h2>ადგილის ტიპების მიხედვით</h2>
+                <form action="#" class="dropdown-form">
+                  <div class="place-type-item dropdown-item">
+                    <input type="radio" id="option1" name="place-type" />
+                    <label for="option1">ლორემ იპსუმ</label>
+                  </div>
+                  <div class="place-type-item dropdown-item">
+                    <input type="radio" id="option2" name="place-type" />
+                    <label for="option2">ლორემ იპსუმ</label>
+                  </div>
+                  <div class="place-type-item dropdown-item">
+                    <input type="radio" id="option3" name="place-type" />
+                    <label for="option3">ლორემ იპსუმ</label>
+                  </div>
+                  <div class="place-type-item dropdown-item">
+                    <input type="radio" id="option4" name="place-type" />
+                    <label for="option4">ლორემ იპსუმ</label>
+                  </div>
+                </form>
+              </div>
+              <div class="bibliography-container">
+                <div class="dropdown-search-container">
+                  <h2>ბიბლიოგრაფია</h2>
+                  <div class="search-div">
+                    <img
+                      class="loop-icon"
+                      src="../assets/loop-icon.svg"
+                      alt="loop-icon"
+                    />
+                    <input type="text" />
+                  </div>
+                </div>
+                <form action="#" class="dropdown-form">
+                  <div class="bibliography-item dropdown-item">
+                    <input type="radio" id="option1" name="bibliography-type" />
+                    <label for="option1">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                  </div>
+                  <div class="bibliography-item dropdown-item">
+                    <input type="radio" id="option2" name="bibliography-type" />
+                    <label for="option2">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                  </div>
+                  <div class="bibliography-item dropdown-item">
+                    <input type="radio" id="option3" name="bibliography-type" />
+                    <label for="option3">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                  </div>
+                  <div class="bibliography-item dropdown-item">
+                    <input type="radio" id="option4" name="bibliography-type" />
+                    <label for="option4">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="range-container"></div>
           </div>
         </div>
         <!-- sorting section -->
         <div class="sort-wrapper">
-          <div class="sortBtn-container">
+          <div class="sortBtn-container dropdown-btn">
             <button>სორტირება</button>
             <img src="../assets/down-arrow.svg" alt="button arrow" />
+          </div>
+          <div class="sorting-dropdpwn-wrapper">
+            <div class="sorting-container dropdown">
+              <form action="#" class="dropdown-form">
+                <div class="dropdown-item">
+                  <input type="radio" id="option1" name="sorting-type" />
+                  <label for="option1">ანბანურად</label>
+                </div>
+                <div class="dropdown-item">
+                  <input type="radio" id="option2" name="sorting-type" />
+                  <label for="option2">ანბანურად პირიქით</label>
+                </div>
+                <div class="dropdown-item">
+                  <input type="radio" id="option3" name="sorting-type" />
+                  <label for="option3">თარიღულად (ახლიდან ძველისკენ)</label>
+                </div>
+                <div class="dropdown-item">
+                  <input type="radio" id="option4" name="sorting-type" />
+                  <label for="option4">თარიღულად (ძველიდან ახლისკენ)</label>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
 
