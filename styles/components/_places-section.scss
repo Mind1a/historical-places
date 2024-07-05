@@ -24,14 +24,14 @@
       padding: 16px 20px 16px 46px;
       font-size: 14px;
       font-weight: normal;
-      color: #d9d9d9;
+      color: $light-gray;
       background-color: #ffffff;
       border: solid 0.5px #000;
 
       &::placeholder {
         font-size: 14px;
         font-weight: normal;
-        color: #d9d9d9;
+        color: $light-gray;
       }
     }
 
@@ -74,7 +74,7 @@
       transition: height 0.3s ease;
 
       &.active {
-        height: 205px;
+        height: 420px;
       }
 
       .filter-dropdown-wrapper {
@@ -85,15 +85,11 @@
         justify-content: space-between;
 
         .place-type-container {
-          @include dropdown-container();
+          @include dropdown-container($dropdown-margin: 18px);
         }
 
         .bibliography-container {
           @include dropdown-container(13px);
-
-          &.active {
-            height: 205px;
-          }
 
           .dropdown-search-container {
             display: flex;
@@ -122,6 +118,121 @@
                 transform: translate(0, -50%);
                 cursor: pointer;
               }
+            }
+          }
+        }
+      }
+      //
+      .time-range-container {
+        width: 100%;
+        height: 181px;
+        max-width: 1120px;
+        margin-top: 17px;
+        padding: 20px 30px;
+        background-color: $dropdown-background;
+        // background-color: green;
+
+        h2 {
+          font-size: 18px;
+          font-weight: 400;
+        }
+
+        .range-wrapper {
+          padding: 40px 45px;
+
+          .range-slider {
+            position: relative;
+            width: 100%;
+            height: 26px;
+            background: $light-gray;
+            border-radius: 13px;
+            padding: 0;
+
+            .slider-track {
+              height: 100%;
+              position: absolute;
+              background-color: $light-blue;
+              border-radius: 13px;
+            }
+
+            input {
+              position: absolute;
+              width: 100%;
+              max-width: 970px;
+              background: none;
+              pointer-events: none;
+              top: 50%;
+              transform: translateY(-50%);
+              appearance: none;
+              z-index: 5;
+
+              &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 27px;
+                height: 26px;
+                border-radius: 50%;
+                background: #363636;
+                cursor: pointer;
+                pointer-events: auto;
+              }
+
+              &::-moz-range-thumb {
+                width: 27px;
+                height: 26px;
+                border-radius: 50%;
+                background: #363636;
+                cursor: pointer;
+                -moz-appearance: none;
+                pointer-events: auto;
+              }
+            }
+
+            .tooltip {
+              padding: 8px 7px;
+              width: 80px;
+              height: 32px;
+              border: 0;
+              background: #ffffff;
+              border: 0.5px solid #000;
+              font-size: 16px;
+              border-radius: 10px;
+              display: block;
+              position: absolute;
+              text-align: center;
+              white-space: nowrap;
+              z-index: 5;
+              margin-top: 17px;
+              top: 100%;
+              transform: translateX(-50%);
+            }
+
+            .min-tooltip {
+              left: 0;
+              // transform: translateX(-50%);
+            }
+            .max-tooltip {
+              // right: 0;
+              // transform: translateX(50%);
+              left: 0;
+            }
+
+            .stick {
+              box-sizing: border-box;
+              width: 1px;
+              height: 40px;
+              background-color: black;
+              position: absolute;
+              top: 10px;
+              transform: translateX(-50%);
+              z-index: 4;
+            }
+
+            .min-stick {
+              left: 0;
+            }
+
+            .max-stick {
+              left: 0;
             }
           }
         }
@@ -163,7 +274,7 @@
       }
 
       .sorting-container {
-        @include dropdown-container(27.5px 15px);
+        @include dropdown-container(27.5px, 10px);
 
         .dropdown-form {
           margin-top: 0;

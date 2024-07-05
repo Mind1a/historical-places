@@ -13,14 +13,14 @@
       padding: 16px 20px 16px 46px;
       font-size: 16px;
       font-weight: normal;
-      color: #d9d9d9;
+      color: $light-gray;
       background-color: #ffffff;
       border: solid 0.5px #000;
 
       &::placeholder {
         font-size: 16px;
         font-weight: normal;
-        color: #d9d9d9;
+        color: $light-gray;
       }
     }
 
@@ -64,7 +64,7 @@
       transition: height 0.3s ease;
 
       &.active {
-        height: 205px;
+        height: 215px;
       }
 
       .filter-dropdown-wrapper {
@@ -75,15 +75,11 @@
         justify-content: space-between;
 
         .place-type-container {
-          @include dropdown-container();
+          @include dropdown-container($dropdown-margin: 18px);
         }
 
         .bibliography-container {
           @include dropdown-container(13px);
-
-          &.active {
-            height: 205px;
-          }
 
           .dropdown-search-container {
             display: flex;
@@ -153,7 +149,7 @@
       }
 
       .sorting-container {
-        @include dropdown-container(27.5px 15px);
+        @include dropdown-container(27.5px, 10px);
 
         .dropdown-form {
           margin-top: 0;
