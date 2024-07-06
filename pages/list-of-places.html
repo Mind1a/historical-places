@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Historical Places</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="../styles/css/global.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <div class="line1">საქართველოს</div>
+          <div class="line2">ისტორიულ</div>
+          <div class="line3">ადგილთა საცავი</div>
+        </div>
+        <div class="navigation">
+          <nav>
+            <ul>
+              <li><a href="../index.html" class="nav-button">მთავარი</a></li>
+              <li><a href="#" class="nav-button">ადგილები</a></li>
+              <li><a href="#" class="nav-button">ბიბლიოგრაფია</a></li>
+            </ul>
+          </nav>
+          <div class="search-container">
+            <img
+              class="loop-icon"
+              src="../assets/loop-icon.svg"
+              alt="loop-icon"
+            />
+            <input type="text" placeholder="ძიება" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+
+    <main>
+      <section class="main-container">
+        <!-- search form -->
+
+        <form action="#" class="places-list-form">
+          <input type="text" id="search" placeholder="ძიება" />
+          <img src="../assets/search-icon.svg" alt="search icon" />
+        </form>
+        <!-- filter section -->
+
+        <div class="filter-wrapper">
+          <div class="filterBtn-container dropdown-btn">
+            <button>ფილტრი</button>
+            <img src="../assets/down-arrow.svg" alt="button arrow" />
+          </div>
+          <div class="filterBtn-dropdown dropdown">
+            <div class="filter-dropdown-wrapper">
+              <div class="place-type-container">
+                <h2>ადგილის ტიპების მიხედვით</h2>
+                <form action="#" class="dropdown-form">
+                  <div class="place-type-item dropdown-item">
+                    <input type="radio" id="option1" name="place-type" />
+                    <label for="option1">ლორემ იპსუმ</label>
+                  </div>
+                  <div class="place-type-item dropdown-item">
+                    <input type="radio" id="option2" name="place-type" />
+                    <label for="option2">ლორემ იპსუმ</label>
+                  </div>
+                  <div class="place-type-item dropdown-item">
+                    <input type="radio" id="option3" name="place-type" />
+                    <label for="option3">ლორემ იპსუმ</label>
+                  </div>
+                  <div class="place-type-item dropdown-item">
+                    <input type="radio" id="option4" name="place-type" />
+                    <label for="option4">ლორემ იპსუმ</label>
+                  </div>
+                </form>
+              </div>
+              <div class="bibliography-container">
+                <div class="dropdown-search-container">
+                  <h2>ბიბლიოგრაფია</h2>
+                  <div class="search-div">
+                    <img
+                      class="loop-icon"
+                      src="../assets/loop-icon.svg"
+                      alt="loop-icon"
+                    />
+                    <input type="text" />
+                  </div>
+                </div>
+                <form action="#" class="dropdown-form">
+                  <div class="bibliography-item dropdown-item">
+                    <input type="radio" id="option1" name="bibliography-type" />
+                    <label for="option1">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                  </div>
+                  <div class="bibliography-item dropdown-item">
+                    <input type="radio" id="option2" name="bibliography-type" />
+                    <label for="option2">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                  </div>
+                  <div class="bibliography-item dropdown-item">
+                    <input type="radio" id="option3" name="bibliography-type" />
+                    <label for="option3">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                  </div>
+                  <div class="bibliography-item dropdown-item">
+                    <input type="radio" id="option4" name="bibliography-type" />
+                    <label for="option4">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="time-range-container">
+              <h2>დროის დიაპაზონი</h2>
+              <div class="range-wrapper">
+                <div class="range-slider">
+                  <span class="slider-track"></span>
+                  <input
+                    type="range"
+                    name="min_val"
+                    class="min-val"
+                    min="1000"
+                    max="3000"
+                    value="1200"
+                  />
+                  <input
+                    type="range"
+                    name="max_val"
+                    class="max-val"
+                    min="1000"
+                    max="3000"
+                    value="2800"
+                  />
+                  <div class="tooltip min-tooltip"></div>
+                  <div class="stick min-stick"></div>
+                  <div class="tooltip max-tooltip"></div>
+                  <div class="stick max-stick"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sorting section -->
+        <div class="sort-wrapper">
+          <div class="sortBtn-container dropdown-btn">
+            <button>სორტირება</button>
+            <img src="../assets/down-arrow.svg" alt="button arrow" />
+          </div>
+          <div class="sorting-dropdpwn-wrapper">
+            <div class="sorting-container dropdown">
+              <form action="#" class="dropdown-form">
+                <div class="dropdown-item">
+                  <input type="radio" id="option1" name="sorting-type" />
+                  <label for="option1">ანბანურად</label>
+                </div>
+                <div class="dropdown-item">
+                  <input type="radio" id="option2" name="sorting-type" />
+                  <label for="option2">ანბანურად პირიქით</label>
+                </div>
+                <div class="dropdown-item">
+                  <input type="radio" id="option3" name="sorting-type" />
+                  <label for="option3">თარიღულად (ახლიდან ძველისკენ)</label>
+                </div>
+                <div class="dropdown-item">
+                  <input type="radio" id="option4" name="sorting-type" />
+                  <label for="option4">თარიღულად (ძველიდან ახლისკენ)</label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- map section -->
+
+        <!-- cards section -->
+        <div class="cards">
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+          <div class="card">
+            <h4>სათაური ლორემ</h4>
+            <p>
+              ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის, ლორემ
+              იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+            </p>
+          </div>
+        </div>
+        <!-- page container  -->
+        <div class="page-container">
+          <div class="pages">
+            <img
+              id="leftArrow"
+              src="../assets/slider-arrow.svg"
+              alt="left arrow"
+            />
+            <div class="numbers">
+              <span>1</span>
+              <span class="spot">...</span>
+              <span>26</span>
+              <span class="current">24</span>
+              <span>25</span>
+              <span class="spot">...</span>
+              <span>50</span>
+            </div>
+            <img
+              id="rightArrow"
+              src="../assets/slider-arrow.svg"
+              alt="right arrow"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+
+    <!-- JavaScript link -->
+    <script src="../js/script.js"></script>
+  </body>
+</html>

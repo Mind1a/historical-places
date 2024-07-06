@@ -1,0 +1,162 @@
+// For Responsive
+
+$l-pc: 1420px; // large PC screen size
+$pc: 1260px; // PC screen size.
+$l-tablet: 1024px; // tablet screen size
+$tablet: 720px; // Tablet screen size.
+$phone: 375px; // Phone screen size.
+$s-phone: 360px; // Small Screen size.
+$tablet-max: $tablet - 1;
+$pc-max: $pc - 1;
+
+@mixin responsive($media) {
+  @if $media == l_pc {
+    @media only screen and (max-width: $l-pc) {
+      @content;
+    }
+  } @else if $media == pc {
+    @media only screen and (min-width: $pc) {
+      @content;
+    }
+  } @else if $media == l-tablet {
+    @media only screen and (max-width: $l-tablet) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (max-width: $pc-max) {
+      @content;
+    }
+  } @else if $media == phone {
+    @media only screen and (max-width: $tablet-max) {
+      @content;
+    }
+  } @else if $media == small_phone {
+    @media only screen and (max-width: $phone) {
+      @content;
+    }
+  } @else if $media == smallest_phone {
+    @media only screen and (max-width: $s-phone) {
+      @content;
+    }
+  }
+}
+
+// For Styles
+
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin text_font_style($fc, $ff, $fs, $fw) {
+  color: $fc;
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: normal;
+}
+
+@mixin underline($color: $light-blue, $thickness: 1px, $space: 5px) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -$space;
+    height: $thickness;
+    background-color: $color;
+  }
+}
+
+@mixin container {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin button(
+  $bg-color: #085791,
+  $color: #ffffff,
+  $padding: 10px,
+  $border-radius: 0,
+  $font-size: 14px,
+  $font-weight: 400,
+  $hover-bg-color: #0b71bc,
+  // $active-bg-color:
+) {
+  background-color: $bg-color;
+  color: $color;
+  padding: $padding;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+
+  // &:active {
+  //   background-color: $active-bg-color;
+  // }
+}
+
+@mixin dropdown-radio-style {
+  input[type="radio"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border: 1px solid;
+    position: relative;
+    cursor: pointer;
+  }
+
+  input[type="radio"]:checked {
+    background-color: $light-blue;
+  }
+}
+
+@mixin dropdown-container(
+  $padding-top: 20px,
+  $margin-bottom: 8.25px,
+  $dropdown-margin: 13.5px
+) {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 17px;
+
+  padding: $padding-top 30px;
+  background-color: $dropdown-background;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .dropdown-form {
+    margin-top: $dropdown-margin;
+    display: flex;
+    flex-direction: column;
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: $margin-bottom;
+      @include dropdown-radio-style();
+
+      input {
+        margin-right: 20px;
+      }
+      label {
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+}
