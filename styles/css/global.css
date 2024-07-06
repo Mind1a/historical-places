@@ -271,6 +271,63 @@ header .navigation .search-container input:focus {
   outline: none;
 }
 
+footer {
+  max-width: 100%;
+  padding: 63px 0;
+  background-color: #3e3e3e;
+}
+footer .footer-container {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+footer .footer-container .contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .footer-container .contact-container h4 {
+  margin-bottom: 22px;
+  padding-left: 45px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #a9c9e0;
+}
+footer .footer-container .contact-container > div {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footer-container .contact-container > div > img {
+  width: 18px;
+  height: 18px;
+  margin: 0 27px 0 0;
+}
+footer .footer-container .contact-container > div > a {
+  all: unset;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+}
+footer .footer-container .logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footer-container .logo-container .unilab-logo {
+  width: 88px;
+  height: 114px;
+  margin-right: 80px;
+}
+footer .footer-container .logo-container .iliauni-logo {
+  width: 124.2px;
+  height: 123.5px;
+}
+
 /* About Project Section */
 .about-project {
   margin-top: 68px;
