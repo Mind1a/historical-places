@@ -42,17 +42,24 @@ function slideMax() {
 }
 
 function setArea() {
+  const handlerWidth = 27 / minVal.clientWidth;
+  console.log(handlerWidth);
   const minPercent =
-    ((minVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue)) * 100;
+    (minVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue);
+  const adjustedMin =
+    (minPercent + handlerWidth / 2 - handlerWidth * minPercent) * 100;
+  console.log(adjustedMin);
   const maxPercent =
-    ((maxVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue)) * 100;
+    (maxVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue);
+  const adjustedMax =
+    (maxPercent + handlerWidth / 2 - handlerWidth * maxPercent) * 100;
 
-  range.style.left = minPercent + "%";
-  range.style.right = 100 - maxPercent + "%";
-  minTooltip.style.left = minPercent + "%";
-  maxTooltip.style.left = maxPercent + "%";
-  minStick.style.left = minPercent + "%";
-  maxStick.style.left = maxPercent + "%";
+  range.style.left = adjustedMin + "%";
+  range.style.right = 100 - adjustedMax + "%";
+  minTooltip.style.left = adjustedMin + "%";
+  maxTooltip.style.left = adjustedMax + "%";
+  minStick.style.left = adjustedMin + "%";
+  maxStick.style.left = adjustedMax + "%";
 }
 
 slideMin();
