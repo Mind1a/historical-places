@@ -41,6 +41,7 @@
             
             button{
                 @include button();
+                width: 240px;
             }
         }
 

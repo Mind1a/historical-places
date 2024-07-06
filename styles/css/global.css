@@ -1199,6 +1199,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   font-weight: 400;
   border: none;
   cursor: pointer;
+  width: 240px;
 }
 .error-content .error-container a button:hover {
   background-color: #0b71bc;
