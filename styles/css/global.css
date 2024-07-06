@@ -296,18 +296,18 @@ footer .footer-container .contact-container h4 {
   font-weight: normal;
   color: #a9c9e0;
 }
-footer .footer-container .contact-container > div {
+footer .footer-container .contact-container div {
   margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-footer .footer-container .contact-container > div > img {
+footer .footer-container .contact-container div img {
   width: 18px;
   height: 18px;
   margin: 0 27px 0 0;
 }
-footer .footer-container .contact-container > div > a {
+footer .footer-container .contact-container div a {
   all: unset;
   font-size: 20px;
   font-weight: 300;
@@ -1152,4 +1152,55 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   width: 12px;
   height: 22px;
   cursor: pointer;
+}
+
+.error-content {
+  width: 100%;
+  margin: 117px 0 98px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error-content .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error-content .error-container img {
+  width: 211px;
+  height: 88px;
+  margin-bottom: 28px;
+}
+.error-content .error-container h3 {
+  width: 210px;
+  margin-bottom: 28px;
+  padding: 11px 7px 7px 6px;
+  border: solid 1px #a9c9e0;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+}
+.error-content .error-container p {
+  margin-bottom: 2px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+}
+.error-content .error-container a {
+  margin-top: 41px;
+}
+.error-content .error-container a button {
+  background-color: #085791;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  width: 240px;
+}
+.error-content .error-container a button:hover {
+  background-color: #0b71bc;
 }/*# sourceMappingURL=global.css.map */
