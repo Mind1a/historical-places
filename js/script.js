@@ -43,12 +43,10 @@ function slideMax() {
 
 function setArea() {
   const handlerWidth = 27 / minVal.clientWidth;
-  console.log(handlerWidth);
   const minPercent =
     (minVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue);
   const adjustedMin =
     (minPercent + handlerWidth / 2 - handlerWidth * minPercent) * 100;
-  console.log(adjustedMin);
   const maxPercent =
     (maxVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue);
   const adjustedMax =
