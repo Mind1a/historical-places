@@ -185,7 +185,7 @@ main .team-members .container h3::after, .about-project .container h3::after {
 header {
   height: 140px;
   background-color: #a9c9e0;
-  padding: 32px 160px;
+  padding: 32px 0;
 }
 header .header-container {
   display: flex;
@@ -1494,4 +1494,70 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   width: 12px;
   height: 22px;
   cursor: pointer;
+}
+
+.place-info-wrapper {
+  padding: 70px 0;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+.place-info-wrapper h2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  color: #3e3e3e;
+  margin-bottom: 26px;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #a9c9e0;
+  font-weight: 500;
+  line-height: 24px;
+}
+.place-info-wrapper section {
+  font-weight: 400;
+}
+.place-info-wrapper section h3 {
+  font-size: 18px;
+  line-height: 21.6px;
+  padding: 10px;
+  width: 100%;
+  background-color: #a9c9e0;
+}
+.place-info-wrapper section p {
+  font-size: 16px;
+  padding: 10px;
+  line-height: 19.2px;
+  background-color: #f2faff;
+}
+.place-info-wrapper section img {
+  width: 32px;
+  margin: 10px 0 10px 10px;
+  cursor: pointer;
+}
+.place-info-wrapper section ul {
+  background-color: #f2faff;
+  padding: 10px 35px;
+  list-style: disc;
+}
+.place-info-wrapper section li {
+  font-size: 16px;
+  line-height: 19.2px;
+}
+.place-info-wrapper section a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19.2px;
+}
+.place-info-wrapper section .place-info-div {
+  background-color: #f2faff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.place-info-wrapper section .link-text {
+  padding-bottom: 0;
+}
+.place-info-wrapper section .link-list {
+  padding-top: 0;
 }/*# sourceMappingURL=global.css.map */
