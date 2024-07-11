@@ -448,7 +448,7 @@ footer .footer-container .logo-container .iliauni-logo {
   transition: height 0.3s ease;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown.active {
-  height: 420px;
+  height: 440px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
   width: 100%;
@@ -571,7 +571,7 @@ footer .footer-container .logo-container .iliauni-logo {
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container {
   width: 100%;
-  height: 181px;
+  height: 200px;
   max-width: 1120px;
   margin-top: 17px;
   padding: 20px 30px;
@@ -590,6 +590,7 @@ footer .footer-container .logo-container .iliauni-logo {
   height: 26px;
   background: #d9d9d9;
   border-radius: 13px;
+  margin-top: 25px;
   padding: 0;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .slider-track {
@@ -643,14 +644,16 @@ footer .footer-container .logo-container .iliauni-logo {
   text-align: center;
   white-space: nowrap;
   z-index: 5;
-  margin-top: 17px;
-  top: 100%;
   transform: translateX(-50%);
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .min-tooltip {
+  margin-top: -17px;
+  top: -120%;
   left: 0;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .max-tooltip {
+  margin-top: 17px;
+  top: 100%;
   left: 0;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .stick {
@@ -659,15 +662,16 @@ footer .footer-container .logo-container .iliauni-logo {
   height: 40px;
   background-color: black;
   position: absolute;
-  top: 10px;
   transform: translateX(-50%);
   z-index: 4;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .min-stick {
   left: 0;
+  top: -120%;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .max-stick {
   left: 0;
+  top: 10px;
 }
 .list-of-places .sort-wrapper {
   margin-bottom: 60px;
@@ -975,7 +979,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   transition: height 0.3s ease;
 }
 .main-container .filter-wrapper .filterBtn-dropdown.active {
-  height: 420px;
+  height: 440px;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
   width: 100%;
@@ -1098,7 +1102,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
 }
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container {
   width: 100%;
-  height: 181px;
+  height: 200px;
   max-width: 1120px;
   margin-top: 17px;
   padding: 20px 30px;
@@ -1112,11 +1116,13 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   padding: 40px 45px;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider {
+  margin-top: 25px;
   position: relative;
   width: 100%;
   height: 26px;
   background: #d9d9d9;
   border-radius: 13px;
+  margin-top: 25px;
   padding: 0;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .slider-track {
@@ -1170,14 +1176,16 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   text-align: center;
   white-space: nowrap;
   z-index: 5;
-  margin-top: 17px;
-  top: 100%;
   transform: translateX(-50%);
 }
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .min-tooltip {
+  margin-top: -17px;
+  top: -120%;
   left: 0;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .max-tooltip {
+  margin-top: 17px;
+  top: 100%;
   left: 0;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .stick {
@@ -1186,15 +1194,16 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   height: 40px;
   background-color: black;
   position: absolute;
-  top: 10px;
   transform: translateX(-50%);
   z-index: 4;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .min-stick {
   left: 0;
+  top: -120%;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .max-stick {
   left: 0;
+  top: 10px;
 }
 .main-container .sort-wrapper {
   margin-bottom: 63px;
