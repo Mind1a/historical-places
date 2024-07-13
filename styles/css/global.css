@@ -843,8 +843,20 @@ footer .footer-container .logo-container .iliauni-logo {
 }
 
 main {
+  /* Map Section */
   /* About Project Section */
   /* Team Members Section */
+}
+main .map-section {
+  margin-top: 68px;
+}
+main .map-section .container {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+main .map-section .container .map-wrapper {
+  height: 537px;
 }
 main .about-project .container .about-project-content p:first-child {
   margin-top: 40px;
@@ -1291,6 +1303,9 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form {
   margin-top: 0;
 }
+.main-container .map-section {
+  margin-bottom: 86px;
+}
 .main-container .cards {
   display: grid;
   grid-template-columns: repeat(4, 264px);
@@ -1569,4 +1584,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
 }
 .place-info-wrapper section .link-list {
   padding-top: 0;
+}
+.place-info-wrapper .map-section {
+  margin-bottom: 59px;
 }/*# sourceMappingURL=global.css.map */
