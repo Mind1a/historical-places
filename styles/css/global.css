@@ -312,6 +312,7 @@ footer .footer-container .contact-container > div > a {
   font-size: 20px;
   font-weight: 300;
   color: #fff;
+  cursor: pointer;
 }
 footer .footer-container .logo-container {
   display: flex;
