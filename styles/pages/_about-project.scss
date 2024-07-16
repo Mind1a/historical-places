@@ -1,4 +1,16 @@
 main {
+  /* Map Section */
+  .map-section {
+    margin-top: 68px;
+    .container {
+      @include container;
+
+      .map-wrapper {
+        height: 537px;
+      }
+    }
+  }
+
   /* About Project Section */
 
   .about-project {

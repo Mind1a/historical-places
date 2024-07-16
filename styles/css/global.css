@@ -185,7 +185,7 @@ main .team-members .container h3::after, .about-project .container h3::after {
 header {
   height: 140px;
   background-color: #a9c9e0;
-  padding: 32px 160px;
+  padding: 32px 0;
 }
 header .header-container {
   display: flex;
@@ -206,6 +206,7 @@ header .logo {
   font-weight: 900;
   letter-spacing: 1px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 header .logo .line1 {
   color: #085791;
@@ -296,18 +297,18 @@ footer .footer-container .contact-container h4 {
   font-weight: normal;
   color: #a9c9e0;
 }
-footer .footer-container .contact-container > div {
+footer .footer-container .contact-container div {
   margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-footer .footer-container .contact-container > div > img {
+footer .footer-container .contact-container div img {
   width: 18px;
   height: 18px;
   margin: 0 27px 0 0;
 }
-footer .footer-container .contact-container > div > a {
+footer .footer-container .contact-container div a {
   all: unset;
   font-size: 20px;
   font-weight: 300;
@@ -449,7 +450,7 @@ footer .footer-container .logo-container .iliauni-logo {
   transition: height 0.3s ease;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown.active {
-  height: 205px;
+  height: 440px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
   width: 100%;
@@ -470,7 +471,7 @@ footer .footer-container .logo-container .iliauni-logo {
   font-weight: 400;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form {
-  margin-top: 15px;
+  margin-top: 18px;
   display: flex;
   flex-direction: column;
 }
@@ -513,7 +514,7 @@ footer .footer-container .logo-container .iliauni-logo {
   font-weight: 400;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form {
-  margin-top: 15px;
+  margin-top: 13.5px;
   display: flex;
   flex-direction: column;
 }
@@ -544,9 +545,6 @@ footer .footer-container .logo-container .iliauni-logo {
   font-size: 16px;
   font-weight: 400;
 }
-.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container.active {
-  height: 205px;
-}
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container {
   display: flex;
   flex-direction: row;
@@ -572,6 +570,110 @@ footer .footer-container .logo-container .iliauni-logo {
   top: 50%;
   transform: translate(0, -50%);
   cursor: pointer;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container {
+  width: 100%;
+  height: 200px;
+  max-width: 1120px;
+  margin-top: 17px;
+  padding: 20px 30px;
+  background-color: #f2faff;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper {
+  padding: 40px 45px;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider {
+  position: relative;
+  width: 100%;
+  height: 26px;
+  background: #d9d9d9;
+  border-radius: 13px;
+  margin-top: 25px;
+  padding: 0;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .slider-track {
+  height: 100%;
+  position: absolute;
+  background-color: #a9c9e0;
+  border-radius: 13px;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider input {
+  position: absolute;
+  width: 100%;
+  max-width: 970px;
+  background: none;
+  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  z-index: 5;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 27px;
+  height: 26px;
+  border-radius: 50%;
+  background: #363636;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider input::-moz-range-thumb {
+  width: 27px;
+  height: 26px;
+  border-radius: 50%;
+  background: #363636;
+  cursor: pointer;
+  -moz-appearance: none;
+  pointer-events: auto;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .tooltip {
+  padding: 8px 7px;
+  width: 80px;
+  height: 32px;
+  border: 0;
+  background: #ffffff;
+  border: 0.5px solid #000;
+  font-size: 16px;
+  border-radius: 10px;
+  display: block;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 5;
+  transform: translateX(-50%);
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .min-tooltip {
+  margin-top: -17px;
+  top: -120%;
+  left: 0;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .max-tooltip {
+  margin-top: 17px;
+  top: 100%;
+  left: 0;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .stick {
+  box-sizing: border-box;
+  width: 1px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .min-stick {
+  left: 0;
+  top: -120%;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .max-stick {
+  left: 0;
+  top: 10px;
 }
 .list-of-places .sort-wrapper {
   margin-bottom: 60px;
@@ -617,7 +719,7 @@ footer .footer-container .logo-container .iliauni-logo {
   width: 100%;
   max-width: 550px;
   margin-top: 17px;
-  padding: 27.5px 15px 30px;
+  padding: 27.5px 30px;
   background-color: #f2faff;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container h2 {
@@ -625,14 +727,14 @@ footer .footer-container .logo-container .iliauni-logo {
   font-weight: 400;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form {
-  margin-top: 15px;
+  margin-top: 13.5px;
   display: flex;
   flex-direction: column;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item {
   display: flex;
   align-items: center;
-  margin-bottom: 8.25px;
+  margin-bottom: 10px;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input[type=radio] {
   -webkit-appearance: none;
@@ -743,8 +845,20 @@ footer .footer-container .logo-container .iliauni-logo {
 }
 
 main {
+  /* Map Section */
   /* About Project Section */
   /* Team Members Section */
+}
+main .map-section {
+  margin-top: 68px;
+}
+main .map-section .container {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+main .map-section .container .map-wrapper {
+  height: 537px;
 }
 main .about-project .container .about-project-content p:first-child {
   margin-top: 40px;
@@ -879,7 +993,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   transition: height 0.3s ease;
 }
 .main-container .filter-wrapper .filterBtn-dropdown.active {
-  height: 205px;
+  height: 440px;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
   width: 100%;
@@ -900,7 +1014,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   font-weight: 400;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form {
-  margin-top: 15px;
+  margin-top: 18px;
   display: flex;
   flex-direction: column;
 }
@@ -943,7 +1057,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   font-weight: 400;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form {
-  margin-top: 15px;
+  margin-top: 13.5px;
   display: flex;
   flex-direction: column;
 }
@@ -974,9 +1088,6 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   font-size: 16px;
   font-weight: 400;
 }
-.main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container.active {
-  height: 205px;
-}
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container {
   display: flex;
   flex-direction: row;
@@ -1002,6 +1113,111 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   top: 50%;
   transform: translate(0, -50%);
   cursor: pointer;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container {
+  width: 100%;
+  height: 200px;
+  max-width: 1120px;
+  margin-top: 17px;
+  padding: 20px 30px;
+  background-color: #f2faff;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper {
+  padding: 40px 45px;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider {
+  margin-top: 25px;
+  position: relative;
+  width: 100%;
+  height: 26px;
+  background: #d9d9d9;
+  border-radius: 13px;
+  margin-top: 25px;
+  padding: 0;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .slider-track {
+  height: 100%;
+  position: absolute;
+  background-color: #a9c9e0;
+  border-radius: 13px;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider input {
+  position: absolute;
+  width: 100%;
+  max-width: 970px;
+  background: none;
+  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  z-index: 5;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 27px;
+  height: 26px;
+  border-radius: 50%;
+  background: #363636;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider input::-moz-range-thumb {
+  width: 27px;
+  height: 26px;
+  border-radius: 50%;
+  background: #363636;
+  cursor: pointer;
+  -moz-appearance: none;
+  pointer-events: auto;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .tooltip {
+  padding: 8px 7px;
+  width: 80px;
+  height: 32px;
+  border: 0;
+  background: #ffffff;
+  border: 0.5px solid #000;
+  font-size: 16px;
+  border-radius: 10px;
+  display: block;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 5;
+  transform: translateX(-50%);
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .min-tooltip {
+  margin-top: -17px;
+  top: -120%;
+  left: 0;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .max-tooltip {
+  margin-top: 17px;
+  top: 100%;
+  left: 0;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .stick {
+  box-sizing: border-box;
+  width: 1px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .min-stick {
+  left: 0;
+  top: -120%;
+}
+.main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .max-stick {
+  left: 0;
+  top: 10px;
 }
 .main-container .sort-wrapper {
   margin-bottom: 63px;
@@ -1047,7 +1263,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   width: 100%;
   max-width: 550px;
   margin-top: 17px;
-  padding: 27.5px 15px 30px;
+  padding: 27.5px 30px;
   background-color: #f2faff;
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container h2 {
@@ -1055,14 +1271,14 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   font-weight: 400;
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form {
-  margin-top: 15px;
+  margin-top: 13.5px;
   display: flex;
   flex-direction: column;
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item {
   display: flex;
   align-items: center;
-  margin-bottom: 8.25px;
+  margin-bottom: 10px;
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input[type=radio] {
   -webkit-appearance: none;
@@ -1088,6 +1304,9 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form {
   margin-top: 0;
+}
+.main-container .map-section {
+  margin-bottom: 86px;
 }
 .main-container .cards {
   display: grid;
@@ -1153,4 +1372,221 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   width: 12px;
   height: 22px;
   cursor: pointer;
+}
+
+.error-content {
+  width: 100%;
+  margin: 117px 0 98px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error-content .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error-content .error-container img {
+  width: 211px;
+  height: 88px;
+  margin-bottom: 28px;
+}
+.error-content .error-container h3 {
+  width: 210px;
+  margin-bottom: 28px;
+  padding: 11px 7px 7px 6px;
+  border: solid 1px #a9c9e0;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+}
+.error-content .error-container p {
+  margin-bottom: 2px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+}
+.error-content .error-container a {
+  margin-top: 41px;
+}
+.error-content .error-container a button {
+  background-color: #085791;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  width: 240px;
+}
+.error-content .error-container a button:hover {
+  background-color: #0b71bc;
+}
+
+.bibliography-content {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+.bibliography-content .bibliography-box {
+  margin: 46px 0 70px;
+}
+@media only screen and (max-width: 1020px) {
+  .bibliography-content .bibliography-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.bibliography-content .bibliography-box h3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 26px;
+  padding-bottom: 4px;
+  border-bottom: solid 1px #a9c9e0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #3e3e3e;
+}
+.bibliography-content .bibliography-box .cards {
+  margin-bottom: 51px;
+  display: grid;
+  grid-template-columns: repeat(2, 442px);
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1020px) {
+  .bibliography-content .bibliography-box .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.bibliography-content .bibliography-box .cards .card {
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 20px 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.bibliography-content .bibliography-box .cards .card p {
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+}
+.bibliography-content .bibliography-box .cards .card p a {
+  all: unset;
+  color: #085791;
+}
+.bibliography-content .bibliography-box .page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bibliography-content .bibliography-box .page-container .pages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bibliography-content .bibliography-box .page-container .pages #leftArrow {
+  width: 12px;
+  height: 22px;
+  transform: rotate(180deg);
+  margin-right: 5px;
+  cursor: pointer;
+}
+.bibliography-content .bibliography-box .page-container .pages .numbers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bibliography-content .bibliography-box .page-container .pages .numbers span {
+  margin-right: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}
+.bibliography-content .bibliography-box .page-container .pages .numbers .spot {
+  padding-bottom: 12.5px;
+  color: #3e3e3e;
+}
+.bibliography-content .bibliography-box .page-container .pages .numbers .current {
+  background-color: #a9c9e0;
+}
+.bibliography-content .bibliography-box .page-container .pages #rightArrow {
+  width: 12px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.place-info-wrapper {
+  padding: 70px 0;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+.place-info-wrapper h2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  color: #3e3e3e;
+  margin-bottom: 26px;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #a9c9e0;
+  font-weight: 500;
+  line-height: 24px;
+}
+.place-info-wrapper section {
+  font-weight: 400;
+}
+.place-info-wrapper section h3 {
+  font-size: 18px;
+  line-height: 21.6px;
+  padding: 10px;
+  width: 100%;
+  background-color: #a9c9e0;
+}
+.place-info-wrapper section p {
+  font-size: 16px;
+  padding: 10px;
+  line-height: 19.2px;
+  background-color: #f2faff;
+}
+.place-info-wrapper section img {
+  width: 32px;
+  margin: 10px 0 10px 10px;
+  cursor: pointer;
+}
+.place-info-wrapper section ul {
+  background-color: #f2faff;
+  padding: 10px 35px;
+  list-style: disc;
+}
+.place-info-wrapper section li {
+  font-size: 16px;
+  line-height: 19.2px;
+}
+.place-info-wrapper section a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19.2px;
+}
+.place-info-wrapper section .place-info-div {
+  background-color: #f2faff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.place-info-wrapper section .link-text {
+  padding-bottom: 0;
+}
+.place-info-wrapper section .link-list {
+  padding-top: 0;
+}
+.place-info-wrapper .map-section {
+  margin-bottom: 59px;
 }/*# sourceMappingURL=global.css.map */

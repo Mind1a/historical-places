@@ -43,19 +43,19 @@ footer {
                 color: #a9c9e0;
             }
 
-             & > div{
+                div{
                 margin-bottom: 10px;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
 
-                & > img{
+                img{
                     width: 18px;
                     height: 18px;
                     margin: 0 27px 0 0;
                 }
 
-                & > a{
+                a{
                     all: unset;
                     font-size: 20px;
                     font-weight: 300;
