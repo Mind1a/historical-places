@@ -206,6 +206,7 @@ header .logo {
   font-weight: 900;
   letter-spacing: 1px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 header .logo .line1 {
   color: #085791;
@@ -312,6 +313,7 @@ footer .footer-container .contact-container div a {
   font-size: 20px;
   font-weight: 300;
   color: #fff;
+  cursor: pointer;
 }
 footer .footer-container .logo-container {
   display: flex;
