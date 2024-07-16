@@ -206,6 +206,7 @@ header .logo {
   font-weight: 900;
   letter-spacing: 1px;
   flex-shrink: 0;
+  cursor: pointer;
 }
 header .logo .line1 {
   color: #085791;
