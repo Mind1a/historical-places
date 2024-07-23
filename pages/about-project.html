@@ -26,6 +26,11 @@
     <!-- website title -->
     <title>Historical Places</title>
 
+    <!-- i18next links -->
+    <script src="https://unpkg.com/i18next@21.6.12/dist/umd/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.5.2/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.0/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+
     <!-- css link -->
     <link rel="stylesheet" href="../styles/css/global.css" />
   </head>
@@ -45,12 +50,27 @@
         <div class="navigation">
           <nav>
             <ul>
-              <li><a href="../index.html" class="nav-button">მთავარი</a></li>
               <li>
-                <a href="./list-of-places.html" class="nav-button">ადგილები</a>
+                <a
+                  data-i18n="header.navigation.home"
+                  href="../index.html"
+                  class="nav-button"
+                  >მთავარი</a
+                >
               </li>
               <li>
-                <a href="./bibliography.html" class="nav-button"
+                <a
+                  data-i18n="header.navigation.places"
+                  href="./list-of-places.html"
+                  class="nav-button"
+                  >ადგილები</a
+                >
+              </li>
+              <li>
+                <a
+                  data-i18n="header.navigation.bibliography"
+                  href="./bibliography.html"
+                  class="nav-button"
                   >ბიბლიოგრაფია</a
                 >
               </li>
@@ -62,7 +82,20 @@
               src="../assets/loop-icon.svg"
               alt="loop-icon"
             />
-            <input type="text" placeholder="ძიება" />
+            <input
+              type="text"
+              data-i18n="[placeholder]header.navigation.searchPlaceholder"
+              placeholder="ძიება"
+            />
+          </div>
+
+          <!-- Switch Language -->
+          <div class="language-switch">
+            <!-- Switch to English Button -->
+            <button id="switch-to-english">EN</button>
+
+            <!-- Switch to Georgian Button -->
+            <button id="switch-to-georgian">KA</button>
           </div>
         </div>
       </div>
@@ -74,11 +107,11 @@
       <section class="about-project">
         <div class="container">
           <!-- Heading -->
-          <h3>პროექტის შესახებ</h3>
+          <h3 data-i18n="about-project.heading">პროექტის შესახებ</h3>
 
           <!-- Content -->
           <div class="about-project-content">
-            <p>
+            <p data-i18n="about-project.about-project-content.paragraph">
               ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა შეუკავებიათო.
               შევცვალო უპოვნია საკმელს წაბლიანს შინაბერებს, ფისტონ, ბიჭებსაც
               დილაზე გათავისუფლების ჭვავის ლაქას ჩაეკვეტოთ, მოქაჩა მთლიანადაა.
@@ -86,7 +119,7 @@
               გადავქექეთ, სარგებლობა ფისტონის იცვალა შევცვალო.
             </p>
 
-            <p>
+            <p data-i18n="about-project.about-project-content.paragraph">
               ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა შეუკავებიათო.
               შევცვალო უპოვნია საკმელს წაბლიანს შინაბერებს, მოღანი ფისტონის,
               ბიჭებსაც დილაზე გათავისუფლების ჭვავის ლაქას ჩაეკვეტოთ, მოქაჩა
@@ -94,7 +127,7 @@
               მოუდგა გადავქექეთ, სარგებლობა ფისტონის იცვალა შევცვალო.
             </p>
 
-            <p>
+            <p data-i18n="about-project.about-project-content.paragraph">
               ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა შეუკავებიათო.
               შევცვალო უპოვნია საკმელს წაბლიანს შინაბერებს, მოღალულნი ფისტონის,
               ვეტოთ, მოქაჩა მთლიანადაა. კოვზს ვეტყვით იმისმა წუხდებით სპორტიდან
@@ -108,14 +141,20 @@
       <section class="team-members">
         <div class="container">
           <!-- Heading -->
-          <h3>გუნდის წევრები</h3>
+          <h3 data-i18n="team-members.heading">გუნდის წევრები</h3>
 
           <div class="team-members-blocks-wrapper">
             <!-- Block 1 -->
             <div class="team-members-block">
-              <h4>გიორგი გიორგაძე</h4>
-              <p>პროექტის ხელმძღვანელი</p>
-              <p>ლორემ იფსუმ</p>
+              <h4 data-i18n="team-members.team-members-block.firstname">
+                გიორგი გიორგაძე
+              </h4>
+              <p data-i18n="team-members.team-members-block.position">
+                პროექტის ხელმძღვანელი
+              </p>
+              <p data-i18n="team-members.team-members-block.info">
+                ლორემ იფსუმ
+              </p>
 
               <div class="email">
                 <img src="../assets/email-icon.svg" alt="email-icon" />
@@ -129,9 +168,15 @@
 
             <!-- Block 2 -->
             <div class="team-members-block">
-              <h4>გიორგი გიორგაძე</h4>
-              <p>პროექტის ხელმძღვანელი</p>
-              <p>ლორემ იფსუმ</p>
+              <h4 data-i18n="team-members.team-members-block.firstname">
+                გიორგი გიორგაძე
+              </h4>
+              <p data-i18n="team-members.team-members-block.position">
+                პროექტის ხელმძღვანელი
+              </p>
+              <p data-i18n="team-members.team-members-block.info">
+                ლორემ იფსუმ
+              </p>
 
               <div class="email">
                 <img src="../assets/email-icon.svg" alt="email-icon" />
@@ -145,9 +190,15 @@
 
             <!-- Block 3 -->
             <div class="team-members-block">
-              <h4>გიორგი გიორგაძე</h4>
-              <p>პროექტის ხელმძღვანელი</p>
-              <p>ლორემ იფსუმ</p>
+              <h4 data-i18n="team-members.team-members-block.firstname">
+                გიორგი გიორგაძე
+              </h4>
+              <p data-i18n="team-members.team-members-block.position">
+                პროექტის ხელმძღვანელი
+              </p>
+              <p data-i18n="team-members.team-members-block.info">
+                ლორემ იფსუმ
+              </p>
 
               <div class="email">
                 <img src="../assets/email-icon.svg" alt="email-icon" />
@@ -161,9 +212,15 @@
 
             <!-- Block 4 -->
             <div class="team-members-block">
-              <h4>გიორგი გიორგაძე</h4>
-              <p>პროექტის ხელმძღვანელი</p>
-              <p>ლორემ იფსუმ</p>
+              <h4 data-i18n="team-members.team-members-block.firstname">
+                გიორგი გიორგაძე
+              </h4>
+              <p data-i18n="team-members.team-members-block.position">
+                პროექტის ხელმძღვანელი
+              </p>
+              <p data-i18n="team-members.team-members-block.info">
+                ლორემ იფსუმ
+              </p>
 
               <div class="email">
                 <img src="../assets/email-icon.svg" alt="email-icon" />
@@ -183,7 +240,7 @@
     <footer>
       <div class="footer-container">
         <div class="contact-container">
-          <h4>კონტაქტი:</h4>
+          <h4 data-i18n="footer.contact">კონტაქტი:</h4>
           <div>
             <img src="../assets/phone-icon.svg" alt="phone icon" />
             <a href="tel:+995322220009">(+995 32) 222 00 09</a>
@@ -214,7 +271,9 @@
       </div>
     </footer>
 
-    <!-- JavaScript link -->
+    <!-- JavaScript links -->
     <script src="../js/script.js"></script>
+    <script src="../js/switch-language.js"></script>
+    <script src="../js/about.js"></script>
   </body>
 </html>

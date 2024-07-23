@@ -1,0 +1,18 @@
+{
+  "header": {
+    "navigation": {
+      "home": "მთავარი",
+      "places": "ადგილები",
+      "bibliography": "ბიბლიოგრაფია",
+      "searchPlaceholder": "ძიება"
+    }
+  },
+
+  "error-content": {
+    "return-button": "მთავარ გვერდზე დაბრუნება"
+  },
+
+  "footer": {
+    "contact": "კონტაქტი:"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "header": {
+    "navigation": {
+      "home": "მთავარი",
+      "places": "ადგილები",
+      "bibliography": "ბიბლიოგრაფია",
+      "searchPlaceholder": "ძიება"
+    }
+  },
+
+  "bibliography-content": {
+    "heading": "ბიბლიოგრაფია",
+
+    "card": {
+      "title": "სათაური:",
+      "title-content": "ლორემ იფსუმ დოლორ თართი მოვიდა",
+      "author": "ავტორი: გიორგი გიორგაძე",
+      "publisher": "გამომცემლობა: ლორემ იფსუმ",
+      "publishing-year": "გამოცემის წელი: 1234",
+      "publishing-place": "გამოცემის ადგილი: ლორემ",
+      "language": "ენა: ლორემ",
+      "Abbreviation": "აბრევიაცია: ლორემ იფსუმ დოლორ"
+    }
+  },
+
+  "footer": {
+    "contact": "კონტაქტი:"
+  }
+}

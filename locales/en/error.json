@@ -1,0 +1,18 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Home",
+      "places": "Places",
+      "bibliography": "Bibliography",
+      "searchPlaceholder": "Search"
+    }
+  },
+
+  "error-content": {
+    "return-button": "Go to Home Page"
+  },
+
+  "footer": {
+    "contact": "Contact:"
+  }
+}

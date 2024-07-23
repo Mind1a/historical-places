@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<<<<<<< Updated upstream
     <!-- seo meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,11 +24,14 @@
     <meta name="twitter:site" content="" />
 
     <!-- website title -->
-=======
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
->>>>>>> Stashed changes
     <title>Historical Places</title>
+
+    <!-- i18next links -->
+    <script src="https://unpkg.com/i18next@21.6.12/dist/umd/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.5.2/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.0/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
 
     <!-- css link -->
     <link rel="stylesheet" href="../styles/css/global.css" />
@@ -48,12 +50,27 @@
         <div class="navigation">
           <nav>
             <ul>
-              <li><a href="../index.html" class="nav-button">მთავარი</a></li>
               <li>
-                <a href="./list-of-places.html" class="nav-button">ადგილები</a>
+                <a
+                  data-i18n="header.navigation.home"
+                  href="../index.html"
+                  class="nav-button"
+                  >მთავარი</a
+                >
               </li>
               <li>
-                <a href="./bibliography.html" class="nav-button"
+                <a
+                  data-i18n="header.navigation.places"
+                  href="./list-of-places.html"
+                  class="nav-button"
+                  >ადგილები</a
+                >
+              </li>
+              <li>
+                <a
+                  data-i18n="header.navigation.bibliography"
+                  href="./bibliography.html"
+                  class="nav-button"
                   >ბიბლიოგრაფია</a
                 >
               </li>
@@ -65,27 +82,24 @@
               src="../assets/loop-icon.svg"
               alt="loop-icon"
             />
-            <input type="text" placeholder="ძიება" />
+            <input
+              data-i18n="[placeholder]header.navigation.searchPlaceholder"
+              type="text"
+              placeholder="ძიება"
+            />
+          </div>
+
+          <!-- Switch Language -->
+          <div class="language-switch">
+            <!-- Switch to English Button -->
+            <button id="switch-to-english">EN</button>
+
+            <!-- Switch to Georgian Button -->
+            <button id="switch-to-georgian">KA</button>
           </div>
         </div>
       </div>
     </header>
-<<<<<<< Updated upstream
-    <!-- main content -->
-    <main class="error-content">
-      <div class="error-container">
-        <img src="../assets/icon-404.svg" alt="error 404 icon" />
-        <h3>ERROR</h3>
-        <p>Page not found</p>
-        <p>გვერდი ვერ მოიძებნა</p>
-        <a href="../index.html">
-          <button>მთავარ გვერდზე დაბრუნება</button>
-        </a>
-      </div>
-    </main>
-<<<<<<< HEAD
-
-=======
 
     <!-- main content -->
     <main class="error-content">
@@ -95,19 +109,18 @@
         <p>Page not found</p>
         <p>გვერდი ვერ მოიძებნა</p>
         <a href="../index.html">
-          <button>მთავარ გვერდზე დაბრუნება</button>
+          <button data-i18n="error-content.return-button">
+            მთავარ გვერდზე დაბრუნება
+          </button>
         </a>
       </div>
     </main>
 
->>>>>>> Stashed changes
-=======
->>>>>>> f98de2724caf430b104fa0a456a74e7b119f66cd
     <!-- footer -->
     <footer>
       <div class="footer-container">
         <div class="contact-container">
-          <h4>კონტაქტი:</h4>
+          <h4 data-i18n="footer.contact">კონტაქტი:</h4>
           <div>
             <img src="../assets/phone-icon.svg" alt="phone icon" />
             <a href="tel:+995322220009">(+995 32) 222 00 09</a>
@@ -138,7 +151,9 @@
       </div>
     </footer>
 
-    <!-- JavaScript link -->
+    <!-- JavaScript links -->
     <script src="../js/script.js"></script>
+    <script src="../js/switch-language.js"></script>
+    <script src="../js/error.js"></script>
   </body>
 </html>

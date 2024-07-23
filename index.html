@@ -26,6 +26,11 @@
     <!-- website title -->
     <title>Historical Places</title>
 
+    <!-- i18next links -->
+    <script src="https://unpkg.com/i18next@21.6.12/dist/umd/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.5.2/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.0/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+
     <!-- css link -->
     <link rel="stylesheet" href="./styles/css/global.css" />
   </head>
@@ -44,27 +49,54 @@
         <div class="navigation">
           <nav>
             <ul>
-              <li><a href="./index.html" class="nav-button">მთავარი</a></li>
               <li>
-                <a href="./pages/list-of-places.html" class="nav-button"
+                <a
+                  data-i18n="header.navigation.home"
+                  href="./index.html"
+                  class="nav-button"
+                  >მთავარი</a
+                >
+              </li>
+              <li>
+                <a
+                  data-i18n="header.navigation.places"
+                  href="./pages/list-of-places.html"
+                  class="nav-button"
                   >ადგილები</a
                 >
               </li>
               <li>
-                <a href="./pages/bibliography.html" class="nav-button"
+                <a
+                  data-i18n="header.navigation.bibliography"
+                  href="./pages/bibliography.html"
+                  class="nav-button"
                   >ბიბლიოგრაფია</a
                 >
               </li>
             </ul>
           </nav>
+
           <div class="search-container">
             <img
               class="loop-icon"
               src="./assets/loop-icon.svg"
               alt="loop-icon"
             />
-            <input type="text" placeholder="ძიება" />
+            <input
+              type="text"
+              data-i18n="[placeholder]list-of-places.searchPlaceholder"
+              placeholder="ძიება"
+            />
           </div>
+        </div>
+
+        <!-- Switch Language -->
+        <div class="language-switch">
+          <!-- Switch to English Button -->
+          <button id="switch-to-english">EN</button>
+
+          <!-- Switch to Georgian Button -->
+          <button id="switch-to-georgian">KA</button>
         </div>
       </div>
     </header>
@@ -92,10 +124,10 @@
       <section class="about-project">
         <div class="container">
           <!-- Heading -->
-          <h3>პროექტის შესახებ</h3>
+          <h3 data-i18n="aboutProject.title">პროექტის შესახებ</h3>
 
           <!-- Content -->
-          <p>
+          <p data-i18n="aboutProject.description">
             ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა შეუკავებიათო.
             შევცვალო უპოვნია საკმელს წაბლიანს შინაბერებს, მოღალულნი ფისტონის,
             ბიჭებსაც დილაზე გათავისუფლების ჭვავის ლაქას ჩაეკვეტოთ, მოქაჩა
@@ -105,7 +137,9 @@
 
           <!-- Button -->
           <div class="see-more">
-            <a href="./pages/about-project.html">ვრცლად</a>
+            <a data-i18n="aboutProject.button" href="./pages/about-project.html"
+              >ვრცლად</a
+            >
           </div>
         </div>
       </section>
@@ -114,42 +148,59 @@
 
       <section class="list-of-places">
         <form action="#" class="places-list-form">
-          <label for="search">ადგილების ჩამონათვალი</label>
-          <input type="text" id="search" placeholder="ძიება" />
+          <label data-i18n="list-of-places.listOfPlaces" for="search"
+            >ადგილების ჩამონათვალი</label
+          >
+          <input
+            type="text"
+            id="search"
+            data-i18n="[placeholder]list-of-places.searchPlaceholder"
+            placeholder="ძიება"
+          />
           <img src="./assets/search-icon.svg" alt="search icon" />
         </form>
         <!-- filter section -->
         <div class="filter-wrapper">
           <div class="filterBtn-container dropdown-btn">
-            <button>ფილტრი</button>
+            <button data-i18n="list-of-places.filter">ფილტრი</button>
             <img src="./assets/down-arrow.svg" alt="button arrow" />
           </div>
           <div class="filterBtn-dropdown dropdown">
             <div class="filter-dropdown-wrapper">
               <div class="place-type-container">
-                <h2>ადგილის ტიპების მიხედვით</h2>
+                <h2 data-i18n="list-of-places.typesOfPlaces">
+                  ადგილის ტიპების მიხედვით
+                </h2>
                 <form action="#" class="dropdown-form">
                   <div class="dropdown-item">
                     <input type="radio" id="option1" name="place-type" />
-                    <label for="option1">ლორემ იპსუმ</label>
+                    <label data-i18n="list-of-places.loremIpsum" for="option1"
+                      >ლორემ იპსუმ</label
+                    >
                   </div>
                   <div class="dropdown-item">
                     <input type="radio" id="option2" name="place-type" />
-                    <label for="option2">ლორემ იპსუმ</label>
+                    <label data-i18n="list-of-places.loremIpsum" for="option2"
+                      >ლორემ იპსუმ</label
+                    >
                   </div>
                   <div class="dropdown-item">
                     <input type="radio" id="option3" name="place-type" />
-                    <label for="option3">ლორემ იპსუმ</label>
+                    <label data-i18n="list-of-places.loremIpsum" for="option3"
+                      >ლორემ იპსუმ</label
+                    >
                   </div>
                   <div class="dropdown-item">
                     <input type="radio" id="option4" name="place-type" />
-                    <label for="option4">ლორემ იპსუმ</label>
+                    <label data-i18n="list-of-places.loremIpsum" for="option4"
+                      >ლორემ იპსუმ</label
+                    >
                   </div>
                 </form>
               </div>
               <div class="bibliography-container">
                 <div class="dropdown-search-container">
-                  <h2>ბიბლიოგრაფია</h2>
+                  <h2 data-i18n="list-of-places.bibliography">ბიბლიოგრაფია</h2>
                   <div class="search-div">
                     <img
                       class="loop-icon"
@@ -162,25 +213,33 @@
                 <form action="#" class="dropdown-form">
                   <div class="dropdown-item">
                     <input type="radio" id="option1" name="bibliography-type" />
-                    <label for="option1">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                    <label data-i18n="list-of-places.loremIpsum2" for="option1"
+                      >ლორემ იპსუმ დოლორ თართი მოვიდა</label
+                    >
                   </div>
                   <div class="dropdown-item">
                     <input type="radio" id="option2" name="bibliography-type" />
-                    <label for="option2">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                    <label data-i18n="list-of-places.loremIpsum2" for="option2"
+                      >ლორემ იპსუმ დოლორ თართი მოვიდა</label
+                    >
                   </div>
                   <div class="dropdown-item">
                     <input type="radio" id="option3" name="bibliography-type" />
-                    <label for="option3">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                    <label data-i18n="list-of-places.loremIpsum2" for="option3"
+                      >ლორემ იპსუმ დოლორ თართი მოვიდა</label
+                    >
                   </div>
                   <div class="dropdown-item">
                     <input type="radio" id="option4" name="bibliography-type" />
-                    <label for="option4">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                    <label data-i18n="list-of-places.loremIpsum2" for="option4"
+                      >ლორემ იპსუმ დოლორ თართი მოვიდა</label
+                    >
                   </div>
                 </form>
               </div>
             </div>
             <div class="time-range-container">
-              <h2>დროის დიაპაზონი</h2>
+              <h2 data-i18n="list-of-places.timeRange">დროის დიაპაზონი</h2>
               <div class="range-wrapper">
                 <div class="range-slider">
                   <span class="slider-track"></span>
@@ -209,10 +268,11 @@
             </div>
           </div>
         </div>
+
         <!-- sorting section -->
         <div class="sort-wrapper">
           <div class="sortBtn-container dropdown-btn">
-            <button>სორტირება</button>
+            <button data-i18n="list-of-places.sort">სორტირება</button>
             <img src="./assets/down-arrow.svg" alt="button arrow" />
           </div>
           <div class="sorting-dropdpwn-wrapper">
@@ -220,19 +280,29 @@
               <form action="#" class="dropdown-form">
                 <div class="dropdown-item">
                   <input type="radio" id="option1" name="sorting-type" />
-                  <label for="option1">ანბანურად</label>
+                  <label data-i18n="list-of-places.alphabetical" for="option1"
+                    >ანბანურად</label
+                  >
                 </div>
                 <div class="dropdown-item">
                   <input type="radio" id="option2" name="sorting-type" />
-                  <label for="option2">ანბანურად პირიქით</label>
+                  <label
+                    data-i18n="list-of-places.reverseAlphabetical"
+                    for="option2"
+                    >ანბანურად პირიქით</label
+                  >
                 </div>
                 <div class="dropdown-item">
                   <input type="radio" id="option3" name="sorting-type" />
-                  <label for="option3">თარიღულად (ახლიდან ძველისკენ)</label>
+                  <label data-i18n="list-of-places.dateAscending" for="option3"
+                    >თარიღულად (ახლიდან ძველისკენ)</label
+                  >
                 </div>
                 <div class="dropdown-item">
                   <input type="radio" id="option4" name="sorting-type" />
-                  <label for="option4">თარიღულად (ძველიდან ახლისკენ)</label>
+                  <label data-i18n="list-of-places.dateDescending" for="option4"
+                    >თარიღულად (ძველიდან ახლისკენ)</label
+                  >
                 </div>
               </form>
             </div>
@@ -244,8 +314,8 @@
           <div class="cards">
             <a href="./pages/places-inside-page.html" class="card">
               <div>
-                <h4>სათაური ლორემ</h4>
-                <p>
+                <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
+                <p data-i18n="list-of-places.loremText">
                   ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                   ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
                 </p>
@@ -253,8 +323,8 @@
             </a>
             <a href="./pages/places-inside-page.html" class="card">
               <div>
-                <h4>სათაური ლორემ</h4>
-                <p>
+                <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
+                <p data-i18n="list-of-places.loremText">
                   ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                   ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
                 </p>
@@ -262,8 +332,8 @@
             </a>
             <a href="./pages/places-inside-page.html" class="card">
               <div>
-                <h4>სათაური ლორემ</h4>
-                <p>
+                <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
+                <p data-i18n="list-of-places.loremText">
                   ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                   ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
                 </p>
@@ -271,8 +341,8 @@
             </a>
             <a href="./pages/places-inside-page.html" class="card">
               <div>
-                <h4>სათაური ლორემ</h4>
-                <p>
+                <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
+                <p data-i18n="list-of-places.loremText">
                   ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                   ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
                 </p>
@@ -301,7 +371,9 @@
             />
           </div>
           <a href="./pages/list-of-places.html">
-            <button>ყველა ადგილის ნახვა</button>
+            <button data-i18n="list-of-places.viewAllPlaces">
+              ყველა ადგილის ნახვა
+            </button>
           </a>
         </div>
       </section>
@@ -311,7 +383,7 @@
     <footer>
       <div class="footer-container">
         <div class="contact-container">
-          <h4>კონტაქტი:</h4>
+          <h4 data-i18n="footer.contact">კონტაქტი:</h4>
           <div>
             <img src="./assets/phone-icon.svg" alt="phone icon" />
             <a href="tel:+995322220009">(+995 32) 222 00 09</a>
@@ -342,7 +414,9 @@
       </div>
     </footer>
 
-    <!-- JavaScript link -->
+    <!-- JavaScript links -->
     <script src="./js/script.js"></script>
+    <script src="./js/switch-language.js"></script>
+    <script src="./js/home.js"></script>
   </body>
 </html>
