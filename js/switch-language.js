@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         debug: true,
         fallbackLng: "ka",
         backend: {
-          loadPath: loadPathTemplate,
+          loadPath: "../locales/{{lng}}/about.json",
         },
       },
       function (err, t) {
@@ -58,4 +58,30 @@ document.addEventListener("DOMContentLoaded", function () {
         updateContent();
       });
     });
+});
+
+// Change color on button clicks
+
+const geoBtn = document.getElementById("switch-to-georgian");
+const engBtn = document.getElementById("switch-to-english");
+
+// Function to handle button click
+function handleButtonClick(activeButton, inactiveButton) {
+  activeButton.classList.add("clicked");
+  activeButton.classList.remove("inactive");
+  inactiveButton.classList.add("inactive");
+  inactiveButton.classList.remove("clicked");
+}
+
+// Set initial state for buttons
+geoBtn.classList.add("clicked");
+engBtn.classList.add("inactive");
+
+// Add event listeners
+geoBtn.addEventListener("click", () => {
+  handleButtonClick(geoBtn, engBtn);
+});
+
+engBtn.addEventListener("click", () => {
+  handleButtonClick(engBtn, geoBtn);
 });

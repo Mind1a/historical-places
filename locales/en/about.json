@@ -1,32 +1,9 @@
 {
-  "header": {
-    "navigation": {
-      "home": "Home",
-      "places": "Places",
-      "bibliography": "Bibliography",
-      "searchPlaceholder": "Search"
-    }
-  },
-
   "about-project": {
-    "heading": "About Project",
+    "heading": "ABOUT THE PROJECT",
 
     "about-project-content": {
-      "paragraph": "Lorem Ipsu asked me to change the bodysuit to pure incontinence. To change, I found the incense for the chestnut housemates, the fish, and the boys also put it on the rye stain of release in the morning, Mokacha is completely. We will say to the spoon that you are worried about the loss of sports."
+      "paragraph": "Lorem ipsum dolor sit amet. Ut amet autem nam officiis obcaecati ut Quis blanditiis id delectus nostrum. Ut possimus dolorum est quam quas et recusandae saepe et quia Quis ea voluptate cumque nam tenetur sint. Et dignissimos asperiores sed laborum autem aut expedita provident. Sed magnam nostrum aut pariatur ratione ut sint fugit aut repellendus nesciunt.. "
     }
-  },
-
-  "team-members": {
-    "heading": "Team Members",
-
-    "team-members-block": {
-      "firstname": "Giorgi Giorgadze",
-      "position": "Project Supervisor",
-      "info": "Lorem Ipsum"
-    }
-  },
-
-  "footer": {
-    "contact": "Contact:"
   }
 }

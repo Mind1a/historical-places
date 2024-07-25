@@ -33,6 +33,35 @@
 
     <!-- css link -->
     <link rel="stylesheet" href="../styles/css/global.css" />
+
+    <!-- css styles -->
+    <style>
+      .about-project .heading {
+        display: flex;
+        align-items: center;
+        column-gap: 14px;
+      }
+
+      .about-project .heading .switch-language span {
+        cursor: pointer;
+        color: #959595;
+      }
+
+      .about-project .heading .switch-language span:first-child {
+        border-right: 1px solid #363636;
+        padding-right: 4px;
+      }
+
+      #switch-to-english.clicked,
+      #switch-to-georgian.clicked {
+        color: #363636;
+      }
+
+      #switch-to-english.inactive,
+      #switch-to-georgian.inactive {
+        color: #959595;
+      }
+    </style>
   </head>
 
   <body>
@@ -51,26 +80,13 @@
           <nav>
             <ul>
               <li>
-                <a
-                  data-i18n="header.navigation.home"
-                  href="../index.html"
-                  class="nav-button"
-                  >მთავარი</a
-                >
+                <a href="../index.html" class="nav-button">მთავარი</a>
               </li>
               <li>
-                <a
-                  data-i18n="header.navigation.places"
-                  href="./list-of-places.html"
-                  class="nav-button"
-                  >ადგილები</a
-                >
+                <a href="./list-of-places.html" class="nav-button">ადგილები</a>
               </li>
               <li>
-                <a
-                  data-i18n="header.navigation.bibliography"
-                  href="./bibliography.html"
-                  class="nav-button"
+                <a href="./bibliography.html" class="nav-button"
                   >ბიბლიოგრაფია</a
                 >
               </li>
@@ -82,20 +98,7 @@
               src="../assets/loop-icon.svg"
               alt="loop-icon"
             />
-            <input
-              type="text"
-              data-i18n="[placeholder]header.navigation.searchPlaceholder"
-              placeholder="ძიება"
-            />
-          </div>
-
-          <!-- Switch Language -->
-          <div class="language-switch">
-            <!-- Switch to English Button -->
-            <button id="switch-to-english">EN</button>
-
-            <!-- Switch to Georgian Button -->
-            <button id="switch-to-georgian">KA</button>
+            <input type="text" placeholder="ძიება" />
           </div>
         </div>
       </div>
@@ -107,7 +110,13 @@
       <section class="about-project">
         <div class="container">
           <!-- Heading -->
-          <h3 data-i18n="about-project.heading">პროექტის შესახებ</h3>
+          <div class="heading">
+            <h3 data-i18n="about-project.heading">პროექტის შესახებ</h3>
+            <div class="switch-language">
+              <span id="switch-to-english">EN</span>
+              <span id="switch-to-georgian" class="clicked">GEO</span>
+            </div>
+          </div>
 
           <!-- Content -->
           <div class="about-project-content">
@@ -141,20 +150,14 @@
       <section class="team-members">
         <div class="container">
           <!-- Heading -->
-          <h3 data-i18n="team-members.heading">გუნდის წევრები</h3>
+          <h3>გუნდის წევრები</h3>
 
           <div class="team-members-blocks-wrapper">
             <!-- Block 1 -->
             <div class="team-members-block">
-              <h4 data-i18n="team-members.team-members-block.firstname">
-                გიორგი გიორგაძე
-              </h4>
-              <p data-i18n="team-members.team-members-block.position">
-                პროექტის ხელმძღვანელი
-              </p>
-              <p data-i18n="team-members.team-members-block.info">
-                ლორემ იფსუმ
-              </p>
+              <h4>გიორგი გიორგაძე</h4>
+              <p>პროექტის ხელმძღვანელი</p>
+              <p>ლორემ იფსუმ</p>
 
               <div class="email">
                 <img src="../assets/email-icon.svg" alt="email-icon" />
@@ -168,15 +171,9 @@
 
             <!-- Block 2 -->
             <div class="team-members-block">
-              <h4 data-i18n="team-members.team-members-block.firstname">
-                გიორგი გიორგაძე
-              </h4>
-              <p data-i18n="team-members.team-members-block.position">
-                პროექტის ხელმძღვანელი
-              </p>
-              <p data-i18n="team-members.team-members-block.info">
-                ლორემ იფსუმ
-              </p>
+              <h4>გიორგი გიორგაძე</h4>
+              <p>პროექტის ხელმძღვანელი</p>
+              <p>ლორემ იფსუმ</p>
 
               <div class="email">
                 <img src="../assets/email-icon.svg" alt="email-icon" />
@@ -190,15 +187,9 @@
 
             <!-- Block 3 -->
             <div class="team-members-block">
-              <h4 data-i18n="team-members.team-members-block.firstname">
-                გიორგი გიორგაძე
-              </h4>
-              <p data-i18n="team-members.team-members-block.position">
-                პროექტის ხელმძღვანელი
-              </p>
-              <p data-i18n="team-members.team-members-block.info">
-                ლორემ იფსუმ
-              </p>
+              <h4>გიორგი გიორგაძე</h4>
+              <p>პროექტის ხელმძღვანელი</p>
+              <p>ლორემ იფსუმ</p>
 
               <div class="email">
                 <img src="../assets/email-icon.svg" alt="email-icon" />
@@ -212,15 +203,9 @@
 
             <!-- Block 4 -->
             <div class="team-members-block">
-              <h4 data-i18n="team-members.team-members-block.firstname">
-                გიორგი გიორგაძე
-              </h4>
-              <p data-i18n="team-members.team-members-block.position">
-                პროექტის ხელმძღვანელი
-              </p>
-              <p data-i18n="team-members.team-members-block.info">
-                ლორემ იფსუმ
-              </p>
+              <h4>გიორგი გიორგაძე</h4>
+              <p>პროექტის ხელმძღვანელი</p>
+              <p>ლორემ იფსუმ</p>
 
               <div class="email">
                 <img src="../assets/email-icon.svg" alt="email-icon" />
@@ -240,7 +225,7 @@
     <footer>
       <div class="footer-container">
         <div class="contact-container">
-          <h4 data-i18n="footer.contact">კონტაქტი:</h4>
+          <h4>კონტაქტი:</h4>
           <div>
             <img src="../assets/phone-icon.svg" alt="phone icon" />
             <a href="tel:+995322220009">(+995 32) 222 00 09</a>

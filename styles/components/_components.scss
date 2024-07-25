@@ -5,8 +5,12 @@
   .container {
     @include container;
 
-    h3 {
-      @extend %global-h3;
+    .heading {
+      display: flex;
+
+      h3 {
+        @extend %global-h3;
+      }
     }
 
     p {

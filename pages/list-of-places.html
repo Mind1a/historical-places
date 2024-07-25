@@ -49,26 +49,13 @@
           <nav>
             <ul>
               <li>
-                <a
-                  data-i18n="header.navigation.home"
-                  href="../index.html"
-                  class="nav-button"
-                  >მთავარი</a
-                >
+                <a href="../index.html" class="nav-button">მთავარი</a>
               </li>
               <li>
-                <a
-                  data-i18n="header.navigation.places"
-                  href="./list-of-places.html"
-                  class="nav-button"
-                  >ადგილები</a
-                >
+                <a href="./list-of-places.html" class="nav-button">ადგილები</a>
               </li>
               <li>
-                <a
-                  data-i18n="header.navigation.bibliography"
-                  href="./bibliography.html"
-                  class="nav-button"
+                <a href="./bibliography.html" class="nav-button"
                   >ბიბლიოგრაფია</a
                 >
               </li>
@@ -80,20 +67,7 @@
               src="../assets/loop-icon.svg"
               alt="loop-icon"
             />
-            <input
-              data-i18n="[placeholder]header.navigation.searchPlaceholder"
-              type="text"
-              placeholder="ძიება"
-            />
-          </div>
-
-          <!-- Switch Language -->
-          <div class="language-switch">
-            <!-- Switch to English Button -->
-            <button id="switch-to-english">EN</button>
-
-            <!-- Switch to Georgian Button -->
-            <button id="switch-to-georgian">KA</button>
+            <input type="text" placeholder="ძიება" />
           </div>
         </div>
       </div>
@@ -106,57 +80,42 @@
         <!-- search form -->
 
         <form action="#" class="places-list-form">
-          <input
-            data-i18n="[placeholder]main-container.search"
-            type="text"
-            id="search"
-            placeholder="ძიება"
-          />
+          <input type="text" id="search" placeholder="ძიება" />
           <img src="../assets/search-icon.svg" alt="search icon" />
         </form>
         <!-- filter section -->
 
         <div class="filter-wrapper">
           <div class="filterBtn-container dropdown-btn">
-            <button data-i18n="list-of-places.filter">ფილტრი</button>
+            <button>ფილტრი</button>
             <img src="../assets/down-arrow.svg" alt="button arrow" />
           </div>
           <div class="filterBtn-dropdown dropdown">
             <div class="filter-dropdown-wrapper">
               <div class="place-type-container">
-                <h2 data-i18n="list-of-places.typesOfPlaces">
-                  ადგილის ტიპების მიხედვით
-                </h2>
+                <h2>ადგილის ტიპების მიხედვით</h2>
                 <form action="#" class="dropdown-form">
                   <div class="place-type-item dropdown-item">
                     <input type="radio" id="option1" name="place-type" />
-                    <label data-i18n="list-of-places.loremIpsum" for="option1"
-                      >ლორემ იპსუმ</label
-                    >
+                    <label for="option1">ლორემ იპსუმ</label>
                   </div>
                   <div class="place-type-item dropdown-item">
                     <input type="radio" id="option2" name="place-type" />
-                    <label data-i18n="list-of-places.loremIpsum" for="option2"
-                      >ლორემ იპსუმ</label
-                    >
+                    <label for="option2">ლორემ იპსუმ</label>
                   </div>
                   <div class="place-type-item dropdown-item">
                     <input type="radio" id="option3" name="place-type" />
-                    <label data-i18n="list-of-places.loremIpsum" for="option3"
-                      >ლორემ იპსუმ</label
-                    >
+                    <label for="option3">ლორემ იპსუმ</label>
                   </div>
                   <div class="place-type-item dropdown-item">
                     <input type="radio" id="option4" name="place-type" />
-                    <label data-i18n="list-of-places.loremIpsum" for="option4"
-                      >ლორემ იპსუმ</label
-                    >
+                    <label for="option4">ლორემ იპსუმ</label>
                   </div>
                 </form>
               </div>
               <div class="bibliography-container">
                 <div class="dropdown-search-container">
-                  <h2 data-i18n="list-of-places.bibliography">ბიბლიოგრაფია</h2>
+                  <h2>ბიბლიოგრაფია</h2>
                   <div class="search-div">
                     <img
                       class="loop-icon"
@@ -169,34 +128,26 @@
                 <form action="#" class="dropdown-form">
                   <div class="bibliography-item dropdown-item">
                     <input type="radio" id="option1" name="bibliography-type" />
-                    <label data-i18n="list-of-places.loremIpsum2" for="option1"
-                      >ლორემ იპსუმ დოლორ თართი მოვიდა</label
-                    >
+                    <label for="option1">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
                   </div>
                   <div class="bibliography-item dropdown-item">
                     <input type="radio" id="option2" name="bibliography-type" />
-                    <label data-i18n="list-of-places.loremIpsum2" for="option2"
-                      >ლორემ იპსუმ დოლორ თართი მოვიდა</label
-                    >
+                    <label for="option2">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
                   </div>
                   <div class="bibliography-item dropdown-item">
                     <input type="radio" id="option3" name="bibliography-type" />
-                    <label data-i18n="list-of-places.loremIpsum2" for="option3"
-                      >ლორემ იპსუმ დოლორ თართი მოვიდა</label
-                    >
+                    <label for="option3">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
                   </div>
                   <div class="bibliography-item dropdown-item">
                     <input type="radio" id="option4" name="bibliography-type" />
-                    <label data-i18n="list-of-places.loremIpsum2" for="option4"
-                      >ლორემ იპსუმ დოლორ თართი მოვიდა</label
-                    >
+                    <label for="option4">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
                   </div>
                 </form>
               </div>
             </div>
 
             <div class="time-range-container">
-              <h2 data-i18n="list-of-places.timeRange">დროის დიაპაზონი</h2>
+              <h2>დროის დიაპაზონი</h2>
               <div class="range-wrapper">
                 <div class="range-slider">
                   <span class="slider-track"></span>
@@ -228,7 +179,7 @@
         <!-- sorting section -->
         <div class="sort-wrapper">
           <div class="sortBtn-container dropdown-btn">
-            <button data-i18n="list-of-places.sort">სორტირება</button>
+            <button>სორტირება</button>
             <img src="../assets/down-arrow.svg" alt="button arrow" />
           </div>
           <div class="sorting-dropdpwn-wrapper">
@@ -236,29 +187,19 @@
               <form action="#" class="dropdown-form">
                 <div class="dropdown-item">
                   <input type="radio" id="option1" name="sorting-type" />
-                  <label data-i18n="list-of-places.alphabetical" for="option1"
-                    >ანბანურად</label
-                  >
+                  <label for="option1">ანბანურად</label>
                 </div>
                 <div class="dropdown-item">
                   <input type="radio" id="option2" name="sorting-type" />
-                  <label
-                    data-i18n="list-of-places.reverseAlphabetical"
-                    for="option2"
-                    >ანბანურად პირიქით</label
-                  >
+                  <label for="option2">ანბანურად პირიქით</label>
                 </div>
                 <div class="dropdown-item">
                   <input type="radio" id="option3" name="sorting-type" />
-                  <label data-i18n="list-of-places.dateAscending" for="option3"
-                    >თარიღულად (ახლიდან ძველისკენ)</label
-                  >
+                  <label for="option3">თარიღულად (ახლიდან ძველისკენ)</label>
                 </div>
                 <div class="dropdown-item">
                   <input type="radio" id="option4" name="sorting-type" />
-                  <label data-i18n="list-of-places.dateDescending" for="option4"
-                    >თარიღულად (ძველიდან ახლისკენ)</label
-                  >
+                  <label for="option4">თარიღულად (ძველიდან ახლისკენ)</label>
                 </div>
               </form>
             </div>
@@ -286,8 +227,8 @@
         <div class="cards">
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -295,8 +236,8 @@
           </a>
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -304,8 +245,8 @@
           </a>
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -313,45 +254,8 @@
           </a>
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
-                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
-                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
-              </p>
-            </div>
-          </a>
-
-          <a href="./places-inside-page.html" class="card">
-            <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
-                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
-                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
-              </p>
-            </div>
-          </a>
-          <a href="./places-inside-page.html" class="card">
-            <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
-                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
-                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
-              </p>
-            </div>
-          </a>
-          <a href="./places-inside-page.html" class="card">
-            <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
-                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
-                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
-              </p>
-            </div>
-          </a>
-          <a href="./places-inside-page.html" class="card">
-            <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -360,8 +264,8 @@
 
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -369,8 +273,8 @@
           </a>
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -378,8 +282,8 @@
           </a>
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -387,45 +291,8 @@
           </a>
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
-                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
-                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
-              </p>
-            </div>
-          </a>
-
-          <a href="./places-inside-page.html" class="card">
-            <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
-                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
-                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
-              </p>
-            </div>
-          </a>
-          <a href="./places-inside-page.html" class="card">
-            <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
-                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
-                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
-              </p>
-            </div>
-          </a>
-          <a href="./places-inside-page.html" class="card">
-            <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
-                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
-                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
-              </p>
-            </div>
-          </a>
-          <a href="./places-inside-page.html" class="card">
-            <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -434,8 +301,8 @@
 
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -443,8 +310,8 @@
           </a>
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -452,8 +319,8 @@
           </a>
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -461,8 +328,82 @@
           </a>
           <a href="./places-inside-page.html" class="card">
             <div>
-              <h4 data-i18n="list-of-places.loremHeading">სათაური ლორემ</h4>
-              <p data-i18n="list-of-places.loremText">
+              <h4>სათაური ლორემ</h4>
+              <p>
+                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
+                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+              </p>
+            </div>
+          </a>
+
+          <a href="./places-inside-page.html" class="card">
+            <div>
+              <h4>სათაური ლორემ</h4>
+              <p>
+                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
+                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+              </p>
+            </div>
+          </a>
+          <a href="./places-inside-page.html" class="card">
+            <div>
+              <h4>სათაური ლორემ</h4>
+              <p>
+                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
+                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+              </p>
+            </div>
+          </a>
+          <a href="./places-inside-page.html" class="card">
+            <div>
+              <h4>სათაური ლორემ</h4>
+              <p>
+                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
+                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+              </p>
+            </div>
+          </a>
+          <a href="./places-inside-page.html" class="card">
+            <div>
+              <h4>სათაური ლორემ</h4>
+              <p>
+                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
+                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+              </p>
+            </div>
+          </a>
+
+          <a href="./places-inside-page.html" class="card">
+            <div>
+              <h4>სათაური ლორემ</h4>
+              <p>
+                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
+                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+              </p>
+            </div>
+          </a>
+          <a href="./places-inside-page.html" class="card">
+            <div>
+              <h4>სათაური ლორემ</h4>
+              <p>
+                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
+                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+              </p>
+            </div>
+          </a>
+          <a href="./places-inside-page.html" class="card">
+            <div>
+              <h4>სათაური ლორემ</h4>
+              <p>
+                ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
+                ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
+              </p>
+            </div>
+          </a>
+          <a href="./places-inside-page.html" class="card">
+            <div>
+              <h4>სათაური ლორემ</h4>
+              <p>
                 ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა ფისტონის,
                 ლორემ იფსუმ არუნდა გათიშვა ბიჭებსა ლაქას ჩაეკვეტოთ.
               </p>
@@ -500,7 +441,7 @@
     <footer>
       <div class="footer-container">
         <div class="contact-container">
-          <h4 data-i18n="footer.contact">კონტაქტი:</h4>
+          <h4>კონტაქტი:</h4>
           <div>
             <img src="../assets/phone-icon.svg" alt="phone icon" />
             <a href="tel:+995322220009">(+995 32) 222 00 09</a>
