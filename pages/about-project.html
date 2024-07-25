@@ -26,8 +26,42 @@
     <!-- website title -->
     <title>Historical Places</title>
 
+    <!-- i18next links -->
+    <script src="https://unpkg.com/i18next@21.6.12/dist/umd/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.5.2/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.0/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+
     <!-- css link -->
     <link rel="stylesheet" href="../styles/css/global.css" />
+
+    <!-- css styles -->
+    <style>
+      .about-project .heading {
+        display: flex;
+        align-items: center;
+        column-gap: 14px;
+      }
+
+      .about-project .heading .switch-language span {
+        cursor: pointer;
+        color: #959595;
+      }
+
+      .about-project .heading .switch-language span:first-child {
+        border-right: 1px solid #363636;
+        padding-right: 4px;
+      }
+
+      #switch-to-english.clicked,
+      #switch-to-georgian.clicked {
+        color: #363636;
+      }
+
+      #switch-to-english.inactive,
+      #switch-to-georgian.inactive {
+        color: #959595;
+      }
+    </style>
   </head>
 
   <body>
@@ -45,7 +79,9 @@
         <div class="navigation">
           <nav>
             <ul>
-              <li><a href="../index.html" class="nav-button">მთავარი</a></li>
+              <li>
+                <a href="../index.html" class="nav-button">მთავარი</a>
+              </li>
               <li>
                 <a href="./list-of-places.html" class="nav-button">ადგილები</a>
               </li>
@@ -74,11 +110,17 @@
       <section class="about-project">
         <div class="container">
           <!-- Heading -->
-          <h3>პროექტის შესახებ</h3>
+          <div class="heading">
+            <h3 data-i18n="about-project.heading">პროექტის შესახებ</h3>
+            <div class="switch-language">
+              <span id="switch-to-english">EN</span>
+              <span id="switch-to-georgian" class="clicked">GEO</span>
+            </div>
+          </div>
 
           <!-- Content -->
           <div class="about-project-content">
-            <p>
+            <p data-i18n="about-project.about-project-content.paragraph">
               ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა შეუკავებიათო.
               შევცვალო უპოვნია საკმელს წაბლიანს შინაბერებს, ფისტონ, ბიჭებსაც
               დილაზე გათავისუფლების ჭვავის ლაქას ჩაეკვეტოთ, მოქაჩა მთლიანადაა.
@@ -86,7 +128,7 @@
               გადავქექეთ, სარგებლობა ფისტონის იცვალა შევცვალო.
             </p>
 
-            <p>
+            <p data-i18n="about-project.about-project-content.paragraph">
               ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა შეუკავებიათო.
               შევცვალო უპოვნია საკმელს წაბლიანს შინაბერებს, მოღანი ფისტონის,
               ბიჭებსაც დილაზე გათავისუფლების ჭვავის ლაქას ჩაეკვეტოთ, მოქაჩა
@@ -94,7 +136,7 @@
               მოუდგა გადავქექეთ, სარგებლობა ფისტონის იცვალა შევცვალო.
             </p>
 
-            <p>
+            <p data-i18n="about-project.about-project-content.paragraph">
               ლორემ იპსუმ მოუდგა თართის შევცვალო ბოდიალის სუფთა შეუკავებიათო.
               შევცვალო უპოვნია საკმელს წაბლიანს შინაბერებს, მოღალულნი ფისტონის,
               ვეტოთ, მოქაჩა მთლიანადაა. კოვზს ვეტყვით იმისმა წუხდებით სპორტიდან
@@ -214,7 +256,9 @@
       </div>
     </footer>
 
-    <!-- JavaScript link -->
+    <!-- JavaScript links -->
     <script src="../js/script.js"></script>
+    <script src="../js/switch-language.js"></script>
+    <script src="../js/about.js"></script>
   </body>
 </html>

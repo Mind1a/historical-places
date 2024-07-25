@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<<<<<<< Updated upstream
     <!-- seo meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,11 +24,14 @@
     <meta name="twitter:site" content="" />
 
     <!-- website title -->
-=======
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
->>>>>>> Stashed changes
     <title>Historical Places</title>
+
+    <!-- i18next links -->
+    <script src="https://unpkg.com/i18next@21.6.12/dist/umd/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.5.2/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.0/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
 
     <!-- css link -->
     <link rel="stylesheet" href="../styles/css/global.css" />
@@ -48,7 +50,9 @@
         <div class="navigation">
           <nav>
             <ul>
-              <li><a href="../index.html" class="nav-button">მთავარი</a></li>
+              <li>
+                <a href="../index.html" class="nav-button">მთავარი</a>
+              </li>
               <li>
                 <a href="./list-of-places.html" class="nav-button">ადგილები</a>
               </li>
@@ -70,22 +74,6 @@
         </div>
       </div>
     </header>
-<<<<<<< Updated upstream
-    <!-- main content -->
-    <main class="error-content">
-      <div class="error-container">
-        <img src="../assets/icon-404.svg" alt="error 404 icon" />
-        <h3>ERROR</h3>
-        <p>Page not found</p>
-        <p>გვერდი ვერ მოიძებნა</p>
-        <a href="../index.html">
-          <button>მთავარ გვერდზე დაბრუნება</button>
-        </a>
-      </div>
-    </main>
-<<<<<<< HEAD
-
-=======
 
     <!-- main content -->
     <main class="error-content">
@@ -100,9 +88,6 @@
       </div>
     </main>
 
->>>>>>> Stashed changes
-=======
->>>>>>> f98de2724caf430b104fa0a456a74e7b119f66cd
     <!-- footer -->
     <footer>
       <div class="footer-container">
@@ -138,7 +123,9 @@
       </div>
     </footer>
 
-    <!-- JavaScript link -->
+    <!-- JavaScript links -->
     <script src="../js/script.js"></script>
+    <script src="../js/switch-language.js"></script>
+    <script src="../js/error.js"></script>
   </body>
 </html>
