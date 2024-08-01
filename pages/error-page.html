@@ -1,82 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- seo meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:site" content="" />
+
+    <!-- website title -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Historical Places</title>
 
-     <!-- css link -->
-     <link rel="stylesheet" href="../styles/css/global.css" />
-</head>
-<body>
+    <!-- i18next links -->
+    <script src="https://unpkg.com/i18next@21.6.12/dist/umd/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-http-backend/2.5.2/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.0/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
 
+    <!-- css link -->
+    <link rel="stylesheet" href="../styles/css/global.css" />
+  </head>
+  <body>
     <!-- header -->
     <header>
-        <div class="header-container">
-          <div class="logo">
+      <div class="header-container">
+        <div class="logo">
+          <a href="../index.html">
             <div class="line1">საქართველოს</div>
             <div class="line2">ისტორიულ</div>
             <div class="line3">ადგილთა საცავი</div>
-          </div>
-          <div class="navigation">
-            <nav>
-              <ul>
-                <li><a href="#" class="nav-button">მთავარი</a></li>
-                <li><a href="#" class="nav-button">ადგილები</a></li>
-                <li><a href="#" class="nav-button">ბიბლიოგრაფია</a></li>
-              </ul>
-            </nav>
-            <div class="search-container">
-              <img
-                class="loop-icon"
-                src="../assets/loop-icon.svg"
-                alt="loop-icon"
-              />
-              <input type="text" placeholder="ძიება" />
-            </div>
+          </a>
+        </div>
+        <div class="navigation">
+          <nav>
+            <ul>
+              <li>
+                <a href="../index.html" class="nav-button">მთავარი</a>
+              </li>
+              <li>
+                <a href="./list-of-places.html" class="nav-button">ადგილები</a>
+              </li>
+              <li>
+                <a href="./bibliography.html" class="nav-button"
+                  >ბიბლიოგრაფია</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="search-container">
+            <img
+              class="loop-icon"
+              src="../assets/loop-icon.svg"
+              alt="loop-icon"
+            />
+            <input type="text" placeholder="ძიება" />
           </div>
         </div>
-      </header>
-  <!-- main content -->
-      <main class="error-content">
-        <div class="error-container">
-            <img src="../assets/icon-404.svg" alt="error 404 icon">
-            <h3>ERROR</h3>
-            <p>Page not found</p>
-            <p>გვერდი ვერ მოიძებნა</p>
-            <a href="../index.html">
-                <button>მთავარ გვერდზე დაბრუნება</button>
-            </a>
-        </div>
+      </div>
+    </header>
 
-      </main>
+    <!-- main content -->
+    <main class="error-content">
+      <div class="error-container">
+        <img src="../assets/icon-404.svg" alt="error 404 icon" />
+        <h3>ERROR</h3>
+        <p>Page not found</p>
+        <p>გვერდი ვერ მოიძებნა</p>
+        <a href="../index.html">
+          <button>მთავარ გვერდზე დაბრუნება</button>
+        </a>
+      </div>
+    </main>
 
-      <!-- footer -->
+    <!-- footer -->
     <footer>
-        <div class="footer-container">
-          <div class="contact-container">
-            <h4>კონტაქტი:</h4>
-            <div>
-              <img src="../assets/phone-icon.svg" alt="phone icon">
-              <a href="#">(+995 32) 222 00 09</a>
-            </div>
-            <div>
-              <img src="../assets/web-icon.svg" alt="web icon">
-              <a href="https://research.iliauni.edu.ge/ka">research.iliauni.edu.ge</a>
-            </div>
-            <div>
-              <img src="../assets/email-symbol-icon.svg" alt="email icon">
-              <a href="#">info@iliauni.edu.ge</a>
-            </div>
+      <div class="footer-container">
+        <div class="contact-container">
+          <h4>კონტაქტი:</h4>
+          <div>
+            <img src="../assets/phone-icon.svg" alt="phone icon" />
+            <a href="tel:+995322220009">(+995 32) 222 00 09</a>
           </div>
-          <div class="logo-container">
-            <img class="unilab-logo" src="../assets/unilab-logo.svg" alt="unilab logo">
-            <img class="iliauni-logo" src="../assets/iliauni-logo.svg" alt="iliauni logo">
+          <div>
+            <img src="../assets/web-icon.svg" alt="web icon" />
+            <a href="https://research.iliauni.edu.ge/ka"
+              >research.iliauni.edu.ge</a
+            >
+          </div>
+          <div>
+            <img src="../assets/email-symbol-icon.svg" alt="email icon" />
+            <a href="mailto:info@iliauni.edu.ge">info@iliauni.edu.ge</a>
           </div>
         </div>
-      </footer>
-  
-      <!-- JavaScript link -->
-      <script src="../js/script.js"></script>
-</body>
+        <div class="logo-container">
+          <img
+            class="unilab-logo"
+            src="../assets/unilab-logo.svg"
+            alt="unilab logo"
+          />
+          <img
+            class="iliauni-logo"
+            src="../assets/iliauni-logo.svg"
+            alt="iliauni logo"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript links -->
+    <script src="../js/script.js"></script>
+    <script src="../js/switch-language.js"></script>
+    <script src="../js/error.js"></script>
+  </body>
 </html>
