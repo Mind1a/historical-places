@@ -20,28 +20,31 @@
     }
 
     input {
-      width: 550px;
-      padding: 16px 20px 16px 46px;
+      padding: 12px 0;
       font-size: 14px;
       font-weight: normal;
       color: $light-gray;
       background-color: #ffffff;
-      border: solid 0.5px #000;
-
-      &::placeholder {
-        font-size: 14px;
-        font-weight: normal;
-        color: $light-gray;
-      }
+      border: none;
+      border: 0.5px solid #085791;
+      border-radius: 8px;
     }
 
     img {
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 19px;
       position: absolute;
-      bottom: 16px;
-      left: 20px;
+      bottom: 12px;
+      right: 20px;
       cursor: pointer;
+    }
+    .border {
+      position: absolute;
+      bottom: 5px;
+      right: 60px;
+      height: 35px;
+      width: 0.5px;
+      background-color: #085791;
     }
   }
 

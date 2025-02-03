@@ -170,16 +170,6 @@ main .team-members .container h3, .about-project .container h3 {
   font-size: 20px;
   line-height: 24px;
   color: #3e3e3e;
-  position: relative;
-}
-main .team-members .container h3::after, .about-project .container h3::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  height: 1px;
-  background-color: #4390c9;
 }
 
 header {
@@ -421,31 +411,30 @@ footer .footer-container .contact-container .logo-container .iliauni-logo {
   color: #3e3e3e;
 }
 .list-of-places .places-list-form input {
-  width: 550px;
-  padding: 16px 20px 16px 46px;
+  padding: 12px 0;
   font-size: 14px;
   font-weight: normal;
   color: #d9d9d9;
   background-color: #ffffff;
-  border: solid 0.5px #000;
-}
-.list-of-places .places-list-form input::-moz-placeholder {
-  font-size: 14px;
-  font-weight: normal;
-  color: #d9d9d9;
-}
-.list-of-places .places-list-form input::placeholder {
-  font-size: 14px;
-  font-weight: normal;
-  color: #d9d9d9;
+  border: none;
+  border: 0.5px solid #085791;
+  border-radius: 8px;
 }
 .list-of-places .places-list-form img {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 19px;
   position: absolute;
-  bottom: 16px;
-  left: 20px;
+  bottom: 12px;
+  right: 20px;
   cursor: pointer;
+}
+.list-of-places .places-list-form .border {
+  position: absolute;
+  bottom: 5px;
+  right: 60px;
+  height: 35px;
+  width: 0.5px;
+  background-color: #085791;
 }
 .list-of-places .filter-wrapper {
   margin-bottom: 36px;
