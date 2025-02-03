@@ -164,7 +164,7 @@ button {
     transform: rotate(360deg);
   }
 }
-main .team-members .container h3, .about-project .container h3 {
+main .team-members .container h3, .about-project .container .heading h3 {
   display: inline-block;
   font-weight: 500;
   font-size: 20px;
@@ -172,20 +172,44 @@ main .team-members .container h3, .about-project .container h3 {
   color: #3e3e3e;
   position: relative;
 }
-main .team-members .container h3::after, .about-project .container h3::after {
+main .team-members .container h3::after, .about-project .container .heading h3::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: -5px;
   height: 1px;
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 
 header {
   height: 140px;
-  background-color: #a9c9e0;
+  background-color: #4390c9;
   padding: 32px 0;
+  /*.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: left;
+    margin-right: 1em;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color:red;
+
+    .line1 {
+      color: $dark-blue;
+      // line-height: 26.4px;
+    }
+
+    .line2,
+    .line3 {
+      color: white;
+      // line-height: 26.4px;
+    }
+  }*/
 }
 header .header-container {
   display: flex;
@@ -196,80 +220,48 @@ header .header-container {
   width: 100%;
   margin: 0 auto;
 }
-header .logo {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  text-align: left;
-  margin-right: 1em;
-  font-size: 22px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-header .logo .line1 {
-  color: #085791;
-}
-header .logo .line2,
-header .logo .line3 {
-  color: white;
-}
 header .navigation {
-  display: flex;
+  /*display: flex;
   flex-direction: row;
+  justify-content: space-between;*/
 }
 header .navigation nav ul {
   display: flex;
   flex-direction: row;
+  gap: 20px;
 }
 header .navigation nav ul .nav-button {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  width: 170px;
-  height: 50px;
-  background-color: #085791;
-  color: white;
+  color: #fff;
   border: none;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 1px;
-  margin-right: 20px;
+  font-weight: 400;
+  line-height: 20px;
 }
 header .navigation nav ul .nav-button:hover {
   background-color: #0b71bc;
   color: white;
 }
-header .navigation .search-container {
-  position: relative;
+header .search-lang-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  gap: 60px;
 }
-header .navigation .search-container .loop-icon {
-  position: absolute;
-  left: 20px;
+header .search-lang-container img {
+  width: 25px;
+  height: 23px;
+  filter: brightness(150%);
   cursor: pointer;
 }
-header .navigation .search-container input {
-  width: 100%;
-  max-width: 265px;
-  min-width: 170px;
+header .language-container {
+  display: flex;
+  justify-content: space-between;
+}
+header .language-container select {
+  padding: 8px 8px;
   border: none;
-  padding: 16px 20px 16px 50px;
-  font-size: 14px;
-}
-header .navigation .search-container input::-moz-placeholder {
-  opacity: 0.5;
-  font-size: 14px;
-}
-header .navigation .search-container input::placeholder {
-  opacity: 0.5;
-  font-size: 14px;
-}
-header .navigation .search-container input:focus {
-  outline: none;
+  border-radius: 4px;
+  color: #4390c9;
 }
 
 footer {
@@ -303,29 +295,59 @@ footer .footer-container .contact-container div {
   flex-direction: row;
   align-items: center;
 }
-footer .footer-container .contact-container div img {
+footer .footer-container .contact-container div .contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .footer-container .contact-container div .contact-container h4 {
+  margin-bottom: 22px;
+  padding-left: 45px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #a9c9e0;
+}
+footer .footer-container .contact-container div .contact-container div {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footer-container .contact-container div .contact-container div img {
   width: 18px;
   height: 18px;
   margin: 0 27px 0 0;
 }
-footer .footer-container .contact-container div a {
+footer .footer-container .contact-container div .contact-container div a {
+  all: unset;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+}
+footer .footer-container .contact-container div .contact-container img {
+  width: 18px;
+  height: 18px;
+  margin: 0 27px 0 0;
+}
+footer .footer-container .contact-container div .contact-container a {
   all: unset;
   font-size: 20px;
   font-weight: 300;
   color: #fff;
   cursor: pointer;
 }
-footer .footer-container .logo-container {
+footer .footer-container .contact-container .logo-container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-footer .footer-container .logo-container .unilab-logo {
+footer .footer-container .contact-container .logo-container .unilab-logo {
   width: 88px;
   height: 114px;
   margin-right: 80px;
 }
-footer .footer-container .logo-container .iliauni-logo {
+footer .footer-container .contact-container .logo-container .iliauni-logo {
   width: 124.2px;
   height: 123.5px;
 }
@@ -338,6 +360,9 @@ footer .footer-container .logo-container .iliauni-logo {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+}
+.about-project .container .heading {
+  display: flex;
 }
 .about-project .container p {
   margin-top: 34px;
@@ -492,7 +517,7 @@ footer .footer-container .logo-container .iliauni-logo {
   cursor: pointer;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input {
   margin-right: 20px;
@@ -535,7 +560,7 @@ footer .footer-container .logo-container .iliauni-logo {
   cursor: pointer;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input {
   margin-right: 20px;
@@ -598,7 +623,7 @@ footer .footer-container .logo-container .iliauni-logo {
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .slider-track {
   height: 100%;
   position: absolute;
-  background-color: #a9c9e0;
+  background-color: #4390c9;
   border-radius: 13px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider input {
@@ -748,7 +773,7 @@ footer .footer-container .logo-container .iliauni-logo {
   cursor: pointer;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input {
   margin-right: 20px;
@@ -1035,7 +1060,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   cursor: pointer;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input {
   margin-right: 20px;
@@ -1078,7 +1103,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   cursor: pointer;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input {
   margin-right: 20px;
@@ -1142,7 +1167,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .slider-track {
   height: 100%;
   position: absolute;
-  background-color: #a9c9e0;
+  background-color: #4390c9;
   border-radius: 13px;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider input {
@@ -1292,7 +1317,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   cursor: pointer;
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input {
   margin-right: 20px;
@@ -1547,7 +1572,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   line-height: 21.6px;
   padding: 10px;
   width: 100%;
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .place-info-wrapper section p {
   font-size: 16px;
