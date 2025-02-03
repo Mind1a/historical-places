@@ -164,7 +164,7 @@ button {
     transform: rotate(360deg);
   }
 }
-main .team-members .container h3, .about-project .container .heading h3 {
+main .team-members .container h3, .about-project .container h3 {
   display: inline-block;
   font-weight: 500;
   font-size: 20px;
@@ -172,7 +172,7 @@ main .team-members .container h3, .about-project .container .heading h3 {
   color: #3e3e3e;
   position: relative;
 }
-main .team-members .container h3::after, .about-project .container .heading h3::after {
+main .team-members .container h3::after, .about-project .container h3::after {
   content: "";
   position: absolute;
   left: 0;
@@ -360,26 +360,36 @@ footer .footer-container .contact-container .logo-container .iliauni-logo {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
-}
-.about-project .container .heading {
   display: flex;
+  flex-direction: column;
+  gap: 19.5px;
+  /*.heading {
+    display: flex;
+
+    h3 {
+      @extend %global-h3;
+    }
+  }*/
+}
+.about-project .container h3 {
+  border-bottom: 1px solid #d2ebfe;
+  padding-bottom: 5px;
+  align-self: flex-start;
 }
 .about-project .container p {
-  margin-top: 34px;
   font-weight: 400;
   font-size: 16px;
   line-height: 19.2px;
   color: #3e3e3e;
 }
 .about-project .container .see-more {
-  width: 130px;
-  height: 35px;
+  display: flex;
   text-align: center;
-  margin-top: 24px;
-  padding: 9px 0;
+  padding: 8px 25px;
   background-color: #085791;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  align-self: flex-start;
 }
 .about-project .container .see-more:hover {
   background-color: #0b71bc;
