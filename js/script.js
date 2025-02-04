@@ -1,5 +1,5 @@
 // dropdowns
-const dropdownBtn = document.querySelectorAll(".dropdown-btn");
+/*const dropdownBtn = document.querySelectorAll(".dropdown-btn");
 
 dropdownBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -9,7 +9,7 @@ dropdownBtn.forEach((btn) => {
     dropdownContent.classList.toggle("active");
     arrow.classList.toggle("rotate");
   });
-});
+});*/
 
 // slider
 const minVal = document.querySelector(".min-val");
