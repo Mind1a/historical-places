@@ -8,16 +8,9 @@
     flex-direction: column;
     gap: 19.5px;
 
-    /*.heading {
-      display: flex;
-
-      h3 {
-        @extend %global-h3;
-      }
-    }*/
     h3 {
       @extend %global-h3;
-      border-bottom: 1px solid #d2ebfe;
+      border-bottom: 1px solid $border-color;
       padding-bottom: 5px;
       align-self: flex-start;
     }

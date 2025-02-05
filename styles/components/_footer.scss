@@ -13,84 +13,46 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      gap: 10px;
       h4 {
-        margin-bottom: 22px;
-        padding-left: 45px;
+        margin-bottom: 20px;
         font-size: 24px;
         font-weight: normal;
-        color: #a9c9e0;
+        color: $border-color;
       }
-
       div {
-        margin-bottom: 10px;
         display: flex;
-        flex-direction: row;
         align-items: center;
-
-        .contact-container {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-
-          h4 {
-            margin-bottom: 22px;
-            padding-left: 45px;
-            font-size: 24px;
-            font-weight: normal;
-            color: #a9c9e0;
-          }
-
-          div {
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            img {
-              width: 18px;
-              height: 18px;
-              margin: 0 27px 0 0;
-            }
-
-            a {
-              all: unset;
-              font-size: 20px;
-              font-weight: 300;
-              color: #fff;
-            }
-          }
-          img {
-            width: 18px;
-            height: 18px;
-            margin: 0 27px 0 0;
-          }
-
-          a {
-            all: unset;
-            font-size: 20px;
-            font-weight: 300;
-            color: #fff;
-            cursor: pointer;
-          }
-        }
+        gap: 5px;
       }
+      img {
+        width: 18px;
+        height: 18px;
+      }
+      a,
+      p {
+        all: unset;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
 
-      .logo-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
 
-        .unilab-logo {
-          width: 88px;
-          height: 114px;
-          margin-right: 80px;
-        }
-
-        .iliauni-logo {
-          width: 124.2px;
-          height: 123.5px;
-        }
+      .unilab-logo {
+        width: 57px;
+        height: 74px;
+        margin-right: 80px;
+      }
+      .iliauni-logo {
+        width: 75px;
+        height: 74px;
       }
     }
   }

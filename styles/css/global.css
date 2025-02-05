@@ -176,30 +176,6 @@ header {
   height: 140px;
   background-color: #4390c9;
   padding: 32px 0;
-  /*.logo {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    text-align: left;
-    margin-right: 1em;
-    font-size: 22px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    flex-shrink: 0;
-    cursor: pointer;
-    background-color:red;
-
-    .line1 {
-      color: $dark-blue;
-      // line-height: 26.4px;
-    }
-
-    .line2,
-    .line3 {
-      color: white;
-      // line-height: 26.4px;
-    }
-  }*/
 }
 header .header-container {
   display: flex;
@@ -210,18 +186,13 @@ header .header-container {
   width: 100%;
   margin: 0 auto;
 }
-header .navigation {
-  /*display: flex;
-  flex-direction: row;
-  justify-content: space-between;*/
-}
 header .navigation nav ul {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 header .navigation nav ul .nav-button {
-  color: #fff;
+  color: #ffffff;
   border: none;
   font-size: 18px;
   letter-spacing: 1px;
@@ -230,7 +201,7 @@ header .navigation nav ul .nav-button {
 }
 header .navigation nav ul .nav-button:hover {
   background-color: #0b71bc;
-  color: white;
+  color: #ffffff;
 }
 header .search-lang-container {
   display: flex;
@@ -240,7 +211,6 @@ header .search-lang-container {
 header .search-lang-container img {
   width: 25px;
   height: 23px;
-  filter: brightness(150%);
   cursor: pointer;
 }
 header .language-container {
@@ -271,75 +241,45 @@ footer .footer-container .contact-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 10px;
 }
 footer .footer-container .contact-container h4 {
-  margin-bottom: 22px;
-  padding-left: 45px;
+  margin-bottom: 20px;
   font-size: 24px;
   font-weight: normal;
-  color: #a9c9e0;
+  color: #d2ebfe;
 }
 footer .footer-container .contact-container div {
-  margin-bottom: 10px;
   display: flex;
-  flex-direction: row;
   align-items: center;
+  gap: 5px;
 }
-footer .footer-container .contact-container div .contact-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-footer .footer-container .contact-container div .contact-container h4 {
-  margin-bottom: 22px;
-  padding-left: 45px;
-  font-size: 24px;
-  font-weight: normal;
-  color: #a9c9e0;
-}
-footer .footer-container .contact-container div .contact-container div {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-footer .footer-container .contact-container div .contact-container div img {
+footer .footer-container .contact-container img {
   width: 18px;
   height: 18px;
-  margin: 0 27px 0 0;
 }
-footer .footer-container .contact-container div .contact-container div a {
+footer .footer-container .contact-container a,
+footer .footer-container .contact-container p {
   all: unset;
   font-size: 20px;
   font-weight: 300;
-  color: #fff;
-}
-footer .footer-container .contact-container div .contact-container img {
-  width: 18px;
-  height: 18px;
-  margin: 0 27px 0 0;
-}
-footer .footer-container .contact-container div .contact-container a {
-  all: unset;
-  font-size: 20px;
-  font-weight: 300;
+  line-height: 24px;
   color: #fff;
   cursor: pointer;
 }
-footer .footer-container .contact-container .logo-container {
+footer .footer-container .logo-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  gap: 20px;
 }
-footer .footer-container .contact-container .logo-container .unilab-logo {
-  width: 88px;
-  height: 114px;
+footer .footer-container .logo-container .unilab-logo {
+  width: 57px;
+  height: 74px;
   margin-right: 80px;
 }
-footer .footer-container .contact-container .logo-container .iliauni-logo {
-  width: 124.2px;
-  height: 123.5px;
+footer .footer-container .logo-container .iliauni-logo {
+  width: 75px;
+  height: 74px;
 }
 
 /* About Project Section */
@@ -353,13 +293,6 @@ footer .footer-container .contact-container .logo-container .iliauni-logo {
   display: flex;
   flex-direction: column;
   gap: 19.5px;
-  /*.heading {
-    display: flex;
-
-    h3 {
-      @extend %global-h3;
-    }
-  }*/
 }
 .about-project .container h3 {
   border-bottom: 1px solid #d2ebfe;
@@ -410,6 +343,9 @@ footer .footer-container .contact-container .logo-container .iliauni-logo {
   font-weight: 500;
   color: #3e3e3e;
 }
+.list-of-places .places-list-form .search-border-container {
+  position: relative;
+}
 .list-of-places .places-list-form input {
   padding: 12px 0;
   font-size: 14px;
@@ -419,6 +355,7 @@ footer .footer-container .contact-container .logo-container .iliauni-logo {
   border: none;
   border: 0.5px solid #085791;
   border-radius: 8px;
+  width: 100%;
 }
 .list-of-places .places-list-form img {
   width: 20px;
@@ -434,7 +371,7 @@ footer .footer-container .contact-container .logo-container .iliauni-logo {
   right: 60px;
   height: 35px;
   width: 0.5px;
-  background-color: #085791;
+  background-color: #4390c9;
 }
 .list-of-places .filter-wrapper {
   margin-bottom: 36px;
@@ -681,7 +618,7 @@ footer .footer-container .contact-container .logo-container .iliauni-logo {
   box-sizing: border-box;
   width: 1px;
   height: 40px;
-  background-color: black;
+  background-color: #000;
   position: absolute;
   transform: translateX(-50%);
   z-index: 4;
@@ -696,26 +633,6 @@ footer .footer-container .contact-container .logo-container .iliauni-logo {
 }
 .list-of-places .sort-wrapper {
   margin-bottom: 60px;
-  /*.sortBtn-container {
-    width: 130px;
-    height: 35px;
-    position: relative;
-    button {
-      width: 100%;
-      @include button();
-    }
-    img {
-      width: 13px;
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      cursor: pointer;
-
-      &.rotate {
-        transform: rotate(180deg);
-      }
-    }
-  }*/
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper {
   height: 0px;
@@ -777,49 +694,6 @@ footer .footer-container .contact-container .logo-container .iliauni-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*/.pages {
-    margin-bottom: 49px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    #leftArrow {
-      width: 12px;
-      height: 22px;
-      transform: rotate(180deg);
-      margin-right: 5px;
-      cursor: pointer;
-    }
-
-    .numbers {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      span {
-        margin-right: 5px;
-        padding: 5px 10px;
-        font-size: 14px;
-        font-weight: 500;
-        color: #000;
-        cursor: pointer;
-      }
-      .spot {
-        padding-bottom: 12.5px;
-        color: #3e3e3e;
-      }
-
-      .current {
-        background-color: #a9c9e0;
-      }
-    }
-
-    #rightArrow {
-      width: 12px;
-      height: 22px;
-      cursor: pointer;
-    }
-  }*/
 }
 .list-of-places .slider-wrapper .cards {
   display: flex;
@@ -831,7 +705,7 @@ footer .footer-container .contact-container .logo-container .iliauni-logo {
   margin-right: 10px;
   padding: 24px;
   border: 0.5px solid #3e3e3e;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 4px;
 }
 .list-of-places .slider-wrapper .cards .card h4 {
