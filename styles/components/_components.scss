@@ -1,6 +1,6 @@
 /* About Project Section */
 .about-project {
-  margin-top: 68px;
+  margin-top: 64px;
 
   .container {
     @include container;
@@ -30,6 +30,7 @@
       cursor: pointer;
       transition: $change-background-color;
       align-self: flex-start;
+      border-radius: 2px;
 
       &:hover {
         background-color: $button-hover;

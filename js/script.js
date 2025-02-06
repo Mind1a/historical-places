@@ -1,6 +1,5 @@
 // dropdowns
 const dropdownBtn = document.querySelectorAll(".dropdown-btn");
-
 dropdownBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     const arrow = btn.querySelector("img");

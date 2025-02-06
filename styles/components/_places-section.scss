@@ -1,8 +1,9 @@
 // index.html pages section
 
 .list-of-places {
+  @include container();
   max-width: 1120px;
-  margin: 70px auto 51px;
+  margin: 54px auto 0;
 
   .places-list-form {
     display: flex;
@@ -55,13 +56,13 @@
   }
 
   .filter-wrapper {
-    margin-bottom: 36px;
+    margin-bottom: 32px;
     .filterBtn-container {
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: $dark-blue;
-      width: 190px;
+      max-width: 190px;
       height: 44px;
       gap: 20px;
       border-radius: 4px;
@@ -234,8 +235,11 @@
     }
   }
 
+  .active {
+    display: none;
+  }
   .sort-wrapper {
-    margin-bottom: 60px;
+    margin-bottom: 32px;
 
     .sorting-dropdpwn-wrapper {
       height: 0px;
@@ -260,6 +264,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 60px;
     .cards {
       display: flex;
       align-items: center;

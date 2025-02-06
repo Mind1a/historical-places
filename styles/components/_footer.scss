@@ -1,8 +1,7 @@
 footer {
   max-width: 100%;
-  padding: 63px 0;
+  padding-top: 44px;
   background-color: #3e3e3e;
-
   .footer-container {
     @include container();
     display: flex;
@@ -54,6 +53,18 @@ footer {
         width: 75px;
         height: 74px;
       }
+    }
+  }
+  .footer-bottom {
+    background-color: $footer-color;
+    height: 36px;
+    padding-top: 10px;
+    margin-top: 27px;
+
+    p {
+      color: $button-text-color;
+      font-size: 14px;
+      text-align: center;
     }
   }
 }

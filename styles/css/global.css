@@ -185,6 +185,7 @@ header .header-container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
 }
 header .navigation nav ul {
   display: flex;
@@ -200,8 +201,7 @@ header .navigation nav ul .nav-button {
   line-height: 20px;
 }
 header .navigation nav ul .nav-button:hover {
-  background-color: #0b71bc;
-  color: #ffffff;
+  color: #085791;
 }
 header .search-lang-container {
   display: flex;
@@ -226,13 +226,14 @@ header .language-container select {
 
 footer {
   max-width: 100%;
-  padding: 63px 0;
+  padding-top: 44px;
   background-color: #3e3e3e;
 }
 footer .footer-container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
   display: flex;
   align-items: center;
 }
@@ -281,15 +282,27 @@ footer .footer-container .logo-container .iliauni-logo {
   width: 75px;
   height: 74px;
 }
+footer .footer-bottom {
+  background-color: #2a2929;
+  height: 36px;
+  padding-top: 10px;
+  margin-top: 27px;
+}
+footer .footer-bottom p {
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+}
 
 /* About Project Section */
 .about-project {
-  margin-top: 68px;
+  margin-top: 64px;
 }
 .about-project .container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
   display: flex;
   flex-direction: column;
   gap: 19.5px;
@@ -313,6 +326,7 @@ footer .footer-container .logo-container .iliauni-logo {
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: flex-start;
+  border-radius: 2px;
 }
 .about-project .container .see-more:hover {
   background-color: #0b71bc;
@@ -326,7 +340,11 @@ footer .footer-container .logo-container .iliauni-logo {
 
 .list-of-places {
   max-width: 1120px;
-  margin: 70px auto 51px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  max-width: 1120px;
+  margin: 54px auto 0;
 }
 .list-of-places .places-list-form {
   display: flex;
@@ -374,14 +392,14 @@ footer .footer-container .logo-container .iliauni-logo {
   background-color: #4390c9;
 }
 .list-of-places .filter-wrapper {
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 .list-of-places .filter-wrapper .filterBtn-container {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #085791;
-  width: 190px;
+  max-width: 190px;
   height: 44px;
   gap: 20px;
   border-radius: 4px;
@@ -631,8 +649,11 @@ footer .footer-container .logo-container .iliauni-logo {
   left: 0;
   top: 10px;
 }
+.list-of-places .active {
+  display: none;
+}
 .list-of-places .sort-wrapper {
-  margin-bottom: 60px;
+  margin-bottom: 32px;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper {
   height: 0px;
@@ -694,6 +715,7 @@ footer .footer-container .logo-container .iliauni-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 60px;
 }
 .list-of-places .slider-wrapper .cards {
   display: flex;
@@ -748,6 +770,7 @@ main .map-section .container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
 }
 main .map-section .container .map-wrapper {
   height: 537px;
@@ -765,6 +788,7 @@ main .team-members .container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
 }
 main .team-members .container .team-members-blocks-wrapper {
   margin-top: 46px;
@@ -1327,6 +1351,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
 }
 .bibliography-content .bibliography-box {
   margin: 46px 0 70px;
@@ -1425,6 +1450,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
 }
 .place-info-wrapper h2 {
   width: -moz-fit-content;
