@@ -39,39 +39,38 @@
     <!-- Header -->
     <header>
       <div class="header-container">
-        <div class="logo">
-          <a href="index.html"
-            ><div class="line1">საქართველოს</div>
-            <div class="line2">ისტორიულ</div>
-            <div class="line3">ადგილთა საცავი</div></a
-          >
-        </div>
+        <img src="./assets/main-images/logo.svg" alt="page logo" />
         <div class="navigation">
           <nav>
             <ul>
               <li>
-                <a href="./index.html" class="nav-button">მთავარი</a>
+                <a href="./index.html" class="nav-button">ადგილები</a>
               </li>
               <li>
                 <a href="./pages/list-of-places.html" class="nav-button"
-                  >ადგილები</a
+                  >ბიბლიოგრაფია</a
                 >
               </li>
               <li>
                 <a href="./pages/bibliography.html" class="nav-button"
-                  >ბიბლიოგრაფია</a
+                  >პროექტის შესახებ</a
                 >
               </li>
             </ul>
           </nav>
-
-          <div class="search-container">
-            <img
-              class="loop-icon"
-              src="./assets/loop-icon.svg"
-              alt="loop-icon"
-            />
-            <input type="text" placeholder="ძიება" />
+        </div>
+        <div class="search-lang-container">
+          <img
+            class="loop-icon"
+            src="./assets/icons/loop icon.svg"
+            alt="loop-icon"
+          />
+          <div class="language-container">
+            <select name="languages" id="languages">
+              <option value="">ka</option>
+              <option value="en">Eng</option>
+              <img src="assets/icons/icon.svg" alt="arrow icon" />
+            </select>
           </div>
         </div>
       </div>
@@ -123,16 +122,20 @@
       <section class="list-of-places">
         <form action="#" class="places-list-form">
           <label for="search">ადგილების ჩამონათვალი</label>
-          <input type="text" id="search" placeholder="ძიება" />
-          <img src="./assets/search-icon.svg" alt="search icon" />
+          <div class="search-border-container">
+            <input type="search" id="search" />
+            <div class="border"></div>
+          </div>
+          <img src="./assets/icons/search-icon.svg" alt="search icon" />
         </form>
         <!-- filter section -->
         <div class="filter-wrapper">
           <div class="filterBtn-container dropdown-btn">
+            <div></div>
             <button>ფილტრი</button>
-            <img src="./assets/down-arrow.svg" alt="button arrow" />
+            <img src="./assets/icons/mage_filter.svg" alt="filter icon" />
           </div>
-          <div class="filterBtn-dropdown dropdown">
+          <div class="filterBtn-dropdown dropdown active">
             <div class="filter-dropdown-wrapper">
               <div class="place-type-container">
                 <h2>ადგილის ტიპების მიხედვით</h2>
@@ -158,14 +161,7 @@
               <div class="bibliography-container">
                 <div class="dropdown-search-container">
                   <h2>ბიბლიოგრაფია</h2>
-                  <div class="search-div">
-                    <img
-                      class="loop-icon"
-                      src="./assets/loop-icon.svg"
-                      alt="loop-icon"
-                    />
-                    <input type="text" />
-                  </div>
+                  <input type="text" placeholder="ძიება" />
                 </div>
                 <form action="#" class="dropdown-form">
                   <div class="dropdown-item">
@@ -220,10 +216,6 @@
 
         <!-- sorting section -->
         <div class="sort-wrapper">
-          <div class="sortBtn-container dropdown-btn">
-            <button>სორტირება</button>
-            <img src="./assets/down-arrow.svg" alt="button arrow" />
-          </div>
           <div class="sorting-dropdpwn-wrapper">
             <div class="sorting-container dropdown">
               <form action="#" class="dropdown-form">
@@ -288,27 +280,7 @@
               </div>
             </a>
           </div>
-          <div class="pages">
-            <img
-              id="leftArrow"
-              src="./assets/slider-arrow.svg"
-              alt="left arrow"
-            />
-            <div class="numbers">
-              <span>1</span>
-              <span class="spot">...</span>
-              <span>26</span>
-              <span class="current">24</span>
-              <span>25</span>
-              <span class="spot">...</span>
-              <span>50</span>
-            </div>
-            <img
-              id="rightArrow"
-              src="./assets/slider-arrow.svg"
-              alt="right arrow"
-            />
-          </div>
+
           <a href="./pages/list-of-places.html">
             <button>ყველა ადგილის ნახვა</button>
           </a>
@@ -322,6 +294,10 @@
         <div class="contact-container">
           <h4>კონტაქტი:</h4>
           <div>
+            <img src="./assets/email-symbol-icon.svg" alt="email icon" />
+            <a href="info@iliauni.edu.ge">info@iliauni.edu.ge</a>
+          </div>
+          <div>
             <img src="./assets/phone-icon.svg" alt="phone icon" />
             <a href="tel:+995322220009">(+995 32) 222 00 09</a>
           </div>
@@ -332,14 +308,14 @@
             >
           </div>
           <div>
-            <img src="./assets/email-symbol-icon.svg" alt="email icon" />
-            <a href="mailto:info@iliauni.edu.ge">info@iliauni.edu.ge</a>
+            <img src="./assets/icons/location-icon.svg" alt="web icon" />
+            <p>თბილისი ქაქუცა ჩოლოყაშვილის გამზირი 3/5</p>
           </div>
         </div>
         <div class="logo-container">
           <img
             class="unilab-logo"
-            src="./assets/unilab-logo.svg"
+            src="./assets/main-images/unilab-logo..svg"
             alt="unilab logo"
           />
           <img
@@ -348,6 +324,9 @@
             alt="iliauni logo"
           />
         </div>
+      </div>
+      <div class="footer-bottom">
+        <p>ილიაუნის ლინგვისტურ კვლევათა ინსტიტუტი</p>
       </div>
     </footer>
 

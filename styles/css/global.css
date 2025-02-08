@@ -170,21 +170,11 @@ main .team-members .container h3, .about-project .container h3 {
   font-size: 20px;
   line-height: 24px;
   color: #3e3e3e;
-  position: relative;
-}
-main .team-members .container h3::after, .about-project .container h3::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  height: 1px;
-  background-color: #a9c9e0;
 }
 
 header {
   height: 140px;
-  background-color: #a9c9e0;
+  background-color: #4390c9;
   padding: 32px 0;
 }
 header .header-container {
@@ -195,92 +185,55 @@ header .header-container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
-}
-header .logo {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  text-align: left;
-  margin-right: 1em;
-  font-size: 22px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-header .logo .line1 {
-  color: #085791;
-}
-header .logo .line2,
-header .logo .line3 {
-  color: white;
-}
-header .navigation {
-  display: flex;
-  flex-direction: row;
+  padding: 0 32px;
 }
 header .navigation nav ul {
   display: flex;
   flex-direction: row;
+  gap: 20px;
 }
 header .navigation nav ul .nav-button {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  width: 170px;
-  height: 50px;
-  background-color: #085791;
-  color: white;
+  color: #ffffff;
   border: none;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 1px;
-  margin-right: 20px;
+  font-weight: 400;
+  line-height: 20px;
 }
 header .navigation nav ul .nav-button:hover {
-  background-color: #0b71bc;
-  color: white;
+  color: #085791;
 }
-header .navigation .search-container {
-  position: relative;
+header .search-lang-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  gap: 60px;
 }
-header .navigation .search-container .loop-icon {
-  position: absolute;
-  left: 20px;
+header .search-lang-container img {
+  width: 25px;
+  height: 23px;
   cursor: pointer;
 }
-header .navigation .search-container input {
-  width: 100%;
-  max-width: 265px;
-  min-width: 170px;
+header .language-container {
+  display: flex;
+  justify-content: space-between;
+}
+header .language-container select {
+  padding: 8px 8px;
   border: none;
-  padding: 16px 20px 16px 50px;
-  font-size: 14px;
-}
-header .navigation .search-container input::-moz-placeholder {
-  opacity: 0.5;
-  font-size: 14px;
-}
-header .navigation .search-container input::placeholder {
-  opacity: 0.5;
-  font-size: 14px;
-}
-header .navigation .search-container input:focus {
-  outline: none;
+  border-radius: 4px;
+  color: #4390c9;
 }
 
 footer {
   max-width: 100%;
-  padding: 63px 0;
+  padding-top: 44px;
   background-color: #3e3e3e;
 }
 footer .footer-container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
   display: flex;
   align-items: center;
 }
@@ -289,72 +242,91 @@ footer .footer-container .contact-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 10px;
 }
 footer .footer-container .contact-container h4 {
-  margin-bottom: 22px;
-  padding-left: 45px;
+  margin-bottom: 20px;
   font-size: 24px;
   font-weight: normal;
-  color: #a9c9e0;
+  color: #d2ebfe;
 }
 footer .footer-container .contact-container div {
-  margin-bottom: 10px;
   display: flex;
-  flex-direction: row;
   align-items: center;
+  gap: 5px;
 }
-footer .footer-container .contact-container div img {
+footer .footer-container .contact-container img {
   width: 18px;
   height: 18px;
-  margin: 0 27px 0 0;
 }
-footer .footer-container .contact-container div a {
+footer .footer-container .contact-container a,
+footer .footer-container .contact-container p {
   all: unset;
   font-size: 20px;
   font-weight: 300;
+  line-height: 24px;
   color: #fff;
   cursor: pointer;
 }
 footer .footer-container .logo-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  gap: 20px;
 }
 footer .footer-container .logo-container .unilab-logo {
-  width: 88px;
-  height: 114px;
+  width: 57px;
+  height: 74px;
   margin-right: 80px;
 }
 footer .footer-container .logo-container .iliauni-logo {
-  width: 124.2px;
-  height: 123.5px;
+  width: 75px;
+  height: 74px;
+}
+footer .footer-bottom {
+  background-color: #2a2929;
+  height: 36px;
+  padding-top: 10px;
+  margin-top: 27px;
+}
+footer .footer-bottom p {
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
 }
 
 /* About Project Section */
 .about-project {
-  margin-top: 68px;
+  margin-top: 64px;
 }
 .about-project .container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 19.5px;
+}
+.about-project .container h3 {
+  border-bottom: 1px solid #d2ebfe;
+  padding-bottom: 5px;
+  align-self: flex-start;
 }
 .about-project .container p {
-  margin-top: 34px;
   font-weight: 400;
   font-size: 16px;
   line-height: 19.2px;
   color: #3e3e3e;
 }
 .about-project .container .see-more {
-  width: 130px;
-  height: 35px;
+  display: flex;
   text-align: center;
-  margin-top: 24px;
-  padding: 9px 0;
+  padding: 8px 25px;
   background-color: #085791;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  align-self: flex-start;
+  border-radius: 2px;
 }
 .about-project .container .see-more:hover {
   background-color: #0b71bc;
@@ -368,7 +340,11 @@ footer .footer-container .logo-container .iliauni-logo {
 
 .list-of-places {
   max-width: 1120px;
-  margin: 70px auto 51px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  max-width: 1120px;
+  margin: 54px auto 0;
 }
 .list-of-places .places-list-form {
   display: flex;
@@ -385,43 +361,50 @@ footer .footer-container .logo-container .iliauni-logo {
   font-weight: 500;
   color: #3e3e3e;
 }
+.list-of-places .places-list-form .search-border-container {
+  position: relative;
+}
 .list-of-places .places-list-form input {
-  width: 550px;
-  padding: 16px 20px 16px 46px;
+  padding: 12px 0;
   font-size: 14px;
   font-weight: normal;
   color: #d9d9d9;
   background-color: #ffffff;
-  border: solid 0.5px #000;
-}
-.list-of-places .places-list-form input::-moz-placeholder {
-  font-size: 14px;
-  font-weight: normal;
-  color: #d9d9d9;
-}
-.list-of-places .places-list-form input::placeholder {
-  font-size: 14px;
-  font-weight: normal;
-  color: #d9d9d9;
+  border: none;
+  border: 0.5px solid #085791;
+  border-radius: 8px;
+  width: 100%;
 }
 .list-of-places .places-list-form img {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 19px;
   position: absolute;
-  bottom: 16px;
-  left: 20px;
+  bottom: 12px;
+  right: 20px;
   cursor: pointer;
 }
+.list-of-places .places-list-form .border {
+  position: absolute;
+  bottom: 5px;
+  right: 60px;
+  height: 35px;
+  width: 0.5px;
+  background-color: #4390c9;
+}
 .list-of-places .filter-wrapper {
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 .list-of-places .filter-wrapper .filterBtn-container {
-  width: 130px;
-  height: 35px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #085791;
+  max-width: 190px;
+  height: 44px;
+  gap: 20px;
+  border-radius: 4px;
 }
 .list-of-places .filter-wrapper .filterBtn-container button {
-  width: 100%;
   background-color: #085791;
   color: #ffffff;
   padding: 10px;
@@ -435,22 +418,13 @@ footer .footer-container .logo-container .iliauni-logo {
   background-color: #0b71bc;
 }
 .list-of-places .filter-wrapper .filterBtn-container img {
-  width: 13px;
-  position: absolute;
-  top: 50%;
-  right: 10px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-}
-.list-of-places .filter-wrapper .filterBtn-container img.rotate {
-  transform: rotate(180deg);
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown {
   height: 0px;
-  overflow: hidden;
-  transition: height 0.3s ease;
-}
-.list-of-places .filter-wrapper .filterBtn-dropdown.active {
-  height: 440px;
+  margin-bottom: 400px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
   width: 100%;
@@ -460,10 +434,10 @@ footer .footer-container .logo-container .iliauni-logo {
   justify-content: space-between;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container {
-  width: 100%;
-  max-width: 550px;
+  width: 450px;
+  height: 200px;
+  padding: 16px 28px;
   margin-top: 17px;
-  padding: 20px 30px;
   background-color: #f2faff;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container h2 {
@@ -492,10 +466,12 @@ footer .footer-container .logo-container .iliauni-logo {
   cursor: pointer;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input {
-  margin-right: 20px;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item label {
   margin-bottom: 0;
@@ -503,11 +479,12 @@ footer .footer-container .logo-container .iliauni-logo {
   font-weight: 400;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container {
-  width: 100%;
-  max-width: 550px;
+  width: 450px;
+  height: 200px;
+  padding: 16px 28px;
   margin-top: 17px;
-  padding: 13px 30px;
   background-color: #f2faff;
+  width: 550px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container h2 {
   font-size: 18px;
@@ -535,10 +512,12 @@ footer .footer-container .logo-container .iliauni-logo {
   cursor: pointer;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input {
-  margin-right: 20px;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item label {
   margin-bottom: 0;
@@ -548,28 +527,23 @@ footer .footer-container .logo-container .iliauni-logo {
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 30px;
 }
-.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container .search-div {
-  position: relative;
-  display: flex;
-  flex-direction: row;
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container h2 {
+  font-size: 18px;
 }
-.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container .search-div input {
-  width: 297px;
-  max-width: 297px;
-  min-width: 170px;
-  border: solid 0.5px #000;
-  padding: 6px 20px 6px 40px;
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container input {
+  border: 0.5px solid #085791;
+  padding: 2px 12px;
   font-size: 14px;
+  border-radius: 4px;
 }
-.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container .search-div .loop-icon {
-  position: absolute;
-  left: 8px;
-  top: 50%;
-  transform: translate(0, -50%);
-  cursor: pointer;
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container input::-moz-placeholder {
+  color: #d9d9d9;
+}
+.list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container input::placeholder {
+  color: #d9d9d9;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container {
   width: 100%;
@@ -598,7 +572,7 @@ footer .footer-container .logo-container .iliauni-logo {
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .slider-track {
   height: 100%;
   position: absolute;
-  background-color: #a9c9e0;
+  background-color: #4390c9;
   border-radius: 13px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider input {
@@ -662,7 +636,7 @@ footer .footer-container .logo-container .iliauni-logo {
   box-sizing: border-box;
   width: 1px;
   height: 40px;
-  background-color: black;
+  background-color: #000;
   position: absolute;
   transform: translateX(-50%);
   z-index: 4;
@@ -675,37 +649,11 @@ footer .footer-container .logo-container .iliauni-logo {
   left: 0;
   top: 10px;
 }
+.list-of-places .active {
+  display: none;
+}
 .list-of-places .sort-wrapper {
-  margin-bottom: 60px;
-}
-.list-of-places .sort-wrapper .sortBtn-container {
-  width: 130px;
-  height: 35px;
-  position: relative;
-}
-.list-of-places .sort-wrapper .sortBtn-container button {
-  width: 100%;
-  background-color: #085791;
-  color: #ffffff;
-  padding: 10px;
-  border-radius: 0;
-  font-size: 14px;
-  font-weight: 400;
-  border: none;
-  cursor: pointer;
-}
-.list-of-places .sort-wrapper .sortBtn-container button:hover {
-  background-color: #0b71bc;
-}
-.list-of-places .sort-wrapper .sortBtn-container img {
-  width: 13px;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  cursor: pointer;
-}
-.list-of-places .sort-wrapper .sortBtn-container img.rotate {
-  transform: rotate(180deg);
+  margin-bottom: 32px;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper {
   height: 0px;
@@ -716,10 +664,10 @@ footer .footer-container .logo-container .iliauni-logo {
   height: 196px;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container {
-  width: 100%;
-  max-width: 550px;
+  width: 450px;
+  height: 200px;
+  padding: 16px 28px;
   margin-top: 17px;
-  padding: 27.5px 30px;
   background-color: #f2faff;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container h2 {
@@ -748,10 +696,12 @@ footer .footer-container .logo-container .iliauni-logo {
   cursor: pointer;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input {
-  margin-right: 20px;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
 }
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item label {
   margin-bottom: 0;
@@ -765,21 +715,23 @@ footer .footer-container .logo-container .iliauni-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 60px;
 }
 .list-of-places .slider-wrapper .cards {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  gap: 21px;
   margin-bottom: 57px;
 }
 .list-of-places .slider-wrapper .cards .card {
   margin-right: 10px;
   padding: 24px;
-  border: 1px solid #3e3e3e;
+  border: 0.5px solid #3e3e3e;
   background-color: #ffffff;
+  border-radius: 4px;
 }
 .list-of-places .slider-wrapper .cards .card h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
   color: #000;
   margin-bottom: 10px;
@@ -791,44 +743,6 @@ footer .footer-container .logo-container .iliauni-logo {
 }
 .list-of-places .slider-wrapper .cards .card:last-child {
   margin-right: 0;
-}
-.list-of-places .slider-wrapper .pages {
-  margin-bottom: 49px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.list-of-places .slider-wrapper .pages #leftArrow {
-  width: 12px;
-  height: 22px;
-  transform: rotate(180deg);
-  margin-right: 5px;
-  cursor: pointer;
-}
-.list-of-places .slider-wrapper .pages .numbers {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.list-of-places .slider-wrapper .pages .numbers span {
-  margin-right: 5px;
-  padding: 5px 10px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #000;
-  cursor: pointer;
-}
-.list-of-places .slider-wrapper .pages .numbers .spot {
-  padding-bottom: 12.5px;
-  color: #3e3e3e;
-}
-.list-of-places .slider-wrapper .pages .numbers .current {
-  background-color: #a9c9e0;
-}
-.list-of-places .slider-wrapper .pages #rightArrow {
-  width: 12px;
-  height: 22px;
-  cursor: pointer;
 }
 .list-of-places .slider-wrapper a button {
   background-color: #085791;
@@ -856,6 +770,7 @@ main .map-section .container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
 }
 main .map-section .container .map-wrapper {
   height: 537px;
@@ -873,6 +788,7 @@ main .team-members .container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
 }
 main .team-members .container .team-members-blocks-wrapper {
   margin-top: 46px;
@@ -1003,10 +919,10 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   justify-content: space-between;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container {
-  width: 100%;
-  max-width: 550px;
+  width: 450px;
+  height: 200px;
+  padding: 16px 28px;
   margin-top: 17px;
-  padding: 20px 30px;
   background-color: #f2faff;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container h2 {
@@ -1035,10 +951,12 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   cursor: pointer;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item input {
-  margin-right: 20px;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container .dropdown-form .dropdown-item label {
   margin-bottom: 0;
@@ -1046,10 +964,10 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   font-weight: 400;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container {
-  width: 100%;
-  max-width: 550px;
+  width: 450px;
+  height: 200px;
+  padding: 16px 28px;
   margin-top: 17px;
-  padding: 13px 30px;
   background-color: #f2faff;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container h2 {
@@ -1078,10 +996,12 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   cursor: pointer;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item input {
-  margin-right: 20px;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-form .dropdown-item label {
   margin-bottom: 0;
@@ -1142,7 +1062,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .slider-track {
   height: 100%;
   position: absolute;
-  background-color: #a9c9e0;
+  background-color: #4390c9;
   border-radius: 13px;
 }
 .main-container .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider input {
@@ -1260,10 +1180,10 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   height: 196px;
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container {
-  width: 100%;
-  max-width: 550px;
+  width: 450px;
+  height: 200px;
+  padding: 16px 28px;
   margin-top: 17px;
-  padding: 27.5px 30px;
   background-color: #f2faff;
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container h2 {
@@ -1292,10 +1212,12 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   cursor: pointer;
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input[type=radio]:checked {
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item input {
-  margin-right: 20px;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
 }
 .main-container .sort-wrapper .sorting-dropdpwn-wrapper .sorting-container .dropdown-form .dropdown-item label {
   margin-bottom: 0;
@@ -1429,6 +1351,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
 }
 .bibliography-content .bibliography-box {
   margin: 46px 0 70px;
@@ -1527,6 +1450,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
 }
 .place-info-wrapper h2 {
   width: -moz-fit-content;
@@ -1547,7 +1471,7 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   line-height: 21.6px;
   padding: 10px;
   width: 100%;
-  background-color: #a9c9e0;
+  background-color: #4390c9;
 }
 .place-info-wrapper section p {
   font-size: 16px;
