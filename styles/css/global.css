@@ -328,8 +328,10 @@ footer .footer-container .logo-container .iliauni-logo {
 footer .footer-bottom {
   background-color: #2a2929;
   height: 36px;
-  padding-top: 10px;
   margin-top: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 footer .footer-bottom p {
   color: #ffffff;

@@ -57,9 +57,11 @@ footer {
   .footer-bottom {
     background-color: $footer-color;
     height: 36px;
-    padding-top: 10px;
     margin-top: 37px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     p {
       color: $button-text-color;
       font-size: 14px;
