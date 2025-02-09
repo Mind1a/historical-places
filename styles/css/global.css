@@ -199,6 +199,7 @@ header .navigation nav ul .nav-button {
   letter-spacing: 1px;
   font-weight: 400;
   line-height: 20px;
+  transition: color 0.2s;
 }
 header .navigation nav ul .nav-button:hover {
   color: #085791;
