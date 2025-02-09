@@ -22,7 +22,7 @@ footer {
       div {
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 16px;
       }
       img {
         width: 18px;
@@ -47,7 +47,6 @@ footer {
       .unilab-logo {
         width: 57px;
         height: 74px;
-        margin-right: 80px;
       }
       .iliauni-logo {
         width: 75px;
@@ -59,12 +58,13 @@ footer {
     background-color: $footer-color;
     height: 36px;
     padding-top: 10px;
-    margin-top: 27px;
+    margin-top: 37px;
 
     p {
       color: $button-text-color;
       font-size: 14px;
       text-align: center;
+      opacity: 0.5;
     }
   }
 }
