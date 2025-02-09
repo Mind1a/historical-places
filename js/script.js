@@ -7,6 +7,10 @@ dropdownBtn.forEach((btn) => {
 
     dropdownContent.classList.toggle("active");
     arrow.classList.toggle("rotate");
+
+    //init slider
+    slideMin();
+    slideMax();
   });
 });
 
@@ -51,15 +55,13 @@ function setArea() {
   const adjustedMax =
     (maxPercent + handlerWidth / 2 - handlerWidth * maxPercent) * 100;
 
-  range.style.left = adjustedMin + "%";
-  range.style.right = 100 - adjustedMax + "%";
+  range.style.left = adjustedMin - 1 + "%";
+  range.style.right = 100 - adjustedMax - 1 + "%";
   minTooltip.style.left = adjustedMin + "%";
   maxTooltip.style.left = adjustedMax + "%";
   minStick.style.left = adjustedMin + "%";
   maxStick.style.left = adjustedMax + "%";
 }
 
-slideMin();
-slideMax();
 minVal.addEventListener("input", slideMin);
 maxVal.addEventListener("input", slideMax);

@@ -386,8 +386,9 @@ footer .footer-bottom p {
 }
 .list-of-places .places-list-form .border {
   position: absolute;
-  bottom: 5px;
+  bottom: 4px;
   right: 60px;
+  top: 4px;
   height: 35px;
   width: 0.5px;
   background-color: #4390c9;
@@ -396,6 +397,7 @@ footer .footer-bottom p {
   margin-bottom: 32px;
 }
 .list-of-places .filter-wrapper .filterBtn-container {
+  transition: background-color 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -404,6 +406,9 @@ footer .footer-bottom p {
   height: 44px;
   gap: 20px;
   border-radius: 4px;
+}
+.list-of-places .filter-wrapper .filterBtn-container:hover {
+  background-color: #0b71bc;
 }
 .list-of-places .filter-wrapper .filterBtn-container button {
   background-color: #085791;
@@ -414,9 +419,13 @@ footer .footer-bottom p {
   font-weight: 400;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 .list-of-places .filter-wrapper .filterBtn-container button:hover {
   background-color: #0b71bc;
+}
+.list-of-places .filter-wrapper .filterBtn-container button:hover {
+  background-color: transparent;
 }
 .list-of-places .filter-wrapper .filterBtn-container img {
   width: 20px;
@@ -573,7 +582,7 @@ footer .footer-bottom p {
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .slider-track {
   height: 100%;
   position: absolute;
-  background-color: #4390c9;
+  background-color: rgb(210, 235, 254);
   border-radius: 13px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider input {
@@ -639,11 +648,11 @@ footer .footer-bottom p {
   height: 40px;
   background-color: #000;
   position: absolute;
-  transform: translateX(-50%);
+  transform: translateX(-10%);
   z-index: 4;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .min-stick {
-  left: 0;
+  left: 0px;
   top: -120%;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .max-stick {
@@ -723,6 +732,7 @@ footer .footer-bottom p {
   align-items: center;
   gap: 21px;
   margin-bottom: 57px;
+  margin-top: 32px;
 }
 .list-of-places .slider-wrapper .cards .card {
   margin-right: 10px;
