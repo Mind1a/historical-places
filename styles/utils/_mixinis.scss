@@ -75,6 +75,7 @@ $pc-max: $pc - 1;
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 32px;
 }
 
 @mixin button(
@@ -126,11 +127,12 @@ $pc-max: $pc - 1;
   $margin-bottom: 8.25px,
   $dropdown-margin: 13.5px
 ) {
-  width: 100%;
-  max-width: 550px;
+  width: 450px;
+  height: 200px;
+  padding: 16px 28px;
   margin-top: 17px;
 
-  padding: $padding-top 30px;
+  //padding: $padding-top 30px;
   background-color: $dropdown-background;
 
   h2 {
@@ -150,7 +152,9 @@ $pc-max: $pc - 1;
       @include dropdown-radio-style();
 
       input {
-        margin-right: 20px;
+        margin-right: 16px;
+        width: 24px;
+        height: 24px;
       }
       label {
         margin-bottom: 0;
