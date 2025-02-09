@@ -320,10 +320,12 @@ footer .footer-container .logo-container {
 footer .footer-container .logo-container .unilab-logo {
   width: 57px;
   height: 74px;
+  cursor: pointer;
 }
 footer .footer-container .logo-container .iliauni-logo {
   width: 75px;
   height: 74px;
+  cursor: pointer;
 }
 footer .footer-bottom {
   background-color: #2a2929;
@@ -798,6 +800,7 @@ footer .footer-bottom p {
   font-size: 16px;
   font-weight: normal;
   color: #3e3e3e;
+  line-height: 19.2px;
 }
 .list-of-places .slider-wrapper .cards .card:last-child {
   margin-right: 0;
