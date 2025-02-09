@@ -429,10 +429,8 @@ footer .footer-bottom p {
   width: 0.5px;
   background-color: #4390c9;
 }
-.list-of-places .filter-wrapper {
-  margin-bottom: 32px;
-}
 .list-of-places .filter-wrapper .filterBtn-container {
+  cursor: pointer;
   transition: background-color 0.2s;
   display: flex;
   align-items: center;
@@ -470,7 +468,7 @@ footer .footer-bottom p {
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown {
   height: 0px;
-  margin-bottom: 400px;
+  height: 432px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
   width: 100%;
@@ -485,6 +483,8 @@ footer .footer-bottom p {
   padding: 16px 28px;
   margin-top: 17px;
   background-color: #f2faff;
+  border: 0.5px solid rgb(8, 87, 145);
+  border-radius: 4px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container h2 {
   font-size: 18px;
@@ -531,6 +531,8 @@ footer .footer-bottom p {
   margin-top: 17px;
   background-color: #f2faff;
   width: 550px;
+  border: 0.5px solid rgb(8, 87, 145);
+  border-radius: 4px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container h2 {
   font-size: 18px;
@@ -598,6 +600,8 @@ footer .footer-bottom p {
   margin-top: 17px;
   padding: 20px 30px;
   background-color: #f2faff;
+  border: 0.5px solid rgb(8, 87, 145);
+  border-radius: 4px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container h2 {
   font-size: 18px;
@@ -698,9 +702,6 @@ footer .footer-bottom p {
 .list-of-places .active {
   display: none;
 }
-.list-of-places .sort-wrapper {
-  margin-bottom: 32px;
-}
 .list-of-places .sort-wrapper .sorting-dropdpwn-wrapper {
   height: 0px;
   overflow: hidden;
@@ -800,6 +801,8 @@ footer .footer-bottom p {
   font-weight: 400;
   border: none;
   cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 2px;
 }
 .list-of-places .slider-wrapper a button:hover {
   background-color: #0b71bc;
