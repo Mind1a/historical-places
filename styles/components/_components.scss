@@ -25,13 +25,15 @@
 
     .see-more {
       display: flex;
-      text-align: center;
-      padding: 8px 25px;
+
+      align-items: center;
+      padding-inline: 25px;
       background-color: $dark-blue;
       cursor: pointer;
       transition: $change-background-color;
       align-self: flex-start;
       border-radius: 2px;
+      min-height: 44px;
 
       &:hover {
         background-color: $button-hover;

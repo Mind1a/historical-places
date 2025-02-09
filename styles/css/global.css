@@ -366,13 +366,14 @@ footer .footer-bottom p {
 }
 .about-project .container .see-more {
   display: flex;
-  text-align: center;
-  padding: 8px 25px;
+  align-items: center;
+  padding-inline: 25px;
   background-color: #085791;
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: flex-start;
   border-radius: 2px;
+  min-height: 44px;
 }
 .about-project .container .see-more:hover {
   background-color: #0b71bc;
