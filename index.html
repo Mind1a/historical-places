@@ -62,17 +62,34 @@
           </nav>
         </div>
         <div class="search-lang-container">
-          <img
-            class="loop-icon"
-            src="./assets/icons/loop icon.svg"
-            alt="loop-icon"
-          />
+          <button class="lang-search-btn">
+            <img
+              class="loop-icon"
+              src="./assets/icons/loop-icon.svg"
+              alt="loop-icon"
+            />
+          </button>
           <div class="language-container">
             <select name="languages" id="languages">
               <option value="">ka</option>
               <option value="en">Eng</option>
               <img src="assets/icons/icon.svg" alt="arrow icon" />
             </select>
+          </div>
+        </div>
+      </div>
+      <div class="search-area inactive">
+        <div class="header-search-wrapper">
+          <form action="#" class="header-search-form">
+            <input type="search" id="header-search" />
+            <button type="submit">
+              <img src="./assets/icons/search-icon.svg" alt="search icon" />
+            </button>
+            <!-- <div class="border"></div> -->
+          </form>
+
+          <div class="search-results">
+            <p class="not-found">შედეგი ვერ მოიძებნა</p>
           </div>
         </div>
       </div>

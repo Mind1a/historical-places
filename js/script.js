@@ -65,3 +65,25 @@ function setArea() {
 
 minVal.addEventListener("input", slideMin);
 maxVal.addEventListener("input", slideMax);
+
+const searchBtn = document.querySelector(".lang-search-btn");
+const searchArea = document.querySelector(".search-area");
+
+searchBtn.addEventListener("click", () => {
+  searchArea.classList.toggle("inactive");
+
+  searchBtn.innerHTML = `
+      <img
+      class="loop-icon"
+      src=${
+        !searchArea.classList.contains("inactive")
+          ? "./assets/icons/close-icon.svg"
+          : "./assets/icons/loop-icon.svg"
+      }
+      alt="loop-icon"
+      alt=${
+        !searchArea.classList.contains("inactive") ? "close icon" : "loop icon"
+      }
+    />
+  `;
+});

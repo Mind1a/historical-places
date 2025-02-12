@@ -219,6 +219,7 @@ header {
   height: 140px;
   background-color: #4390c9;
   padding: 32px 0;
+  z-index: 999;
 }
 header .header-container {
   display: flex;
@@ -229,6 +230,7 @@ header .header-container {
   width: 100%;
   margin: 0 auto;
   padding: 0 32px;
+  padding: 0;
 }
 header .navigation nav ul {
   display: flex;
@@ -252,10 +254,13 @@ header .search-lang-container {
   align-items: center;
   gap: 60px;
 }
-header .search-lang-container img {
+header .search-lang-container .lang-search-btn {
+  background-color: transparent;
+  border: none;
+}
+header .search-lang-container .lang-search-btn img {
   width: 25px;
   height: 23px;
-  cursor: pointer;
 }
 header .language-container {
   display: flex;
@@ -266,6 +271,65 @@ header .language-container select {
   border: none;
   border-radius: 4px;
   color: #4390c9;
+}
+header .search-area {
+  background-color: rgb(242, 250, 255);
+  margin-top: 20px;
+}
+header .search-area.inactive {
+  display: none;
+}
+header .search-area .header-search-wrapper {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  padding: 28px 0;
+  height: 291px;
+}
+header .search-area .header-search-wrapper .search-results {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+header .search-area .header-search-wrapper .search-results .not-found {
+  color: gba(62, 62, 62, 1);
+  font-weight: 700;
+  font-size: 16px;
+}
+header .search-area .header-search-wrapper .header-search-form {
+  display: flex;
+  position: relative;
+}
+header .search-area .header-search-wrapper .header-search-form input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #085791;
+  border-radius: 8px;
+  padding: 16px 36px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+}
+header .search-area .header-search-wrapper .header-search-form button {
+  width: 80px;
+  position: absolute;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  bottom: 4px;
+  top: 4px;
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid #4390c9;
+}
+header .search-area .header-search-wrapper .header-search-form button img {
+  height: 25px;
+  width: 23px;
 }
 
 footer {
@@ -588,14 +652,14 @@ footer .footer-bottom p {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 30px;
+  justify-content: space-between;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container h2 {
   font-size: 18px;
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container input {
   border: 0.5px solid #085791;
-  padding: 2px 12px;
+  padding: 6px 12px;
   font-size: 14px;
   border-radius: 4px;
 }
