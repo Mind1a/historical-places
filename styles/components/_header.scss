@@ -3,12 +3,20 @@ header {
   background-color: $light-blue;
   padding: 32px 0;
 
+  @include responsive($phone) {
+    border-radius: 0 0 8px 8px;
+  }
+
   .header-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     @include container;
+
+    @include responsive($phone) {
+      padding: 0 16px;
+    }
   }
 
   .navigation {
@@ -16,6 +24,10 @@ header {
       display: flex;
       flex-direction: row;
       gap: 20px;
+
+      @include responsive($phone) {
+        display: none;
+      }
 
       .nav-button {
         color: $button-text-color;
@@ -45,6 +57,10 @@ header {
   .language-container {
     display: flex;
     justify-content: space-between;
+
+    @include responsive($phone) {
+      display: none;
+    }
 
     select {
       padding: 8px 8px;

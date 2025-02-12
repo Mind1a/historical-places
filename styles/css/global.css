@@ -177,6 +177,11 @@ header {
   background-color: #4390c9;
   padding: 32px 0;
 }
+@media only screen and (max-width: 719px) {
+  header {
+    border-radius: 0 0 8px 8px;
+  }
+}
 header .header-container {
   display: flex;
   flex-direction: row;
@@ -187,10 +192,26 @@ header .header-container {
   margin: 0 auto;
   padding: 0 32px;
 }
+@media only screen and (max-width: 719px) {
+  header .header-container {
+    max-height: 360px;
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  header .header-container {
+    padding: 0 16px;
+  }
+}
 header .navigation nav ul {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+@media only screen and (max-width: 719px) {
+  header .navigation nav ul {
+    display: none;
+  }
 }
 header .navigation nav ul .nav-button {
   color: #ffffff;
@@ -217,6 +238,11 @@ header .language-container {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 719px) {
+  header .language-container {
+    display: none;
+  }
+}
 header .language-container select {
   padding: 8px 8px;
   border: none;
@@ -237,6 +263,19 @@ footer .footer-container {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 719px) {
+  footer .footer-container {
+    max-height: 360px;
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  footer .footer-container {
+    flex-direction: column-reverse;
+    padding: 24px;
+    gap: 32px;
+  }
+}
 footer .footer-container .contact-container {
   width: 100%;
   display: flex;
@@ -244,16 +283,31 @@ footer .footer-container .contact-container {
   align-items: flex-start;
   gap: 10px;
 }
+@media only screen and (max-width: 719px) {
+  footer .footer-container .contact-container {
+    gap: 16px;
+  }
+}
 footer .footer-container .contact-container h4 {
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: normal;
   color: #d2ebfe;
 }
+@media only screen and (max-width: 719px) {
+  footer .footer-container .contact-container h4 {
+    display: none;
+  }
+}
 footer .footer-container .contact-container div {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+@media only screen and (max-width: 719px) {
+  footer .footer-container .contact-container div {
+    gap: 8px;
+  }
 }
 footer .footer-container .contact-container img {
   width: 18px;
@@ -268,15 +322,32 @@ footer .footer-container .contact-container p {
   color: #fff;
   cursor: pointer;
 }
+@media only screen and (max-width: 719px) {
+  footer .footer-container .contact-container a,
+  footer .footer-container .contact-container p {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
 footer .footer-container .logo-container {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+@media only screen and (max-width: 719px) {
+  footer .footer-container .logo-container {
+    align-self: start;
+  }
+}
 footer .footer-container .logo-container .unilab-logo {
   width: 57px;
   height: 74px;
   margin-right: 80px;
+}
+@media only screen and (max-width: 719px) {
+  footer .footer-container .logo-container .unilab-logo {
+    margin-right: 28px;
+  }
 }
 footer .footer-container .logo-container .iliauni-logo {
   width: 75px;
@@ -293,6 +364,12 @@ footer .footer-bottom p {
   font-size: 14px;
   text-align: center;
 }
+@media only screen and (max-width: 719px) {
+  footer .footer-bottom p {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
 
 /* About Project Section */
 .about-project {
@@ -307,6 +384,17 @@ footer .footer-bottom p {
   flex-direction: column;
   gap: 19.5px;
 }
+@media only screen and (max-width: 719px) {
+  .about-project .container {
+    max-height: 360px;
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .about-project .container {
+    gap: 12px;
+  }
+}
 .about-project .container h3 {
   border-bottom: 1px solid #d2ebfe;
   padding-bottom: 5px;
@@ -318,15 +406,37 @@ footer .footer-bottom p {
   line-height: 19.2px;
   color: #3e3e3e;
 }
+@media only screen and (max-width: 719px) {
+  .about-project .container p {
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
 .about-project .container .see-more {
   display: flex;
   text-align: center;
-  padding: 8px 25px;
+  padding: 14.5px 19px;
   background-color: #085791;
-  cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: flex-start;
   border-radius: 2px;
+  max-width: 130px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 719px) {
+  .about-project .container .see-more {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 12.5px;
+    font-size: 12px;
+  }
 }
 .about-project .container .see-more:hover {
   background-color: #0b71bc;
@@ -346,6 +456,18 @@ footer .footer-bottom p {
   max-width: 1120px;
   margin: 54px auto 0;
 }
+@media only screen and (max-width: 719px) {
+  .list-of-places {
+    max-height: 360px;
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places {
+    margin-top: 36px;
+    max-height: 100%;
+  }
+}
 .list-of-places .places-list-form {
   display: flex;
   flex-direction: column;
@@ -360,6 +482,7 @@ footer .footer-bottom p {
   font-size: 20px;
   font-weight: 500;
   color: #3e3e3e;
+  border-bottom: 1px solid #d2ebfe;
 }
 .list-of-places .places-list-form .search-border-container {
   position: relative;
@@ -375,6 +498,27 @@ footer .footer-bottom p {
   border-radius: 8px;
   width: 100%;
 }
+.list-of-places .places-list-form input::-moz-placeholder {
+  color: transparent;
+}
+.list-of-places .places-list-form input::placeholder {
+  color: transparent;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .places-list-form input::-moz-placeholder {
+    color: #d9d9d9;
+  }
+  .list-of-places .places-list-form input::placeholder {
+    color: #d9d9d9;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .places-list-form input {
+    padding: 12px 11px 12px 35px;
+    border: none;
+    border: 0.37px solid black;
+  }
+}
 .list-of-places .places-list-form img {
   width: 20px;
   height: 19px;
@@ -382,6 +526,12 @@ footer .footer-bottom p {
   bottom: 12px;
   right: 20px;
   cursor: pointer;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .places-list-form img {
+    left: 11px;
+    filter: grayscale(200%);
+  }
 }
 .list-of-places .places-list-form .border {
   position: absolute;
@@ -391,8 +541,18 @@ footer .footer-bottom p {
   width: 0.5px;
   background-color: #4390c9;
 }
+@media only screen and (max-width: 719px) {
+  .list-of-places .places-list-form .border {
+    display: none;
+  }
+}
 .list-of-places .filter-wrapper {
   margin-bottom: 32px;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper {
+    position: relative;
+  }
 }
 .list-of-places .filter-wrapper .filterBtn-container {
   display: flex;
@@ -403,6 +563,16 @@ footer .footer-bottom p {
   height: 44px;
   gap: 20px;
   border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.list-of-places .filter-wrapper .filterBtn-container:hover {
+  background-color: #0b71bc;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-container {
+    background-color: #d2ebfe;
+    max-width: 100%;
+  }
 }
 .list-of-places .filter-wrapper .filterBtn-container button {
   background-color: #085791;
@@ -413,18 +583,43 @@ footer .footer-bottom p {
   font-weight: 400;
   border: none;
   cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  background-color: transparent;
 }
 .list-of-places .filter-wrapper .filterBtn-container button:hover {
   background-color: #0b71bc;
+}
+.list-of-places .filter-wrapper .filterBtn-container button:hover {
+  background-color: transparent;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-container button {
+    color: #085791;
+    font-size: 12px;
+  }
 }
 .list-of-places .filter-wrapper .filterBtn-container img {
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-container img {
+    filter: invert(78%) sepia(78%) saturate(580%) hue-rotate(180deg) brightness(100%);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 8px;
+  }
+}
 .list-of-places .filter-wrapper .filterBtn-dropdown {
   height: 0px;
   margin-bottom: 400px;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-dropdown {
+    margin-bottom: 720px;
+  }
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
   width: 100%;
@@ -432,6 +627,11 @@ footer .footer-bottom p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
+    flex-direction: column;
+  }
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container {
   width: 450px;
@@ -477,6 +677,11 @@ footer .footer-bottom p {
   margin-bottom: 0;
   font-size: 16px;
   font-weight: 400;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .place-type-container {
+    width: 100%;
+  }
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container {
   width: 450px;
@@ -524,11 +729,23 @@ footer .footer-bottom p {
   font-size: 16px;
   font-weight: 400;
 }
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container {
+    width: 100%;
+    height: 100%;
+  }
+}
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 30px;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper .bibliography-container .dropdown-search-container h2 {
   font-size: 18px;
@@ -723,6 +940,16 @@ footer .footer-bottom p {
   gap: 21px;
   margin-bottom: 57px;
 }
+@media only screen and (max-width: 719px) {
+  .list-of-places .slider-wrapper .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    overflow: scroll;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+}
 .list-of-places .slider-wrapper .cards .card {
   margin-right: 10px;
   padding: 24px;
@@ -730,21 +957,40 @@ footer .footer-bottom p {
   background-color: #ffffff;
   border-radius: 4px;
 }
+@media only screen and (max-width: 719px) {
+  .list-of-places .slider-wrapper .cards .card {
+    background-color: #d2ebfe;
+    margin-right: 0;
+    padding: 15.75px;
+    width: 174px;
+  }
+}
 .list-of-places .slider-wrapper .cards .card h4 {
   font-size: 20px;
   font-weight: normal;
   color: #000;
   margin-bottom: 10px;
 }
+@media only screen and (max-width: 719px) {
+  .list-of-places .slider-wrapper .cards .card h4 {
+    font-size: 14px;
+  }
+}
 .list-of-places .slider-wrapper .cards .card p {
   font-size: 16px;
   font-weight: normal;
   color: #3e3e3e;
 }
+@media only screen and (max-width: 719px) {
+  .list-of-places .slider-wrapper .cards .card p {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
 .list-of-places .slider-wrapper .cards .card:last-child {
   margin-right: 0;
 }
-.list-of-places .slider-wrapper a button {
+.list-of-places .slider-wrapper a {
   background-color: #085791;
   color: #ffffff;
   padding: 10px;
@@ -753,9 +999,20 @@ footer .footer-bottom p {
   font-weight: 400;
   border: none;
   cursor: pointer;
+  padding: 10px;
 }
-.list-of-places .slider-wrapper a button:hover {
+.list-of-places .slider-wrapper a:hover {
   background-color: #0b71bc;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .slider-wrapper a {
+    width: 100%;
+    border-radius: 6px;
+    padding: 12.5px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 main {
@@ -766,14 +1023,36 @@ main {
 main .map-section {
   margin-top: 68px;
 }
+@media only screen and (max-width: 719px) {
+  main .map-section {
+    max-height: 360px;
+    margin-top: 36px;
+  }
+}
 main .map-section .container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
   padding: 0 32px;
 }
+@media only screen and (max-width: 719px) {
+  main .map-section .container {
+    max-height: 360px;
+    padding: 0 15px;
+  }
+}
 main .map-section .container .map-wrapper {
   height: 537px;
+}
+@media only screen and (max-width: 719px) {
+  main .map-section .container .map-wrapper {
+    max-height: 360px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  main .about-project {
+    margin-top: 36px;
+  }
 }
 main .about-project .container .about-project-content p:first-child {
   margin-top: 40px;
@@ -789,6 +1068,12 @@ main .team-members .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 32px;
+}
+@media only screen and (max-width: 719px) {
+  main .team-members .container {
+    max-height: 360px;
+    padding: 0 15px;
+  }
 }
 main .team-members .container .team-members-blocks-wrapper {
   margin-top: 46px;
@@ -1353,6 +1638,12 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   margin: 0 auto;
   padding: 0 32px;
 }
+@media only screen and (max-width: 719px) {
+  .bibliography-content {
+    max-height: 360px;
+    padding: 0 15px;
+  }
+}
 .bibliography-content .bibliography-box {
   margin: 46px 0 70px;
 }
@@ -1451,6 +1742,12 @@ main .team-members .container .team-members-blocks-wrapper .team-members-block .
   width: 100%;
   margin: 0 auto;
   padding: 0 32px;
+}
+@media only screen and (max-width: 719px) {
+  .place-info-wrapper {
+    max-height: 360px;
+    padding: 0 15px;
+  }
 }
 .place-info-wrapper h2 {
   width: -moz-fit-content;
