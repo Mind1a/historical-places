@@ -760,11 +760,11 @@ footer .footer-bottom p {
 .list-of-places .filter-wrapper .filterBtn-dropdown {
   margin-top: 35px;
   height: 0px;
-  margin-bottom: 400px;
+  margin-bottom: 420px;
 }
 @media only screen and (max-width: 719px) {
   .list-of-places .filter-wrapper .filterBtn-dropdown {
-    margin-bottom: 720px;
+    margin-bottom: 745px;
   }
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
@@ -1003,6 +1003,12 @@ footer .footer-bottom p {
   border: 0.5px solid rgb(8, 87, 145);
   border-radius: 4px;
 }
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container {
+    max-height: 116px;
+    padding: 16px;
+  }
+}
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container h2 {
   font-size: 18px;
   font-weight: 400;
@@ -1018,7 +1024,7 @@ footer .footer-bottom p {
 }
 @media only screen and (max-width: 719px) {
   .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper {
-    padding: 40px 0;
+    padding: 0px 0;
   }
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider {
@@ -1101,6 +1107,15 @@ footer .footer-bottom p {
   z-index: 5;
   transform: translateX(-50%);
 }
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .tooltip {
+    border-radius: 0;
+    padding: 3px 0;
+    height: 20px;
+    width: 46.5px;
+    font-size: 12px;
+  }
+}
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .min-tooltip {
   margin-top: -17px;
   top: -120%;
@@ -1124,6 +1139,11 @@ footer .footer-bottom p {
   position: absolute;
   transform: translateX(-10%);
   z-index: 4;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .stick {
+    height: 30px;
+  }
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .time-range-container .range-wrapper .range-slider .min-stick {
   left: 0px;

@@ -152,9 +152,9 @@
     .filterBtn-dropdown {
       margin-top: 35px;
       height: 0px;
-      margin-bottom: 400px;
+      margin-bottom: 420px;
       @include responsive($phone) {
-        margin-bottom: 720px;
+        margin-bottom: 745px;
       }
 
       .filter-dropdown-wrapper {
@@ -263,6 +263,10 @@
         border: 0.5px solid rgba(8, 87, 145, 1);
         border-radius: 4px;
 
+        @include responsive($phone) {
+          max-height: 116px;
+          padding: 16px;
+        }
         h2 {
           font-size: 18px;
           font-weight: 400;
@@ -276,7 +280,7 @@
         .range-wrapper {
           padding: 40px 45px;
           @include responsive($phone) {
-            padding: 40px 0;
+            padding: 0px 0;
           }
 
           .range-slider {
@@ -358,6 +362,14 @@
               white-space: nowrap;
               z-index: 5;
               transform: translateX(-50%);
+
+              @include responsive($phone) {
+                border-radius: 0;
+                padding: 3px 0;
+                height: 20px;
+                width: 46.5px;
+                font-size: 12px;
+              }
             }
 
             .min-tooltip {
@@ -383,6 +395,10 @@
               position: absolute;
               transform: translateX(-10%);
               z-index: 4;
+
+              @include responsive($phone) {
+                height: 30px;
+              }
             }
 
             .min-stick {
