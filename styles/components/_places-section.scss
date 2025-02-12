@@ -87,8 +87,7 @@
     }
 
     .filterBtn-dropdown {
-      height: 0px;
-      height: 432px;
+      margin-top: 35px;
 
       .filter-dropdown-wrapper {
         width: 100%;
@@ -96,11 +95,27 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        position: relative;
+
+        .clear-btn {
+          position: absolute;
+          right: 0;
+          top: -38px;
+
+          background-color: transparent;
+          border: none;
+
+          padding: 9.5px 0;
+
+          font-family: "Noto Sans", sans-serif;
+          color: rgba(171, 171, 171, 1);
+        }
 
         .place-type-container {
           @include dropdown-container($dropdown-margin: 18px);
           border: 0.5px solid rgba(8, 87, 145, 1);
           border-radius: 4px;
+          margin-top: 0;
         }
 
         .bibliography-container {
@@ -108,6 +123,7 @@
           width: 550px;
           border: 0.5px solid rgba(8, 87, 145, 1);
           border-radius: 4px;
+          margin-top: 0;
 
           .dropdown-search-container {
             display: flex;

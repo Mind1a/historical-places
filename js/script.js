@@ -87,3 +87,17 @@ searchBtn.addEventListener("click", () => {
     />
   `;
 });
+
+document.querySelector(".clear-btn").addEventListener("click", () => {
+  const allFormes = document
+    .querySelector(".filter-wrapper")
+    .querySelectorAll("form");
+
+  allFormes.forEach((el) => el.reset());
+
+  minVal.value = 1200;
+  maxVal.value = 2800;
+
+  slideMin();
+  slideMax();
+});
