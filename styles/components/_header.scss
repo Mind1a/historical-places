@@ -5,6 +5,10 @@ header {
 
   z-index: 999;
 
+  @include responsive($phone) {
+    border-radius: 0 0 8px 8px;
+  }
+
   .header-container {
     display: flex;
     flex-direction: row;
@@ -12,6 +16,10 @@ header {
     justify-content: space-between;
     @include container;
     padding: 0;
+
+    @include responsive($phone) {
+      padding: 0 16px;
+    }
   }
 
   .navigation {
@@ -19,6 +27,10 @@ header {
       display: flex;
       flex-direction: row;
       gap: 20px;
+
+      @include responsive($phone) {
+        display: none;
+      }
 
       .nav-button {
         color: $button-text-color;
@@ -56,6 +68,10 @@ header {
     display: flex;
     justify-content: space-between;
 
+    @include responsive($phone) {
+      display: none;
+    }
+
     select {
       padding: 8px 8px;
       border: none;
@@ -75,7 +91,7 @@ header {
     .header-search-wrapper {
       @include container;
       padding: 28px 0;
-      height: 291px; //adadfasfafsipdodsholfx
+      height: 291px;
 
       .search-results {
         margin: auto;
@@ -107,6 +123,11 @@ header {
 
           font-family: "Noto Sans", sans-serif;
           font-size: 14px;
+
+          @include responsive($phone) {
+            margin-top: 25px;
+            height: 36px;
+          }
         }
         button {
           width: 80px;
@@ -123,6 +144,14 @@ header {
           border: none;
 
           border-left: 1px solid $light-blue;
+
+          @include responsive($phone) {
+            border: none;
+
+            right: 0;
+            top: 25px;
+            bottom: 2px;
+          }
 
           img {
             height: 25px;

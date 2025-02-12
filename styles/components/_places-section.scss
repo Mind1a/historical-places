@@ -1,9 +1,13 @@
 // index.html pages section
-
 .list-of-places {
   @include container();
   max-width: 1120px;
   margin: 54px auto 0;
+
+  @include responsive($phone) {
+    margin-top: 36px;
+    max-height: 100%;
+  }
 
   .places-list-form {
     display: flex;
@@ -18,6 +22,13 @@
       font-size: 20px;
       font-weight: 500;
       color: $text-color;
+
+      border-bottom: 1px solid $border-color;
+
+      @include responsive($phone) {
+        font-size: 16px;
+        font-weight: 500;
+      }
     }
 
     .search-border-container {
@@ -34,6 +45,19 @@
       border: 0.5px solid $dark-blue;
       border-radius: 8px;
       width: 100%;
+
+      &::placeholder {
+        color: transparent;
+        @include responsive($phone) {
+          color: $light-gray;
+        }
+      }
+
+      @include responsive($phone) {
+        padding: 12px 11px 12px 35px;
+        border: none;
+        border: 0.37px solid black;
+      }
     }
 
     img {
@@ -43,6 +67,11 @@
       bottom: 12px;
       right: 20px;
       cursor: pointer;
+
+      @include responsive($phone) {
+        left: 11px;
+        filter: grayscale(200%);
+      }
     }
     .border {
       position: absolute;
@@ -52,10 +81,17 @@
       height: 35px;
       width: 0.5px;
       background-color: $light-blue;
+
+      @include responsive($phone) {
+        display: none;
+      }
     }
   }
 
   .filter-wrapper {
+    @include responsive($phone) {
+      position: relative;
+    }
     .filterBtn-container {
       cursor: pointer;
 
@@ -71,9 +107,27 @@
       height: 44px;
       gap: 20px;
       border-radius: 4px;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: #0b71bc;
+      }
+      @include responsive($phone) {
+        background-color: $border-color;
+        max-width: 100%;
+      }
+
       button {
         @include button();
         background-color: transparent;
+        font-family: "Work Sans", sans-serif;
+
+        &:hover {
+          background-color: transparent;
+        }
+        @include responsive($phone) {
+          color: $dark-blue;
+          font-size: 12px;
+        }
 
         &:hover {
           background-color: transparent;
@@ -83,11 +137,25 @@
         width: 20px;
         height: 20px;
         cursor: pointer;
+
+        @include responsive($phone) {
+          filter: invert(78%) sepia(78%) saturate(580%) hue-rotate(180deg)
+            brightness(100%);
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          right: 8px;
+        }
       }
     }
 
     .filterBtn-dropdown {
       margin-top: 35px;
+      height: 0px;
+      margin-bottom: 400px;
+      @include responsive($phone) {
+        margin-bottom: 720px;
+      }
 
       .filter-dropdown-wrapper {
         width: 100%;
@@ -96,6 +164,12 @@
         flex-direction: row;
         justify-content: space-between;
         position: relative;
+
+        @include responsive($phone) {
+          margin-top: 52px;
+          flex-direction: column;
+          gap: 24px;
+        }
 
         .clear-btn {
           position: absolute;
@@ -109,13 +183,23 @@
 
           font-family: "Noto Sans", sans-serif;
           color: rgba(171, 171, 171, 1);
+
+          @include responsive($phone) {
+            left: 0;
+            text-align: start;
+          }
         }
 
         .place-type-container {
           @include dropdown-container($dropdown-margin: 18px);
           border: 0.5px solid rgba(8, 87, 145, 1);
           border-radius: 4px;
-          margin-top: 0;
+          margin-top: 0px;
+
+          @include responsive($phone) {
+            width: 100%;
+            margin-top: 10px;
+          }
         }
 
         .bibliography-container {
@@ -125,6 +209,11 @@
           border-radius: 4px;
           margin-top: 0;
 
+          @include responsive($phone) {
+            width: 100%;
+            height: 100%;
+          }
+
           .dropdown-search-container {
             display: flex;
             flex-direction: row;
@@ -132,8 +221,18 @@
             justify-content: space-between;
             // gap: 30px;
 
+            @include responsive($phone) {
+              flex-direction: column;
+              gap: 15px;
+            }
+
             h2 {
               font-size: 18px;
+
+              @include responsive($phone) {
+                font-size: 16px;
+                font-weight: 500;
+              }
             }
 
             input {
@@ -141,6 +240,10 @@
               padding: 6px 12px;
               font-size: 14px;
               border-radius: 4px;
+
+              @include responsive($phone) {
+                width: 100%;
+              }
             }
             input::placeholder {
               color: $light-gray;
@@ -163,10 +266,18 @@
         h2 {
           font-size: 18px;
           font-weight: 400;
+
+          @include responsive($phone) {
+            font-size: 16px;
+            font-weight: 500;
+          }
         }
 
         .range-wrapper {
           padding: 40px 45px;
+          @include responsive($phone) {
+            padding: 40px 0;
+          }
 
           .range-slider {
             position: relative;
@@ -176,6 +287,11 @@
             border-radius: 13px;
             margin-top: 25px;
             padding: 0;
+
+            @include responsive($phone) {
+              border-radius: 0;
+              height: 11px;
+            }
 
             .slider-track {
               height: 100%;
@@ -198,12 +314,17 @@
 
               &::-webkit-slider-thumb {
                 -webkit-appearance: none;
-                width: 27px;
+                width: 21px;
                 height: 26px;
                 border-radius: 50%;
                 background: $language-switch-dark;
                 cursor: pointer;
                 pointer-events: auto;
+
+                @include responsive($phone) {
+                  width: 16px;
+                  height: 15px;
+                }
               }
 
               &::-moz-range-thumb {
@@ -214,6 +335,11 @@
                 cursor: pointer;
                 -moz-appearance: none;
                 pointer-events: auto;
+
+                @include responsive($phone) {
+                  width: 16px;
+                  height: 15px;
+                }
               }
             }
 
@@ -238,6 +364,10 @@
               margin-top: -17px;
               top: -120%;
               left: 0;
+
+              @include responsive($phone) {
+                top: 45px;
+              }
             }
             .max-tooltip {
               margin-top: 17px;
@@ -258,6 +388,10 @@
             .min-stick {
               left: 0px;
               top: -120%;
+
+              @include responsive($phone) {
+                top: 10px;
+              }
             }
 
             .max-stick {
@@ -305,6 +439,16 @@
       margin-bottom: 57px;
       margin-top: 32px;
 
+      @include responsive($phone) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 100%;
+        overflow: scroll;
+        gap: 12px;
+
+        margin-bottom: 40px;
+      }
+
       .card {
         margin-right: 10px;
         padding: 24px;
@@ -312,11 +456,25 @@
         background-color: $button-text-color;
         border-radius: 4px;
 
+        @include responsive($phone) {
+          background-color: $border-color;
+          margin-right: 0;
+          padding: 15.75px;
+
+          width: 174px;
+
+          border: 0.5px solid $light-gray;
+        }
+
         h4 {
           font-size: 20px;
           font-weight: normal;
           color: $black-color;
           margin-bottom: 10px;
+
+          @include responsive($phone) {
+            font-size: 14px;
+          }
         }
 
         p {
@@ -324,6 +482,10 @@
           font-weight: normal;
           color: $text-color;
           line-height: 19.2px;
+
+          @include responsive($phone) {
+            font-size: 12px;
+          }
         }
       }
 
@@ -333,11 +495,18 @@
     }
 
     a {
-      button {
-        @include button();
-        transition: background-color 0.2s;
+      @include button();
+      padding: 10px;
 
-        border-radius: 2px;
+      transition: background-color 0.2s;
+
+      @include responsive($phone) {
+        width: 100%;
+        border-radius: 6px;
+        padding: 12.5px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
       }
     }
   }

@@ -9,11 +9,20 @@
     flex-direction: column;
     gap: 19.5px;
 
+    @include responsive($phone) {
+      gap: 12px;
+    }
+
     h3 {
       @extend %global-h3;
       border-bottom: 1px solid $border-color;
       padding-bottom: 5px;
       align-self: flex-start;
+
+      @include responsive($phone) {
+        font-size: 16px;
+        font-weight: 500;
+      }
     }
 
     p {
@@ -21,19 +30,41 @@
       font-size: 16px;
       line-height: 19.2px;
       color: $text-color;
+
+      @include responsive($phone) {
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 400;
+      }
     }
 
     .see-more {
       display: flex;
 
       align-items: center;
-      padding-inline: 25px;
+      padding: 14.5px 19px;
       background-color: $dark-blue;
-      cursor: pointer;
       transition: $change-background-color;
       align-self: flex-start;
       border-radius: 2px;
-      min-height: 44px;
+
+      max-width: 130px;
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include responsive($phone) {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        padding: 12.5px;
+
+        font-size: 12px;
+      }
 
       &:hover {
         background-color: $button-hover;
