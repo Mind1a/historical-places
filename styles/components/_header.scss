@@ -49,7 +49,7 @@ header {
 
   .mobile-nav {
     overflow: hidden;
-    display: none;
+    // display: none;
 
     &.inactive {
       height: 0;
@@ -57,10 +57,18 @@ header {
 
     @include responsive($phone) {
       background-color: rgba(242, 250, 255, 1);
-      margin-top: 20px;
       display: flex;
       justify-content: center;
       height: 200px;
+
+      border: 1px solid #085791;
+      border-top: transparent;
+      border-radius: 0 0 8px 8px;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -12;
     }
 
     nav {

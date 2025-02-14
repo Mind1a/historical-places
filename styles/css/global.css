@@ -270,7 +270,6 @@ header .navigation nav ul .nav-button:hover {
 }
 header .mobile-nav {
   overflow: hidden;
-  display: none;
 }
 header .mobile-nav.inactive {
   height: 0;
@@ -278,10 +277,16 @@ header .mobile-nav.inactive {
 @media only screen and (max-width: 719px) {
   header .mobile-nav {
     background-color: rgb(242, 250, 255);
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     height: 200px;
+    border: 1px solid #085791;
+    border-top: transparent;
+    border-radius: 0 0 8px 8px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -12;
   }
 }
 header .mobile-nav nav {

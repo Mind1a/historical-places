@@ -68,11 +68,12 @@ maxVal.addEventListener("input", slideMax);
 
 // nav
 const searchBtn = document.querySelector(".lang-search-btn");
-const searchArea = document.querySelector(".search-area");
 const burgerMenuBtn = document.querySelector(".burger");
-const mobileNav = document.querySelector(".mobile-nav");
 
-const headerEvents = function (elements) {
+const addHeaderEvents = function (elements) {
+  const searchArea = document.querySelector(".search-area");
+  const mobileNav = document.querySelector(".mobile-nav");
+
   elements.forEach((el) => {
     el.addEventListener("click", () => {
       el.id === "burger"
@@ -96,7 +97,7 @@ const headerEvents = function (elements) {
   });
 };
 
-headerEvents([burgerMenuBtn, searchBtn]);
+addHeaderEvents([burgerMenuBtn, searchBtn]);
 
 document.querySelector(".clear-btn").addEventListener("click", () => {
   const allFormes = document
