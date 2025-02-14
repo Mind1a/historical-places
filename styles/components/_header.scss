@@ -3,8 +3,6 @@ header {
   background-color: $light-blue;
   padding: 32px 0;
 
-  z-index: 999;
-
   @include responsive($phone) {
     border-radius: 0 0 8px 8px;
   }
@@ -48,18 +46,74 @@ header {
       }
     }
   }
+
+  .mobile-nav {
+    overflow: hidden;
+    display: none;
+
+    &.inactive {
+      height: 0;
+    }
+
+    @include responsive($phone) {
+      background-color: rgba(242, 250, 255, 1);
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      height: 200px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+
+        padding: 32px 0 24px 0;
+        // height: 400px;
+      }
+    }
+  }
   .search-lang-container {
     display: flex;
     align-items: center;
     gap: 60px;
 
+    @include responsive($phone) {
+      gap: 20px;
+    }
+
+    .burger {
+      display: none;
+      background-color: transparent;
+      border: none;
+
+      @include responsive($phone) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
     .lang-search-btn {
       background-color: transparent;
       border: none;
+      display: flex;
+      justify-content: center;
 
       img {
         width: 25px;
         height: 23px;
+        @include responsive($phone) {
+          width: 29px;
+          height: 32px;
+        }
       }
     }
   }
@@ -84,6 +138,15 @@ header {
     background-color: rgba(242, 250, 255, 1);
     margin-top: 20px;
 
+    @include responsive($phone) {
+      // margin-top: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      transform: translateY(-20px);
+    }
+
     &.inactive {
       display: none;
     }
@@ -91,7 +154,15 @@ header {
     .header-search-wrapper {
       @include container;
       padding: 28px 0;
-      height: 291px;
+      // min-height: 86px;
+      min-height: 106px;
+
+      @include responsive($phone) {
+        border: 1px solid $dark-blue;
+        border-top: none;
+
+        border-radius: 0 0 8px 8px;
+      }
 
       .search-results {
         margin: auto;
@@ -102,6 +173,10 @@ header {
         align-items: center;
         justify-content: center;
         text-align: center;
+
+        @include responsive($phone) {
+          display: none;
+        }
 
         .not-found {
           color: gba(62, 62, 62, 1);
@@ -125,7 +200,7 @@ header {
           font-size: 14px;
 
           @include responsive($phone) {
-            margin-top: 25px;
+            margin-top: 45px;
             height: 36px;
           }
         }
@@ -135,7 +210,8 @@ header {
           position: absolute;
           display: grid;
           align-items: center;
-          justify-content: center;
+          justify-content: end;
+          padding-right: 12px;
 
           right: 0;
           bottom: 4px;
@@ -149,7 +225,7 @@ header {
             border: none;
 
             right: 0;
-            top: 25px;
+            top: 45px;
             bottom: 2px;
           }
 

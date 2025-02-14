@@ -66,27 +66,37 @@ function setArea() {
 minVal.addEventListener("input", slideMin);
 maxVal.addEventListener("input", slideMax);
 
+// nav
 const searchBtn = document.querySelector(".lang-search-btn");
 const searchArea = document.querySelector(".search-area");
+const burgerMenuBtn = document.querySelector(".burger");
+const mobileNav = document.querySelector(".mobile-nav");
 
-searchBtn.addEventListener("click", () => {
-  searchArea.classList.toggle("inactive");
+const headerEvents = function (elements) {
+  elements.forEach((el) => {
+    el.addEventListener("click", () => {
+      el.id === "burger"
+        ? mobileNav.classList.toggle("inactive")
+        : searchArea.classList.toggle("inactive");
 
-  searchBtn.innerHTML = `
-      <img
-      class="loop-icon"
+      el.innerHTML = `
+     <img
+      class="${el.id}"
       src=${
-        !searchArea.classList.contains("inactive")
-          ? "./assets/icons/close-icon.svg"
-          : "./assets/icons/loop-icon.svg"
+        !el.classList.contains("inactive")
+          ? `./assets/icons/close-${el.id}.svg`
+          : `./assets/icons/${el.id}-icon.svg`
       }
-      alt="loop-icon"
-      alt=${
-        !searchArea.classList.contains("inactive") ? "close icon" : "loop icon"
-      }
+      alt="${el.classList.contains("inactive") ? el.id : `close-${el.id}`}"
     />
-  `;
-});
+    `;
+
+      el.classList.toggle("inactive");
+    });
+  });
+};
+
+headerEvents([burgerMenuBtn, searchBtn]);
 
 document.querySelector(".clear-btn").addEventListener("click", () => {
   const allFormes = document

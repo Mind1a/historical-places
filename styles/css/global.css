@@ -219,7 +219,6 @@ header {
   height: 140px;
   background-color: #4390c9;
   padding: 32px 0;
-  z-index: 999;
 }
 @media only screen and (max-width: 719px) {
   header {
@@ -269,18 +268,73 @@ header .navigation nav ul .nav-button {
 header .navigation nav ul .nav-button:hover {
   color: #085791;
 }
+header .mobile-nav {
+  overflow: hidden;
+  display: none;
+}
+header .mobile-nav.inactive {
+  height: 0;
+}
+@media only screen and (max-width: 719px) {
+  header .mobile-nav {
+    background-color: rgb(242, 250, 255);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+  }
+}
+header .mobile-nav nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .mobile-nav nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  padding: 32px 0 24px 0;
+}
 header .search-lang-container {
   display: flex;
   align-items: center;
   gap: 60px;
 }
+@media only screen and (max-width: 719px) {
+  header .search-lang-container {
+    gap: 20px;
+  }
+}
+header .search-lang-container .burger {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+@media only screen and (max-width: 719px) {
+  header .search-lang-container .burger {
+    display: flex;
+    justify-content: center;
+  }
+}
 header .search-lang-container .lang-search-btn {
   background-color: transparent;
   border: none;
+  display: flex;
+  justify-content: center;
 }
 header .search-lang-container .lang-search-btn img {
   width: 25px;
   height: 23px;
+}
+@media only screen and (max-width: 719px) {
+  header .search-lang-container .lang-search-btn img {
+    width: 29px;
+    height: 32px;
+  }
 }
 header .language-container {
   display: flex;
@@ -301,6 +355,15 @@ header .search-area {
   background-color: rgb(242, 250, 255);
   margin-top: 20px;
 }
+@media only screen and (max-width: 719px) {
+  header .search-area {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transform: translateY(-20px);
+  }
+}
 header .search-area.inactive {
   display: none;
 }
@@ -310,11 +373,18 @@ header .search-area .header-search-wrapper {
   margin: 0 auto;
   padding: 0 32px;
   padding: 28px 0;
-  height: 291px;
+  min-height: 106px;
 }
 @media only screen and (max-width: 719px) {
   header .search-area .header-search-wrapper {
     padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  header .search-area .header-search-wrapper {
+    border: 1px solid #085791;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
   }
 }
 header .search-area .header-search-wrapper .search-results {
@@ -325,6 +395,11 @@ header .search-area .header-search-wrapper .search-results {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+@media only screen and (max-width: 719px) {
+  header .search-area .header-search-wrapper .search-results {
+    display: none;
+  }
 }
 header .search-area .header-search-wrapper .search-results .not-found {
   color: gba(62, 62, 62, 1);
@@ -346,7 +421,7 @@ header .search-area .header-search-wrapper .header-search-form input {
 }
 @media only screen and (max-width: 719px) {
   header .search-area .header-search-wrapper .header-search-form input {
-    margin-top: 25px;
+    margin-top: 45px;
     height: 36px;
   }
 }
@@ -355,7 +430,8 @@ header .search-area .header-search-wrapper .header-search-form button {
   position: absolute;
   display: grid;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+  padding-right: 12px;
   right: 0;
   bottom: 4px;
   top: 4px;
@@ -367,7 +443,7 @@ header .search-area .header-search-wrapper .header-search-form button {
   header .search-area .header-search-wrapper .header-search-form button {
     border: none;
     right: 0;
-    top: 25px;
+    top: 45px;
     bottom: 2px;
   }
 }
@@ -750,11 +826,19 @@ footer .footer-bottom p {
 }
 @media only screen and (max-width: 719px) {
   .list-of-places .filter-wrapper .filterBtn-container img {
-    filter: invert(78%) sepia(78%) saturate(580%) hue-rotate(180deg) brightness(100%);
+    display: none;
+  }
+}
+.list-of-places .filter-wrapper .filterBtn-container .filter-mobile {
+  display: none;
+}
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-container .filter-mobile {
+    display: block;
     width: 25px;
     height: 25px;
     position: absolute;
-    right: 8px;
+    right: 11px;
   }
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown {
@@ -1333,6 +1417,7 @@ footer .footer-bottom p {
 
 main {
   /* Map Section */
+  z-index: -55;
   /* About Project Section */
   /* Team Members Section */
 }

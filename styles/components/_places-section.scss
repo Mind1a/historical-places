@@ -137,14 +137,19 @@
         width: 20px;
         height: 20px;
         cursor: pointer;
+        @include responsive($phone) {
+          display: none;
+        }
+      }
+      .filter-mobile {
+        display: none;
 
         @include responsive($phone) {
-          filter: invert(78%) sepia(78%) saturate(580%) hue-rotate(180deg)
-            brightness(100%);
+          display: block;
           width: 25px;
           height: 25px;
           position: absolute;
-          right: 8px;
+          right: 11px;
         }
       }
     }

@@ -61,13 +61,18 @@
             </ul>
           </nav>
         </div>
+
         <div class="search-lang-container">
-          <button class="lang-search-btn">
+          <button id="loop" class="lang-search-btn">
             <img
               class="loop-icon"
               src="./assets/icons/loop-icon.svg"
               alt="loop-icon"
             />
+          </button>
+
+          <button id="burger" class="burger">
+            <img src="./assets/icons/burger-icon.svg" alt="menu" />
           </button>
           <div class="language-container">
             <select name="languages" id="languages">
@@ -92,6 +97,25 @@
             <p class="not-found">შედეგი ვერ მოიძებნა</p>
           </div>
         </div>
+      </div>
+      <div class="mobile-nav inactive">
+        <nav>
+          <ul>
+            <li>
+              <a href="./index.html" class="nav-button">ადგილები</a>
+            </li>
+            <li>
+              <a href="./pages/list-of-places.html" class="nav-button"
+                >ბიბლიოგრაფია</a
+              >
+            </li>
+            <li>
+              <a href="./pages/bibliography.html" class="nav-button"
+                >პროექტის შესახებ</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -153,6 +177,11 @@
             <div></div>
             <button>ფილტრი</button>
             <img src="./assets/icons/mage_filter.svg" alt="filter icon" />
+            <img
+              src="./assets/icons/filter-mobile.svg"
+              class="filter-mobile"
+              alt="filter icon"
+            />
           </div>
           <div class="filterBtn-dropdown dropdown active">
             <div class="filter-dropdown-wrapper">
