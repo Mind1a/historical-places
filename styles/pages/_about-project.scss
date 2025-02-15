@@ -1,7 +1,7 @@
 main {
   /* Map Section */
 
-  z-index: -55;
+  // z-index: -55;
   .map-section {
     @include responsive($phone) {
       max-height: 360px;
