@@ -860,7 +860,7 @@ footer .footer-bottom p {
 }
 @media only screen and (max-width: 719px) {
   .list-of-places .filter-wrapper .filterBtn-dropdown {
-    margin-bottom: 745px;
+    margin-bottom: 700px;
   }
 }
 .list-of-places .filter-wrapper .filterBtn-dropdown .filter-dropdown-wrapper {
