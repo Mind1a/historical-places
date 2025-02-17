@@ -207,7 +207,7 @@ button {
     transform: rotate(360deg);
   }
 }
-main .team-members .container h3, .about-project .container h3 {
+.about-project .container h3 {
   display: inline-block;
   font-weight: 500;
   font-size: 20px;
@@ -586,88 +586,6 @@ footer .footer-bottom p {
     font-size: 10px;
     color: rgba(255, 255, 255, 0.5);
   }
-}
-
-/* About Project Section */
-.about-project {
-  margin-top: 64px;
-}
-.about-project .container {
-  max-width: 1120px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 19.5px;
-}
-@media only screen and (max-width: 719px) {
-  .about-project .container {
-    padding: 0 15px;
-  }
-}
-@media only screen and (max-width: 719px) {
-  .about-project .container {
-    gap: 12px;
-  }
-}
-.about-project .container h3 {
-  border-bottom: 1px solid #d2ebfe;
-  padding-bottom: 5px;
-  align-self: flex-start;
-}
-@media only screen and (max-width: 719px) {
-  .about-project .container h3 {
-    font-size: 16px;
-    font-weight: 500;
-  }
-}
-.about-project .container p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19.2px;
-  color: #3e3e3e;
-}
-@media only screen and (max-width: 719px) {
-  .about-project .container p {
-    font-size: 12px;
-    line-height: 1.5;
-    font-weight: 400;
-  }
-}
-.about-project .container .see-more {
-  display: flex;
-  align-items: center;
-  padding: 14.5px 19px;
-  background-color: #085791;
-  transition: background-color 0.3s ease;
-  align-self: flex-start;
-  border-radius: 2px;
-  max-width: 130px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media only screen and (max-width: 719px) {
-  .about-project .container .see-more {
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    padding: 12.5px;
-    font-size: 12px;
-  }
-}
-.about-project .container .see-more:hover {
-  background-color: #0b71bc;
-}
-.about-project .container .see-more a {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16.8px;
-  color: #ffffff;
 }
 
 .list-of-places {
@@ -1446,8 +1364,6 @@ footer .footer-bottom p {
 
 main {
   /* Map Section */
-  /* About Project Section */
-  /* Team Members Section */
 }
 main .map-section {
   margin-top: 68px;
@@ -1477,72 +1393,98 @@ main .map-section .container .map-wrapper {
     max-height: 360px;
   }
 }
+
+/* About Project Section */
+.about-project {
+  margin-top: 64px;
+}
 @media only screen and (max-width: 719px) {
-  main .about-project {
+  .about-project {
     margin-top: 36px;
   }
 }
-main .about-project .container .about-project-content p:first-child {
-  margin-top: 40px;
-}
-main .about-project .container .about-project-content p:not(:first-child) {
-  margin-top: 20px;
-}
-main .team-members {
-  margin: 88px 0 50px 0;
-}
-main .team-members .container {
+.about-project .container {
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
   padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 19.5px;
 }
 @media only screen and (max-width: 719px) {
-  main .team-members .container {
+  .about-project .container {
     padding: 0 15px;
   }
 }
-main .team-members .container .team-members-blocks-wrapper {
-  margin-top: 46px;
-  display: flex;
-  -moz-column-gap: 87px;
-       column-gap: 87px;
+@media only screen and (max-width: 719px) {
+  .about-project .container {
+    gap: 12px;
+  }
 }
-main .team-members .container .team-members-blocks-wrapper .team-members-block {
-  width: 17.68%;
-  padding: 10px;
+.about-project .container .about-project-content p:first-child {
+  margin-top: 40px;
 }
-main .team-members .container .team-members-blocks-wrapper .team-members-block h4 {
-  margin-bottom: 10px;
+.about-project .container .about-project-content p:not(:first-child) {
+  margin-top: 20px;
+}
+.about-project .container h3 {
+  border-bottom: 1px solid #d2ebfe;
+  padding-bottom: 5px;
+  align-self: flex-start;
+}
+@media only screen and (max-width: 719px) {
+  .about-project .container h3 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.about-project .container p {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 21.6px;
+  font-size: 16px;
+  line-height: 19.2px;
   color: #3e3e3e;
 }
-main .team-members .container .team-members-blocks-wrapper .team-members-block p {
-  font-weight: 300;
-  font-size: 10px;
-  line-height: 12px;
-  color: #3e3e3e;
+@media only screen and (max-width: 719px) {
+  .about-project .container p {
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
 }
-main .team-members .container .team-members-blocks-wrapper .team-members-block .email {
-  margin-top: 10px;
+.about-project .container .see-more {
   display: flex;
+  align-items: center;
+  padding: 14.5px 19px;
+  background-color: #085791;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  border-radius: 2px;
+  max-width: 130px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-main .team-members .container .team-members-blocks-wrapper .team-members-block .email img {
-  width: 14px;
-  height: 11px;
-  -o-object-fit: cover;
-     object-fit: cover;
+@media only screen and (max-width: 719px) {
+  .about-project .container .see-more {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 12.5px;
+    font-size: 12px;
+  }
 }
-main .team-members .container .team-members-blocks-wrapper .team-members-block .email p {
-  margin-left: 4px;
+.about-project .container .see-more:hover {
+  background-color: #0b71bc;
 }
-main .team-members .container .team-members-blocks-wrapper .team-members-block .email p a {
-  font-weight: 300;
-  font-size: 10px;
-  line-height: 12px;
-  color: #3e3e3e;
+.about-project .container .see-more a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #ffffff;
 }
 
 .main-container {

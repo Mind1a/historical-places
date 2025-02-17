@@ -156,8 +156,8 @@
 
     .filterBtn-dropdown {
       margin-top: 35px;
-      height: 0px;
-      margin-bottom: 420px;
+      height: 0px; //----------
+      margin-bottom: 420px; //----------
       @include responsive($phone) {
         margin-bottom: 700px;
       }
