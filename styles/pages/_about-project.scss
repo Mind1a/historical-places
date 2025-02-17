@@ -1,29 +1,4 @@
-main {
-  /* Map Section */
-
-  // z-index: -55;
-  .map-section {
-    @include responsive($phone) {
-      max-height: 360px;
-      margin-top: 36px;
-    }
-    margin-top: 68px;
-    .container {
-      @include container;
-
-      .map-wrapper {
-        height: 537px;
-
-        @include responsive($phone) {
-          max-height: 360px;
-        }
-      }
-    }
-  }
-}
-
 /* About Project Section */
-
 .about-project {
   margin-top: 64px;
 
