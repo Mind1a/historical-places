@@ -65,14 +65,30 @@
         <div class="search-lang-container">
           <button id="loop" class="lang-search-btn">
             <img
-              class="loop-icon"
+              class="loop-icon mainBtn active"
               src="./assets/icons/loop-icon.svg"
               alt="loop-icon"
             />
+
+            <img
+              class="close"
+              src="./assets/icons/close-loop.svg"
+              alt="close-icon"
+            />
           </button>
 
-          <button id="burger" class="burger">
-            <img src="./assets/icons/burger-icon.svg" alt="menu" />
+          <button id="burger">
+            <img
+              class="burger mainBtn active"
+              src="./assets/icons/burger-icon.svg"
+              alt="menu"
+            />
+
+            <img
+              class="close"
+              src="./assets/icons/close-burger.svg"
+              alt="close-icon"
+            />
           </button>
           <div class="language-container">
             <select name="languages" id="languages">
@@ -174,18 +190,19 @@
         <!-- filter section -->
         <div class="filter-wrapper">
           <div class="filterBtn-container dropdown-btn">
-            <div></div>
-            <button>ფილტრი</button>
-            <img src="./assets/icons/mage_filter.svg" alt="filter icon" />
-            <img
-              src="./assets/icons/filter-mobile.svg"
-              class="filter-mobile"
-              alt="filter icon"
-            />
+            <button class="filter-btn">
+              <span> ფილტრი </span>
+              <img src="./assets/icons/mage_filter.svg" alt="filter icon" />
+              <img
+                src="./assets/icons/filter-mobile.svg"
+                class="filter-mobile"
+                alt="filter icon"
+              />
+            </button>
+            <button class="clear-btn active">ფილტრის გასუფთავება</button>
           </div>
           <div class="filterBtn-dropdown dropdown active">
             <div class="filter-dropdown-wrapper">
-              <button class="clear-btn">ფილტრის გასუფთავება</button>
               <div class="place-type-container">
                 <h2>ადგილის ტიპების მიხედვით</h2>
                 <form action="#" class="dropdown-form locations">
@@ -208,7 +225,7 @@
                 </form>
               </div>
               <div class="bibliography-container">
-                <div class="dropdown-search-container">
+                <form class="dropdown-search-container">
                   <h2>ბიბლიოგრაფია</h2>
                   <input type="text" placeholder="ძიება" />
                   <img
@@ -216,7 +233,7 @@
                     src="./assets/icons/input-loop.svg"
                     alt="loop icon"
                   />
-                </div>
+                </form>
                 <form action="#" class="dropdown-form bibliography">
                   <div class="dropdown-item">
                     <input

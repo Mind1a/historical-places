@@ -48,11 +48,9 @@ header {
   }
 
   .mobile-nav {
-    overflow: hidden;
-    // display: none;
-
+    display: block;
     &.inactive {
-      height: 0;
+      display: none;
     }
 
     @include responsive($phone) {
@@ -68,7 +66,7 @@ header {
       position: absolute;
       left: 0;
       right: 0;
-      z-index: -12;
+      z-index: -1;
     }
 
     nav {
@@ -97,35 +95,63 @@ header {
   .search-lang-container {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 48px;
+
+    min-width: 81px;
 
     @include responsive($phone) {
       gap: 20px;
     }
 
-    .burger {
-      display: none;
+    #burger {
       background-color: transparent;
       border: none;
+      display: none;
 
       @include responsive($phone) {
         display: flex;
         justify-content: center;
       }
+
+      .burger {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+
+      .close {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
     }
 
-    .lang-search-btn {
+    #loop {
       background-color: transparent;
       border: none;
       display: flex;
       justify-content: center;
 
       img {
+        display: none;
         width: 25px;
         height: 23px;
         @include responsive($phone) {
           width: 29px;
           height: 32px;
+        }
+        &.active {
+          display: block;
+        }
+
+        &.close {
+          display: none;
+          &.active {
+            display: block;
+          }
         }
       }
     }

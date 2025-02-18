@@ -10,6 +10,8 @@ main {
     margin-top: 68px;
     .container {
       @include container();
+      z-index: -2;
+      position: relative;
       .map-wrapper {
         height: 537px;
 

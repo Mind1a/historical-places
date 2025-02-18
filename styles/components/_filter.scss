@@ -1,7 +1,7 @@
 .list-of-places {
   @include container();
   max-width: 1120px;
-  margin: 54px auto 0;
+  margin: 56px auto;
 
   @include responsive($phone) {
     margin-top: 36px;
@@ -53,7 +53,7 @@
       }
 
       @include responsive($phone) {
-        padding: 12px 11px 12px 35px;
+        padding: 11.15px 35px;
         border: none;
         border: 0.37px solid black;
       }
@@ -68,7 +68,7 @@
       cursor: pointer;
 
       @include responsive($phone) {
-        left: 11px;
+        left: 11.15px;
         filter: grayscale(200%);
       }
     }
@@ -92,32 +92,14 @@
       position: relative;
     }
     .filterBtn-container {
-      cursor: pointer;
-
-      transition: background-color 0.2s;
-      &:hover {
-        background-color: #0b71bc;
-      }
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      background-color: $dark-blue;
-      max-width: 190px;
-      height: 44px;
-      gap: 20px;
-      border-radius: 4px;
-      transition: background-color 0.2s;
-      &:hover {
-        background-color: #0b71bc;
-      }
-      @include responsive($phone) {
-        background-color: $border-color;
-        max-width: 100%;
-      }
 
+      @include responsive($phone) {
+        gap: 12px;
+      }
       button {
-        @include button();
-        background-color: transparent;
         font-family: "Work Sans", sans-serif;
 
         &:hover {
@@ -130,6 +112,48 @@
 
         &:hover {
           background-color: transparent;
+        }
+      }
+
+      .filter-btn {
+        @include button();
+
+        max-width: 190px;
+        transition: background-color 0.2s;
+        background-color: $dark-blue;
+        border-radius: 4px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 14px;
+
+        @include responsive($phone) {
+          background-color: $border-color;
+          max-width: 100%;
+          color: $dark-blue;
+          padding: 8px;
+        }
+
+        span {
+          font-size: 12px;
+        }
+      }
+
+      .clear-btn {
+        max-width: 174px;
+        background-color: transparent;
+        border: none;
+        padding: 9.5px 0;
+        align-self: flex-end;
+        font-family: "Noto Sans", sans-serif;
+        color: rgba(171, 171, 171, 1);
+
+        @include responsive($phone) {
+          // text-align: start;
+          padding: 9px 0;
+          align-self: flex-start;
         }
       }
       img {
@@ -145,20 +169,17 @@
 
         @include responsive($phone) {
           display: block;
-          width: 25px;
-          height: 25px;
+          width: 19px;
+          height: 18px;
           position: absolute;
-          right: 11px;
+          right: 8px;
         }
       }
     }
 
     .filterBtn-dropdown {
-      margin-top: 35px;
-      height: 0px; //----------
-      margin-bottom: 420px; //----------
       @include responsive($phone) {
-        margin-bottom: 700px;
+        margin-top: 8px;
       }
 
       .filter-dropdown-wrapper {
@@ -170,29 +191,8 @@
         position: relative;
 
         @include responsive($phone) {
-          margin-top: 52px;
           flex-direction: column;
           gap: 24px;
-        }
-
-        .clear-btn {
-          position: absolute;
-          right: 0;
-          top: -38px;
-
-          background-color: transparent;
-          border: none;
-
-          padding: 9.5px 0;
-
-          font-family: "Noto Sans", sans-serif;
-          color: rgba(171, 171, 171, 1);
-
-          @include responsive($phone) {
-            left: 0;
-            text-align: start;
-            padding: 5px 0 0px 0;
-          }
         }
 
         .place-type-container {
@@ -290,6 +290,7 @@
           max-height: 116px;
           padding: 16px;
           border-radius: 6px;
+          margin-top: 24px;
         }
         h2 {
           font-size: 18px;
@@ -471,7 +472,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px;
     .cards {
       display: flex;
       align-items: center;
@@ -485,6 +485,7 @@
         max-width: 100%;
         overflow: scroll;
         gap: 12px;
+        margin-top: 32px;
 
         margin-bottom: 40px;
       }
@@ -545,6 +546,7 @@
         width: 100%;
         border-radius: 6px;
         padding: 12.5px;
+        font-size: 12px;
         display: grid;
         justify-content: center;
         align-items: center;

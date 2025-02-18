@@ -6,6 +6,7 @@ dropdownBtn.forEach((btn) => {
     const dropdownContent = btn.nextElementSibling;
 
     dropdownContent.classList.toggle("active");
+    document.querySelector(".clear-btn").classList.toggle("active");
     arrow.classList.toggle("rotate");
 
     //init slider
@@ -56,11 +57,20 @@ function setArea() {
     (maxPercent + handlerWidth / 2 - handlerWidth * maxPercent) * 100;
 
   range.style.left = adjustedMin - 1 + "%";
-  range.style.right = 100 - adjustedMax - 1 + "%";
+  range.style.right = 100 - adjustedMax + 1 + "%";
   minTooltip.style.left = adjustedMin + "%";
   maxTooltip.style.left = adjustedMax + "%";
   minStick.style.left = adjustedMin + "%";
   maxStick.style.left = adjustedMax + "%";
+
+  if (window.outerWidth <= 390) {
+    range.style.left = adjustedMin + "%";
+    range.style.right = 100 - adjustedMax + "%";
+    minTooltip.style.left = adjustedMin + "%";
+    maxTooltip.style.left = adjustedMax + "%";
+    minStick.style.left = adjustedMin - 1 + "%";
+    maxStick.style.left = adjustedMax + 1 + "%";
+  }
 }
 
 minVal.addEventListener("input", slideMin);
@@ -68,7 +78,7 @@ maxVal.addEventListener("input", slideMax);
 
 // nav
 const searchBtn = document.querySelector(".lang-search-btn");
-const burgerMenuBtn = document.querySelector(".burger");
+const burgerMenuBtn = document.getElementById("burger");
 
 const addHeaderEvents = function (elements) {
   const searchArea = document.querySelector(".search-area");
@@ -76,23 +86,15 @@ const addHeaderEvents = function (elements) {
 
   elements.forEach((el) => {
     el.addEventListener("click", () => {
+      const close = el.querySelector(".close");
+      const mainBtn = el.querySelector(".mainBtn");
+
+      close.classList.toggle("active");
+      mainBtn.classList.toggle("active");
+
       el.id === "burger"
         ? mobileNav.classList.toggle("inactive")
         : searchArea.classList.toggle("inactive");
-
-      el.innerHTML = `
-     <img
-      class="${el.id}"
-      src=${
-        !el.classList.contains("inactive")
-          ? `./assets/icons/close-${el.id}.svg`
-          : `./assets/icons/${el.id}-icon.svg`
-      }
-      alt="${el.classList.contains("inactive") ? el.id : `close-${el.id}`}"
-    />
-    `;
-
-      el.classList.toggle("inactive");
     });
   });
 };
