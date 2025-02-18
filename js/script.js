@@ -6,7 +6,12 @@ dropdownBtn.forEach((btn) => {
     const dropdownContent = btn.nextElementSibling;
 
     dropdownContent.classList.toggle("active");
+    document.querySelector(".clear-btn").classList.toggle("active");
     arrow.classList.toggle("rotate");
+
+    //init slider
+    slideMin();
+    slideMax();
   });
 });
 
@@ -51,15 +56,61 @@ function setArea() {
   const adjustedMax =
     (maxPercent + handlerWidth / 2 - handlerWidth * maxPercent) * 100;
 
-  range.style.left = adjustedMin + "%";
-  range.style.right = 100 - adjustedMax + "%";
+  range.style.left = adjustedMin - 1 + "%";
+  range.style.right = 100 - adjustedMax + 1 + "%";
   minTooltip.style.left = adjustedMin + "%";
   maxTooltip.style.left = adjustedMax + "%";
   minStick.style.left = adjustedMin + "%";
   maxStick.style.left = adjustedMax + "%";
+
+  if (window.outerWidth <= 390) {
+    range.style.left = adjustedMin + "%";
+    range.style.right = 100 - adjustedMax + "%";
+    minTooltip.style.left = adjustedMin + "%";
+    maxTooltip.style.left = adjustedMax + "%";
+    minStick.style.left = adjustedMin - 1 + "%";
+    maxStick.style.left = adjustedMax + 1 + "%";
+  }
 }
 
-slideMin();
-slideMax();
 minVal.addEventListener("input", slideMin);
 maxVal.addEventListener("input", slideMax);
+
+// nav
+const searchBtn = document.querySelector(".lang-search-btn");
+const burgerMenuBtn = document.getElementById("burger");
+
+const addHeaderEvents = function (elements) {
+  const searchArea = document.querySelector(".search-area");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  elements.forEach((el) => {
+    el.addEventListener("click", () => {
+      const close = el.querySelector(".close");
+      const mainBtn = el.querySelector(".mainBtn");
+
+      close.classList.toggle("active");
+      mainBtn.classList.toggle("active");
+
+      el.id === "burger"
+        ? mobileNav.classList.toggle("inactive")
+        : searchArea.classList.toggle("inactive");
+    });
+  });
+};
+
+addHeaderEvents([burgerMenuBtn, searchBtn]);
+
+document.querySelector(".clear-btn").addEventListener("click", () => {
+  const allFormes = document
+    .querySelector(".filter-wrapper")
+    .querySelectorAll("form");
+
+  allFormes.forEach((el) => el.reset());
+
+  minVal.value = 1200;
+  maxVal.value = 2800;
+
+  slideMin();
+  slideMax();
+});

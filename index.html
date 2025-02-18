@@ -39,7 +39,9 @@
     <!-- Header -->
     <header>
       <div class="header-container">
-        <img src="./assets/main-images/logo.svg" alt="page logo" />
+        <a href="#">
+          <img src="./assets/main-images/logo.svg" alt="page logo" />
+        </a>
         <div class="navigation">
           <nav>
             <ul>
@@ -59,12 +61,35 @@
             </ul>
           </nav>
         </div>
+
         <div class="search-lang-container">
-          <img
-            class="loop-icon"
-            src="./assets/icons/loop icon.svg"
-            alt="loop-icon"
-          />
+          <button id="loop" class="lang-search-btn">
+            <img
+              class="loop-icon mainBtn active"
+              src="./assets/icons/loop-icon.svg"
+              alt="loop-icon"
+            />
+
+            <img
+              class="close"
+              src="./assets/icons/close-loop.svg"
+              alt="close-icon"
+            />
+          </button>
+
+          <button id="burger">
+            <img
+              class="burger mainBtn active"
+              src="./assets/icons/burger-icon.svg"
+              alt="menu"
+            />
+
+            <img
+              class="close"
+              src="./assets/icons/close-burger.svg"
+              alt="close-icon"
+            />
+          </button>
           <div class="language-container">
             <select name="languages" id="languages">
               <option value="">ka</option>
@@ -73,6 +98,40 @@
             </select>
           </div>
         </div>
+      </div>
+      <div class="search-area inactive">
+        <div class="header-search-wrapper">
+          <form action="#" class="header-search-form">
+            <input type="search" id="header-search" />
+            <button type="submit">
+              <img src="./assets/icons/search-icon.svg" alt="search icon" />
+            </button>
+            <!-- <div class="border"></div> -->
+          </form>
+
+          <div class="search-results">
+            <p class="not-found">შედეგი ვერ მოიძებნა</p>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-nav inactive">
+        <nav>
+          <ul>
+            <li>
+              <a href="./index.html" class="nav-button">ადგილები</a>
+            </li>
+            <li>
+              <a href="./pages/list-of-places.html" class="nav-button"
+                >ბიბლიოგრაფია</a
+              >
+            </li>
+            <li>
+              <a href="./pages/bibliography.html" class="nav-button"
+                >პროექტის შესახებ</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -111,8 +170,8 @@
           </p>
 
           <!-- Button -->
-          <div class="see-more">
-            <a href="./pages/about-project.html">ვრცლად</a>
+          <div>
+            <a class="see-more" href="./pages/about-project.html">ვრცლად</a>
           </div>
         </div>
       </section>
@@ -123,7 +182,7 @@
         <form action="#" class="places-list-form">
           <label for="search">ადგილების ჩამონათვალი</label>
           <div class="search-border-container">
-            <input type="search" id="search" />
+            <input type="search" id="search" placeholder="გაფართოებული ძებნა" />
             <div class="border"></div>
           </div>
           <img src="./assets/icons/search-icon.svg" alt="search icon" />
@@ -131,54 +190,82 @@
         <!-- filter section -->
         <div class="filter-wrapper">
           <div class="filterBtn-container dropdown-btn">
-            <div></div>
-            <button>ფილტრი</button>
-            <img src="./assets/icons/mage_filter.svg" alt="filter icon" />
+            <button class="filter-btn">
+              <span> ფილტრი </span>
+              <img src="./assets/icons/mage_filter.svg" alt="filter icon" />
+              <img
+                src="./assets/icons/filter-mobile.svg"
+                class="filter-mobile"
+                alt="filter icon"
+              />
+            </button>
+            <button class="clear-btn active">ფილტრის გასუფთავება</button>
           </div>
           <div class="filterBtn-dropdown dropdown active">
             <div class="filter-dropdown-wrapper">
               <div class="place-type-container">
                 <h2>ადგილის ტიპების მიხედვით</h2>
-                <form action="#" class="dropdown-form">
+                <form action="#" class="dropdown-form locations">
                   <div class="dropdown-item">
-                    <input type="radio" id="option1" name="place-type" />
+                    <input type="checkbox" id="option1" name="place-type" />
                     <label for="option1">ლორემ იპსუმ</label>
                   </div>
                   <div class="dropdown-item">
-                    <input type="radio" id="option2" name="place-type" />
+                    <input type="checkbox" id="option2" name="place-type" />
                     <label for="option2">ლორემ იპსუმ</label>
                   </div>
                   <div class="dropdown-item">
-                    <input type="radio" id="option3" name="place-type" />
+                    <input type="checkbox" id="option3" name="place-type" />
                     <label for="option3">ლორემ იპსუმ</label>
                   </div>
                   <div class="dropdown-item">
-                    <input type="radio" id="option4" name="place-type" />
+                    <input type="checkbox" id="option4" name="place-type" />
                     <label for="option4">ლორემ იპსუმ</label>
                   </div>
                 </form>
               </div>
               <div class="bibliography-container">
-                <div class="dropdown-search-container">
+                <form class="dropdown-search-container">
                   <h2>ბიბლიოგრაფია</h2>
                   <input type="text" placeholder="ძიება" />
-                </div>
-                <form action="#" class="dropdown-form">
+                  <img
+                    class="search-mobile-icon"
+                    src="./assets/icons/input-loop.svg"
+                    alt="loop icon"
+                  />
+                </form>
+                <form action="#" class="dropdown-form bibliography">
                   <div class="dropdown-item">
-                    <input type="radio" id="option1" name="bibliography-type" />
-                    <label for="option1">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                    <input
+                      type="checkbox"
+                      id="option5"
+                      name="bibliography-type"
+                    />
+                    <label for="option5">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
                   </div>
                   <div class="dropdown-item">
-                    <input type="radio" id="option2" name="bibliography-type" />
-                    <label for="option2">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                    <input
+                      type="checkbox"
+                      id="option6"
+                      name="bibliography-type"
+                    />
+                    <label for="option6">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
                   </div>
                   <div class="dropdown-item">
-                    <input type="radio" id="option3" name="bibliography-type" />
-                    <label for="option3">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                    <input
+                      type="checkbox"
+                      id="option7"
+                      name="bibliography-type"
+                    />
+                    <label for="option7">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
                   </div>
                   <div class="dropdown-item">
-                    <input type="radio" id="option4" name="bibliography-type" />
-                    <label for="option4">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
+                    <input
+                      type="checkbox"
+                      id="option8"
+                      name="bibliography-type"
+                    />
+                    <label for="option8">ლორემ იპსუმ დოლორ თართი მოვიდა</label>
                   </div>
                 </form>
               </div>
@@ -215,30 +302,30 @@
         </div>
 
         <!-- sorting section -->
-        <div class="sort-wrapper">
+        <!-- <div class="sort-wrapper">
           <div class="sorting-dropdpwn-wrapper">
             <div class="sorting-container dropdown">
               <form action="#" class="dropdown-form">
                 <div class="dropdown-item">
-                  <input type="radio" id="option1" name="sorting-type" />
+                  <input type="checkbox" id="option1" name="sorting-type" />
                   <label for="option1">ანბანურად</label>
                 </div>
                 <div class="dropdown-item">
-                  <input type="radio" id="option2" name="sorting-type" />
+                  <input type="checkbox" id="option2" name="sorting-type" />
                   <label for="option2">ანბანურად პირიქით</label>
                 </div>
                 <div class="dropdown-item">
-                  <input type="radio" id="option3" name="sorting-type" />
+                  <input type="checkbox" id="option3" name="sorting-type" />
                   <label for="option3">თარიღულად (ახლიდან ძველისკენ)</label>
                 </div>
                 <div class="dropdown-item">
-                  <input type="radio" id="option4" name="sorting-type" />
+                  <input type="checkbox" id="option4" name="sorting-type" />
                   <label for="option4">თარიღულად (ძველიდან ახლისკენ)</label>
                 </div>
               </form>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- slider -->
         <div class="slider-wrapper">
@@ -281,9 +368,7 @@
             </a>
           </div>
 
-          <a href="./pages/list-of-places.html">
-            <button>ყველა ადგილის ნახვა</button>
-          </a>
+          <a href="./pages/list-of-places.html"> ყველა ადგილის ნახვა </a>
         </div>
       </section>
     </main>
@@ -332,7 +417,7 @@
 
     <!-- JavaScript links -->
     <script src="./js/script.js"></script>
-    <script src="./js/switch-language.js"></script>
-    <script src="./js/home.js"></script>
+    <!-- <script src="./js/switch-language.js"></script> -->
+    <!-- <script src="./js/home.js"></script> -->
   </body>
 </html>
