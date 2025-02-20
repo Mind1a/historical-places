@@ -1,18 +1,16 @@
 // dropdowns
-const dropdownBtn = document.querySelectorAll(".dropdown-btn");
-dropdownBtn.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const arrow = btn.querySelector("img");
-    const dropdownContent = btn.nextElementSibling;
+const dropdownBtn = document.querySelector(".filter-btn");
 
-    dropdownContent.classList.toggle("active");
-    document.querySelector(".clear-btn").classList.toggle("active");
-    arrow.classList.toggle("rotate");
+dropdownBtn.addEventListener("click", () => {
+  const arrow = dropdownBtn.querySelector("img");
 
-    //init slider
-    slideMin();
-    slideMax();
-  });
+  document.querySelector(".filterBtn-dropdown").classList.toggle("active");
+  document.querySelector(".clear-btn").classList.toggle("active");
+  arrow.classList.toggle("rotate");
+
+  //init slider
+  slideMin();
+  slideMax();
 });
 
 // slider
@@ -101,10 +99,12 @@ const addHeaderEvents = function (elements) {
 
 addHeaderEvents([burgerMenuBtn, searchBtn]);
 
-document.querySelector(".clear-btn").addEventListener("click", () => {
+document.getElementById("clearBtn").addEventListener("click", () => {
   const allFormes = document
     .querySelector(".filter-wrapper")
     .querySelectorAll("form");
+
+  console.log(allFormes);
 
   allFormes.forEach((el) => el.reset());
 
