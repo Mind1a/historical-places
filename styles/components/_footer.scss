@@ -7,22 +7,41 @@ footer {
     display: flex;
     align-items: center;
 
+    @include responsive($phone) {
+      flex-direction: column-reverse;
+      padding: 24px;
+      gap: 32px;
+    }
+
     .contact-container {
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 10px;
+
+      @include responsive($phone) {
+        gap: 16px;
+      }
+
       h4 {
         margin-bottom: 20px;
         font-size: 24px;
         font-weight: normal;
         color: $border-color;
+
+        @include responsive($phone) {
+          display: none;
+        }
       }
       div {
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 16px;
+
+        @include responsive($phone) {
+          gap: 8px;
+        }
       }
       img {
         width: 18px;
@@ -36,6 +55,11 @@ footer {
         line-height: 24px;
         color: #fff;
         cursor: pointer;
+
+        @include responsive($phone) {
+          font-size: 14px;
+          font-weight: 300;
+        }
       }
     }
 
@@ -44,27 +68,44 @@ footer {
       align-items: center;
       gap: 20px;
 
+      @include responsive($phone) {
+        align-self: start;
+      }
+
       .unilab-logo {
         width: 57px;
         height: 74px;
-        margin-right: 80px;
+        cursor: pointer;
+
+        @include responsive($phone) {
+          margin-right: 28px;
+        }
       }
       .iliauni-logo {
         width: 75px;
         height: 74px;
+        cursor: pointer;
       }
     }
   }
   .footer-bottom {
     background-color: $footer-color;
     height: 36px;
-    padding-top: 10px;
-    margin-top: 27px;
+    margin-top: 37px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     p {
       color: $button-text-color;
       font-size: 14px;
       text-align: center;
+      opacity: 0.5;
+
+      @include responsive($phone) {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.5);
+      }
     }
   }
 }

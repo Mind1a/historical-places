@@ -3,12 +3,21 @@ header {
   background-color: $light-blue;
   padding: 32px 0;
 
+  @include responsive($phone) {
+    border-radius: 0 0 8px 8px;
+  }
+
   .header-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     @include container;
+    padding: 0;
+
+    @include responsive($phone) {
+      padding: 0 16px;
+    }
   }
 
   .navigation {
@@ -17,6 +26,10 @@ header {
       flex-direction: row;
       gap: 20px;
 
+      @include responsive($phone) {
+        display: none;
+      }
+
       .nav-button {
         color: $button-text-color;
         border: none;
@@ -24,8 +37,57 @@ header {
         letter-spacing: 1px;
         font-weight: 400;
         line-height: 20px;
+
+        transition: color 0.2s;
+
         &:hover {
           color: $dark-blue;
+        }
+      }
+    }
+  }
+
+  .mobile-nav {
+    display: block;
+    &.inactive {
+      display: none;
+    }
+
+    @include responsive($phone) {
+      background-color: rgba(242, 250, 255, 1);
+      display: flex;
+      justify-content: center;
+      height: 200px;
+
+      border: 1px solid #085791;
+      border-top: transparent;
+      border-radius: 0 0 8px 8px;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+
+        padding: 32px 0 24px 0;
+        // height: 400px;
+
+        a {
+          color: $dark-blue;
+          font-size: 16px;
         }
       }
     }
@@ -33,12 +95,65 @@ header {
   .search-lang-container {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 48px;
 
-    img {
-      width: 25px;
-      height: 23px;
-      cursor: pointer;
+    min-width: 81px;
+
+    @include responsive($phone) {
+      gap: 20px;
+    }
+
+    #burger {
+      background-color: transparent;
+      border: none;
+      display: none;
+
+      @include responsive($phone) {
+        display: flex;
+        justify-content: center;
+      }
+
+      .burger {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+
+      .close {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+
+    #loop {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+
+      img {
+        display: none;
+        width: 25px;
+        height: 23px;
+        @include responsive($phone) {
+          width: 29px;
+          height: 32px;
+        }
+        &.active {
+          display: block;
+        }
+
+        &.close {
+          display: none;
+          &.active {
+            display: block;
+          }
+        }
+      }
     }
   }
 
@@ -46,11 +161,124 @@ header {
     display: flex;
     justify-content: space-between;
 
+    @include responsive($phone) {
+      display: none;
+    }
+
     select {
       padding: 8px 8px;
       border: none;
       border-radius: 4px;
       color: $light-blue;
+    }
+  }
+
+  .search-area {
+    background-color: rgba(242, 250, 255, 1);
+    margin-top: 20px;
+
+    @include responsive($phone) {
+      // margin-top: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      transform: translateY(-20px);
+    }
+
+    &.inactive {
+      display: none;
+    }
+
+    .header-search-wrapper {
+      @include container;
+      padding: 28px 0;
+      // min-height: 86px;
+      min-height: 291px;
+
+      @include responsive($phone) {
+        border: 1px solid $dark-blue;
+        border-top: none;
+
+        border-radius: 0 0 8px 8px;
+
+        min-height: 106px;
+      }
+
+      .search-results {
+        margin: auto;
+        margin-top: 84px;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        @include responsive($phone) {
+          display: none;
+        }
+
+        .not-found {
+          color: gba(62, 62, 62, 1);
+          font-weight: 700;
+          font-size: 16px;
+        }
+      }
+
+      .header-search-form {
+        display: flex;
+        position: relative;
+
+        input {
+          width: 100%;
+          height: 48px;
+          border: 1px solid $dark-blue;
+          border-radius: 8px;
+          padding: 16px 36px;
+
+          font-family: "Noto Sans", sans-serif;
+          font-size: 14px;
+
+          @include responsive($phone) {
+            margin-top: 45px;
+            height: 36px;
+          }
+        }
+        button {
+          width: 80px;
+          // height: 100%;
+          position: absolute;
+          display: grid;
+          align-items: center;
+          justify-content: end;
+          padding-right: 12px;
+
+          right: 0;
+          bottom: 4px;
+          top: 4px;
+          background-color: transparent;
+          border: none;
+
+          border-left: 1px solid $light-blue;
+
+          @include responsive($phone) {
+            border: none;
+
+            right: 0;
+            top: 45px;
+            bottom: 2px;
+          }
+
+          img {
+            height: 25px;
+            width: 23px;
+            margin-right: 12.5px;
+          }
+        }
+      }
     }
   }
 }

@@ -1,91 +1,94 @@
-main {
-  /* Map Section */
-  .map-section {
-    margin-top: 68px;
-    .container {
-      @include container;
+/* About Project Section */
+.about-project {
+  margin-top: 64px;
 
-      .map-wrapper {
-        height: 537px;
-      }
-    }
+  @include responsive($phone) {
+    margin-top: 36px;
   }
 
-  /* About Project Section */
+  .container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    gap: 19.5px;
 
-  .about-project {
-    .container {
-      .about-project-content {
-        p {
-          &:first-child {
-            margin-top: 40px;
-          }
+    @include responsive($phone) {
+      gap: 12px;
+    }
 
-          &:not(:first-child) {
-            margin-top: 20px;
-          }
+    .about-project-content {
+      p {
+        &:first-child {
+          margin-top: 40px;
+        }
+        &:not(:first-child) {
+          margin-top: 20px;
         }
       }
     }
-  }
 
-  /* Team Members Section */
-  .team-members {
-    margin: 88px 0 50px 0;
+    h3 {
+      @extend %global-h3;
+      border-bottom: 1px solid $border-color;
+      padding-bottom: 5px;
+      align-self: flex-start;
 
-    .container {
-      @include container;
-
-      h3 {
-        @extend %global-h3;
+      @include responsive($phone) {
+        font-size: 16px;
+        font-weight: 500;
       }
+    }
 
-      .team-members-blocks-wrapper {
-        margin-top: 46px;
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19.2px;
+      color: $text-color;
+
+      @include responsive($phone) {
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+    }
+
+    .see-more {
+      display: flex;
+
+      align-items: center;
+      padding: 14.5px 19px;
+      background-color: $dark-blue;
+      transition: $change-background-color;
+      align-self: flex-start;
+      border-radius: 2px;
+
+      max-width: 130px;
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include responsive($phone) {
+        max-width: 100%;
         display: flex;
-        column-gap: 87px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        padding: 12.5px;
 
-        .team-members-block {
-          width: 17.68%;
-          padding: 10px;
+        font-size: 12px;
+      }
 
-          h4 {
-            margin-bottom: 10px;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 21.6px;
-            color: $text-color;
-          }
+      &:hover {
+        background-color: $button-hover;
+      }
 
-          p {
-            font-weight: 300;
-            font-size: 10px;
-            line-height: 12px;
-            color: $text-color;
-          }
-
-          .email {
-            margin-top: 10px;
-            display: flex;
-
-            img {
-              width: 14px;
-              height: 11px;
-              object-fit: cover;
-            }
-
-            p {
-              margin-left: 4px;
-
-              a {
-                font-weight: 300;
-                font-size: 10px;
-                line-height: 12px;
-                color: $text-color;
-              }
-            }
-          }
-        }
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.8px;
+        color: $button-text-color;
       }
     }
   }
