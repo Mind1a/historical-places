@@ -804,8 +804,10 @@ main .map-section .container .map-wrapper {
     padding: 8px;
   }
 }
-.list-of-places .filter-wrapper .filterBtn-container .filter-btn span {
-  font-size: 12px;
+@media only screen and (max-width: 719px) {
+  .list-of-places .filter-wrapper .filterBtn-container .filter-btn span {
+    font-size: 12px;
+  }
 }
 .list-of-places .filter-wrapper .filterBtn-container .clear-btn {
   max-width: 174px;
